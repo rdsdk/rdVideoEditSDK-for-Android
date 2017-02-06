@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 滑竿背景 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/transparent_white" />
+
+            <stroke
+                android:width="17dp"
+                android:color="@color/transparent" />
+
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- 进度条 -->
+    <item android:id="@android:id/progress">
+        <shape>
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="17dp"
+                android:color="@color/transparent" />
+
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <shape>
+            <solid android:color="@color/transparent_black" />
+
+            <stroke
+                android:width="17dp"
+                android:color="@color/transparent" />
+
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+
+</layer-list>

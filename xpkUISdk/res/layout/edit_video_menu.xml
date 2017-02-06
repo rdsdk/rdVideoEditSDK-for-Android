@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/fl_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/edit_menu_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <include layout="@layout/sp_music_container" />
+
+        <include layout="@layout/sp_filter_container" />
+
+        <include layout="@layout/sp_watermark_container" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEditorGroups"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/sub_menu_bgcolor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/sp_rg_bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RadioButton
+                android:id="@+id/sp_rb_music"
+                style="@style/edit_menu"
+                android:drawableTop="@drawable/sp_edit_music"
+                android:text="@string/music" />
+
+            <RadioButton
+                android:id="@+id/sp_rb_filter"
+                style="@style/edit_menu"
+                android:drawableTop="@drawable/sp_edit_filter"
+                android:text="@string/filter" />
+
+            <RadioButton
+                android:id="@+id/sp_rb_watermark"
+                style="@style/edit_menu"
+                android:drawableTop="@drawable/sp_edit_watermark"
+                android:text="@string/watermark"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/sp_rb_partedit"
+                style="@style/edit_menu"
+                android:layout_marginRight="15dp"
+                android:drawableTop="@drawable/sp_edit_partedit"
+                android:text="@string/partedit" />
+        </RadioGroup>
+
+        <HorizontalScrollView
+            android:id="@+id/hsvBottomMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="@null"
+            android:visibility="visible" >
+
+            <RadioGroup
+                android:id="@+id/edit_groups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_theme"
+                    style="@style/edit_menu"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="@dimen/edit_video_ment_item_marginLeft"
+                    android:drawableTop="@drawable/edit_theme"
+                    android:text="@string/theme"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_music"
+                    style="@style/edit_menu"
+                    android:layout_marginLeft="0dp"
+                    android:drawableTop="@drawable/edit_music"
+                    android:text="@string/music" />
+
+                <RadioButton
+                    android:id="@+id/rb_audio"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_rb_audio"
+                    android:text="@string/audio" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter1"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_filter"
+                    android:text="@string/filter"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_word"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_word"
+                    android:text="@string/subtitle" />
+
+                <RadioButton
+                    android:id="@+id/rb_filter"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_filter"
+                    android:text="@string/filter" />
+
+                <RadioButton
+                    android:id="@+id/rb_special"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_special"
+                    android:text="@string/special" />
+
+                <RadioButton
+                    android:id="@+id/rb_transition"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_transition"
+                    android:text="@string/transition"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_doodle"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_doodle"
+                    android:text="@string/doodle"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_partedit"
+                    style="@style/edit_menu"
+                    android:layout_marginLeft="10dp"
+                    android:drawableTop="@drawable/edit_partedit"
+                    android:text="@string/partedit" />
+            </RadioGroup>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

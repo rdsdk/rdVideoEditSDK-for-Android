@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/priview_item_height_plus" >
+
+        <ImageView
+            android:id="@+id/ivAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/item_edit_add_normal" />
+
+        <ImageView
+            android:id="@+id/ivTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivAddItem"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/additem_transition_none" />
+
+        <RelativeLayout
+            android:id="@+id/rl_extra_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/ivExtraItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/edit_add_video_button"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvItemSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivExtraItem"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:textColor="@drawable/sort_text_color"
+                android:text="@string/preview_sort"
+                android:textSize="@dimen/text_size_13"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

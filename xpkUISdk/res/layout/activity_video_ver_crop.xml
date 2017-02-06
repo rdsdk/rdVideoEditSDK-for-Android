@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0E0E10"
+        android:orientation="vertical" >
+
+        <!-- 9:16的视频裁剪 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical" >
+
+            <com.rd.xpkuisdk.ui.ChartView
+                android:id="@+id/chartView"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/transparent_white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.rd.lib.ui.PreviewFrameLayout
+                        android:id="@+id/rlVideoCropFramePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:gravity="center" >
+
+                        <com.rd.xpk.editor.EnhancePlaybackView
+                            android:id="@+id/vvMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <com.rd.xpkuisdk.crop.CropView
+                            android:id="@+id/cvVideoCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+               </com.rd.lib.ui.PreviewFrameLayout>
+                </RelativeLayout>
+
+                <com.rd.xpkuisdk.ui.HandLine
+                    android:id="@+id/mHandline"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="15dp" />
+
+                <View
+                    android:id="@+id/ivVideoConver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/public_editor_backgroup"
+                    android:contentDescription="@string/empty" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/public_menu" />
+    </LinearLayout>
+
+</LinearLayout>

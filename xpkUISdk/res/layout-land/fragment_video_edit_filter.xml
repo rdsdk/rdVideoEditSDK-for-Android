@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/land_bottom_height"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="@dimen/land_left_width"
+        android:layout_height="match_parent" >
+
+        <TextView
+            style="@style/land_title_style"
+            android:drawableTop="@drawable/land_edit_filter"
+            android:text="@string/filter" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/edit_menu_bg" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <RadioGroup
+            android:id="@+id/rgFliter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbFliterWuCha"
+                style="@style/FliterBucketStyle"
+                android:checked="true"
+                android:text="@string/filter_wucha" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterGeTe"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_gete" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterLemo"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_lomo" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterLengdiao"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_lengdiao" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterBomo"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_bomo" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterYese"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_yese" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterHuaijiu"
+                style="@style/FliterBucketStyle"
+                android:layout_marginRight="10dp"
+                android:text="@string/filter_huaijiu" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sub_menu_bgcolor"
+        android:orientation="vertical" >
+
+        <com.rd.lib.ui.PreviewFrameLayout
+            android:id="@+id/rlPreviewLevel1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" >
+
+            <com.rd.lib.ui.PreviewFrameLayout
+                android:id="@+id/rlPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <com.rd.xpkuisdk.ui.ExtEditPic
+                    android:id="@+id/exteditpic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:hint="请输入文本"
+                    android:lines="6"
+                    android:maxLines="6"
+                    android:textSize="@dimen/text_size_25"
+                    android:scrollbarStyle="@null"
+                    android:scrollbars="@null"
+                    android:singleLine="false"
+                    android:textColor="@color/white" />
+            </com.rd.lib.ui.PreviewFrameLayout>
+        </com.rd.lib.ui.PreviewFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#242423"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/rgtxColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:minHeight="60dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/ttf"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/item_underline"
+                        android:checked="true"
+                        android:minHeight="60dp"
+                        android:padding="@dimen/radio_btn_padding"
+                        android:text="@string/subtitle_font_style"
+                        android:textColor="@drawable/edit_menu_color" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/edit_music_divider" />
+
+                    <RadioButton
+                        android:id="@+id/txcolor"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_underline"
+                        android:minHeight="60dp"
+                        android:padding="@dimen/radio_btn_padding"
+                        android:text="@string/subtitle_color"
+                        android:textColor="@drawable/edit_menu_color" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/edit_music_divider" />
+
+                    <RadioButton
+                        android:id="@+id/bgcolor"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_underline"
+                        android:minHeight="60dp"
+                        android:padding="@dimen/radio_btn_padding"
+                        android:text="@string/bg_color"
+                        android:textColor="@drawable/edit_menu_color" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/rgtxSide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/leftside"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textboard_leftside_button" />
+
+                    <RadioButton
+                        android:id="@+id/midside"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textboard_midside_button"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/rightside"
+                        style="@style/subtitle_menu_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textboard_rightside_button" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/theFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <GridView
+                    android:id="@+id/gridview_ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:cacheColorHint="@null"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="@null" />
+
+                <com.rd.xpkuisdk.ui.ExtColorPicker
+                    android:id="@+id/txColorPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    cpicker:isdrawcircle="true" />
+
+                <com.rd.xpkuisdk.ui.ExtColorPicker
+                    android:id="@+id/bgColorPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    cpicker:isdrawcircle="false" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

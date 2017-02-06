@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_video_sub_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <include layout="@layout/subtitle_add_layout" />
+
+    <include layout="@layout/subtitle_menu_layout" />
+
+</FrameLayout>

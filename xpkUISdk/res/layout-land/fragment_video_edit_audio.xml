@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/land_bottom_height" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="@dimen/land_left_width"
+        android:layout_height="match_parent" >
+
+        <TextView
+            style="@style/land_title_style"
+            android:drawableTop="@drawable/land_edit_audio"
+            android:text="@string/audio" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rlTitle"
+        android:background="@color/edit_menu_bg" />
+
+    <LinearLayout
+        android:id="@+id/llPlayState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/rlTitle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivPlayerState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty"
+            android:minHeight="28dp"
+            android:minWidth="28dp"
+            android:onClick="clickView"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/edit_music_play" />
+
+        <com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView
+            android:id="@+id/audio_horizontal_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/audio_subtitleline_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.rd.xpkuisdk.ui.ThumbNailLine
+                    android:id="@+id/audio_subline_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp" />
+            </LinearLayout>
+        </com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

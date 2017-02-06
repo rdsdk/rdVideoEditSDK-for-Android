@@ -1,0 +1,2 @@
+include ':xpkUISdk'
+project(":xpkUISdk").projectDir = file("../xpkUISdk")

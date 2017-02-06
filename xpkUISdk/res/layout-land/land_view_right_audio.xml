@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rightViewAudio"
+    android:layout_width="@dimen/land_right_width"
+    android:layout_height="match_parent"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llPlayState" >
+
+        <TextView
+            android:id="@+id/tv_audio_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="1dp"
+            android:drawableTop="@drawable/video_edit_autio_reset_background"
+            android:gravity="center_horizontal"
+            android:text="@string/audio_reset"
+            android:textColor="@color/transparent_white"
+            android:textSize="@dimen/text_size_11" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_audio_record"
+                android:layout_width="@dimen/land_right_button_width"
+                android:layout_height="@dimen/land_right_button_height"
+                android:src="@drawable/audio_record_record" />
+
+            <TextView
+                android:id="@+id/tv_audio_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/audio_press"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_audio_audition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="1dp"
+            android:drawableTop="@drawable/video_edit_audio_audition_background"
+            android:gravity="center_horizontal"
+            android:text="@string/audio_audition"
+            android:textColor="@color/transparent_white"
+            android:textSize="@dimen/text_size_11" />
+    </RelativeLayout>
+
+</RelativeLayout>

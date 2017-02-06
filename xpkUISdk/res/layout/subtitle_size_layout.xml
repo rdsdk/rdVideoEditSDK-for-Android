@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subtitle_size_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" >
+
+    <com.rd.xpkuisdk.ui.TimeLine
+        android:id="@+id/timeline_size"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3dp" >
+
+        <LinearLayout
+            android:id="@+id/subtitle_size_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.rd.xpkuisdk.ui.SizePicker
+                android:id="@+id/subtitle_sizepicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+ 
+    </com.rd.xpkuisdk.ui.TimeLine>
+
+</FrameLayout>

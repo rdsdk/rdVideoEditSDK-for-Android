@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="txtStyle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:background">#13cadb</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="dialogActivityStyle" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

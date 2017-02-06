@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- 边角的半径弧度 -->
+    <corners android:radius="3dp" />
+
+    <!-- padding -->
+    <padding
+        android:bottom="@dimen/dimen_7"
+        android:left="@dimen/dimen_7"
+        android:right="@dimen/dimen_7"
+        android:top="@dimen/dimen_7" />
+
+    <size
+        android:height="@dimen/dimen_60"
+        android:width="@dimen/dimen_100" />
+
+    <!-- 内部颜色 -->
+    <solid android:color="@color/color1" />
+
+    <!-- 边框颜色 -->
+    <stroke
+        android:width="3dp"
+        android:color="#1199EF" />
+
+</shape>

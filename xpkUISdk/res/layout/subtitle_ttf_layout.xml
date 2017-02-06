@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subtitle_ttf_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <!-- <LinearLayout -->
+    <!-- android:id="@+id/lldefaultSubsTtf" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:orientation="horizontal"> -->
+    <!-- <TextView -->
+    <!-- android:id="@+id/tvdefaultSubsTtf" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_gravity="center_horizontal" -->
+    <!-- android:gravity="center" -->
+    <!-- android:height="25dp" -->
+    <!-- android:singleLine="true" -->
+    <!-- android:text="还原默认字体" -->
+    <!-- android:clickable="true" -->
+    <!-- android:textColor="@color/white" -->
+    <!-- android:textSize="@dimen/text_size_16" /> -->
+    <!-- android:layout_above="@id/lldefaultSubsTtf" -->
+    <!-- </LinearLayout> -->
+
+    <LinearLayout
+        android:id="@+id/llistview_ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <GridView
+            android:id="@+id/gridview_ttf"
+            style="@style/listviewStyle_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edit_music_divider"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:scrollbars="@null"
+            android:verticalSpacing="0.5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

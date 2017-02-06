@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBucket"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical" >
+
+    <com.rd.xpkuisdk.ui.BucketListView
+        android:id="@+id/lvBucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_bg"
+        android:divider="@color/white_divider"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

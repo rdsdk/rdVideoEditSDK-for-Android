@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_menu_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <RadioGroup
+            android:id="@+id/musicgroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/edit_menu_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/mymusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_music_menu_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/mymusic"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/localmusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_music_menu_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/localmusic"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/historymusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/more_music_menu_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/histroymusic"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/musicpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/musicgroup"
+            android:background="@color/edit_menu_bg" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/musicgroup"
+            android:background="@color/edit_music_divider" />
+    </RelativeLayout>
+
+</LinearLayout>

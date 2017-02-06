@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="public_menu_back_color">#33333B</color>
+    <color name="sort_title_bar_back_color">#0c0b0d</color>
+    <color name="speed_line_button_back_color">#42424C</color>
+    <color name="speed_line_button_text_color">#898989</color>
+    <color name="gradient_button_back_color_begin">#33c3e8</color>
+    <color name="gradient_button_back_color_end">#1cb3a0</color>
+
+</resources>

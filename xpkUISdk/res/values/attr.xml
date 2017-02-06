@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ExtImage">
+        <attr name="extSrc" format="reference"></attr>
+        <attr name="extBorderLineWidth" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="VerSeekbar">
+        <attr name="thumb" format="reference"></attr>
+        <attr name="VerProgressDrawable" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="extAutoTitle">
+        <attr name="sText" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="extdragarray">
+        <attr name="sArrays" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="extColorPicker">
+        <attr name="isdrawcircle" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="ExtCircleProgressBar">
+        <attr name="extprogressDrawable" format="reference" />
+        <attr name="extindetermiateDrawable" format="reference" />
+        <attr name="extindetermiate" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RangeSeekBarBaidu">
+        <attr name="isSide" format="boolean"></attr>
+    </declare-styleable>
+
+    <!-- 字幕颜色显示是否描边 -->
+    <declare-styleable name="squareview">
+        <attr name="square_text" format="string"></attr>
+        <attr name="square_bg" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="swThumbDrawable" format="reference" />
+        <attr name="swThumbColor" format="color|reference" />
+        <attr name="swThumbMargin" format="dimension|reference" />
+        <attr name="swThumbMarginTop" format="dimension|reference" />
+        <attr name="swThumbMarginBottom" format="dimension|reference" />
+        <attr name="swThumbMarginLeft" format="dimension|reference" />
+        <attr name="swThumbMarginRight" format="dimension|reference" />
+        <attr name="swThumbWidth" format="dimension|reference" />
+        <attr name="swThumbHeight" format="dimension|reference" />
+        <attr name="swThumbRadius" format="dimension|reference" />
+        <attr name="swBackRadius" format="dimension|reference" />
+        <attr name="swBackDrawable" format="reference" />
+        <attr name="swBackColor" format="color|reference" />
+        <attr name="swFadeBack" format="boolean" />
+        <attr name="swBackMeasureRatio" format="float" />
+        <attr name="swAnimationDuration" format="integer" />
+        <attr name="swTintColor" format="color|reference" />
+        <attr name="swTextOn" format="string" />
+        <attr name="swTextOff" format="string" />
+        <attr name="swTextMarginH" format="dimension" />
+        <attr name="swAutoAdjustTextPosition" format="boolean" />
+    </declare-styleable>
+
+</resources>

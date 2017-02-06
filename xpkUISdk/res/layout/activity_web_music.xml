@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_menu_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <com.rd.xpkuisdk.ui.ExtViewPagerNoScroll
+            android:id="@+id/musicpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/edit_menu_bg" />
+
+    </RelativeLayout>
+
+</LinearLayout>

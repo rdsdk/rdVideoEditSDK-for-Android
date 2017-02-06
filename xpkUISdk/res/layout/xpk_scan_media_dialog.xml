@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/scaning_alert_dialog_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_finishScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:src="@drawable/loading_scan_img" />
+    </RelativeLayout>
+
+    <!-- <com.rd.ui.CircleProgressBar -->
+    <!-- android:id="@+id/pb_loadingScan" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- rd:indetermiate="true" -->
+    <!-- rd:indetermiateDrawable="@drawable/loading_scan_img" /> -->
+    <!-- </RelativeLayout> -->
+
+    <TextView
+        android:id="@+id/tv_mediaPathName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#808080"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/btn_textsize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/scan_music_dialog_color" />
+
+    <TextView
+        android:id="@+id/tv_cancelScan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scaning_music_dialog_bottom_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/scaning_media_dialog_text_color"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="#808080"
+        android:textSize="@dimen/related_video_text_size_18" />
+
+</LinearLayout>

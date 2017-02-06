@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <com.rd.xpkuisdk.ui.PriviewLayout
+        android:id="@+id/mroot_priview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/viewLeft"
+                android:layout_width="@dimen/land_left_width"
+                android:layout_height="match_parent"
+                android:background="@color/edit_menu_bg" >
+
+                <RelativeLayout
+                    android:id="@+id/rlTitle"
+                    android:layout_width="@dimen/land_left_width"
+                    android:layout_height="@dimen/land_bottom_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/public_background_color" >
+
+                    <TextView
+                        style="@style/land_title_style"
+                        android:drawableTop="@drawable/land_edit_sort"
+                        android:text="@string/preview_sort" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/edit_menu_bg" />
+
+                <ImageView
+                    android:id="@+id/public_menu_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rlTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/land_button1_margin_height"
+                    android:background="@drawable/land_edit_sure"
+                    android:onClick="clickView" />
+
+                <ImageView
+                    android:id="@+id/public_menu_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/public_menu_sure"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/land_button2_margin_height"
+                    android:background="@drawable/land_edit_close"
+                    android:onClick="clickView" />
+            </RelativeLayout>
+
+            <com.rd.xpkuisdk.ui.PriviewLinearLayout
+                android:id="@+id/the_priview_layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/viewLeft"
+                android:orientation="vertical" >
+
+                <com.rd.xpkuisdk.ui.DraggableGridView
+                    android:id="@+id/gridVideosDstArray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbars="none" />
+            </com.rd.xpkuisdk.ui.PriviewLinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/viewLeft"
+                android:background="@drawable/sort_gradient_bg_180" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/viewLeft"
+                android:background="@drawable/sort_gradient_bg" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 可拖动的层 -->
+
+        <com.rd.xpkuisdk.ui.DraggedTrashLayout
+            android:id="@+id/thelinearDraggedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:visibility="gone" >
+
+            <com.rd.xpkuisdk.ui.DraggedView
+                android:id="@+id/draggedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.rd.xpkuisdk.ui.DraggedTrashLayout>
+    </com.rd.xpkuisdk.ui.PriviewLayout>
+
+</LinearLayout>

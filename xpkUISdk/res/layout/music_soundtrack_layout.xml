@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_music_soundtrack_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_music_soundtrack_bg"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/ivMusicIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/edit_music_icon2" />
+
+        <TextView
+            android:id="@+id/musicDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="00:00"
+            android:textColor="@color/borderline_color"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/musicname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@id/musicDuration"
+            android:layout_toRightOf="@id/ivMusicIcon"
+            android:gravity="left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="音乐"
+            android:textColor="@color/borderline_color"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rlTitle"
+        android:layout_marginTop="10dp"
+        android:background="@color/progress_n" />
+
+    <LinearLayout
+        android:id="@+id/rl_middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_music_track_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-3dp"
+            android:src="@drawable/edit_music_play" />
+
+        <com.rd.xpkuisdk.ui.ExpRangeSeekBarMusic
+            android:id="@+id/rs_music_track_range_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp" >
+        </com.rd.xpkuisdk.ui.ExpRangeSeekBarMusic>
+    </LinearLayout>
+
+</RelativeLayout>

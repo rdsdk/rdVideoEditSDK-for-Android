@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autoview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.rd.xpkuisdk.ui.AutoView
+        android:id="@+id/auto_listview_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        autoview:sText="@string/drag_for_listview" />
+
+    <!-- <TextView -->
+    <!-- android:id="@+id/auto_listview_drag" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:text="@string/drag_for_listview" /> -->
+
+</LinearLayout>

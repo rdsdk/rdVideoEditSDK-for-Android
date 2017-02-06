@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xpksdk_main_bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent"
+            android:background="@color/edit_menu_bg" >
+
+            <ImageView
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/land_button1_margin_height"
+                android:src="@drawable/land_select_camera" />
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/right"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/land_button2_margin_height"
+                android:src="@drawable/land_edit_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/media_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/land_bottom_height"
+        android:layout_gravity="bottom"
+        android:background="@color/public_background_color"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/land_title_style"
+                android:drawableTop="@drawable/land_edit_addvideo"
+                android:text="@string/addmenu_addvideo" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:background="@color/edit_menu_bg" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/land_bottom_height"
+                android:layout_gravity="center"
+                android:background="@drawable/land_rg_item_underline"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/land_bucket_arrow_up"
+                android:gravity="center"
+                android:text="@string/select_media_title_video"
+                android:textColor="@drawable/edit_menu_color"
+                android:textSize="@dimen/text_size_18" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_menu_bg" />
+
+            <RadioButton
+                android:id="@+id/rbPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/land_bottom_height"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/land_rg_item_underline"
+                android:button="@null"
+                android:drawableRight="@drawable/land_bucket_arrow_up"
+                android:gravity="center"
+                android:text="@string/select_media_title_photo"
+                android:textColor="@drawable/edit_menu_color"
+                android:textSize="@dimen/text_size_18" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/import_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/import_btn"
+            android:paddingRight="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <Button
+            android:id="@+id/import_btn"
+            android:layout_width="48dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/music_library_additem_bg"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textColor="@drawable/select_camera_popwin_textcolor"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+</LinearLayout>

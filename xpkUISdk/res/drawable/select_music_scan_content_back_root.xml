@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/select_music_scan_content_back_root_e" android:state_enabled="false"/>
+    <item android:drawable="@drawable/select_music_scan_content_back_root_n"/>
+
+</selector>

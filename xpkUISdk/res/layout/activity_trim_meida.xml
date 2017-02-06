@@ -1,0 +1,243 @@
+<com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <com.rd.xpkuisdk.ui.PriviewLayout
+        android:id="@+id/mroot_priview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.rd.xpkuisdk.ui.PriviewLinearLayout
+            android:id="@+id/the_priview_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.rd.lib.ui.PreviewFrameLayout
+                    android:id="@+id/rlPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black" >
+
+                    <com.rd.lib.ui.PreviewFrameLayout
+                        android:id="@+id/rlPreview_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center" >
+
+                        <com.rd.xpk.editor.EnhancePlaybackView
+                            android:id="@+id/epvPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/ivPlayerState"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/empty"
+                            android:onClick="clickView"
+                            android:scaleType="center"
+                            android:src="@drawable/btn_play" />
+                    </com.rd.lib.ui.PreviewFrameLayout>
+
+                    <com.rd.xpkuisdk.ui.ProgressView
+                        android:id="@+id/progressView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true" />
+                </com.rd.lib.ui.PreviewFrameLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSeekbar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/ivSeekBarPosition"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/preview_rangseekbarplus_height"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/ivMidline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_above="@+id/ivSeekBarPosition" />
+
+                <TextView
+                    android:id="@+id/tvRemainDuration"
+                    style="@style/styleEditorDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ivSeekBarPosition"
+                    android:layout_centerHorizontal="true"
+                    android:background="@null"
+                    android:textColor="@color/main_orange"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tvInterceptFrontTime"
+                    style="@style/styleEditorDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ivSeekBarPosition"
+                    android:background="@null"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tvInterceptBehindTime"
+                    style="@style/styleEditorDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/ivSeekBarPosition"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:textSize="@dimen/text_size_14" />
+
+                <LinearLayout
+                    android:id="@+id/timeline_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivMidline"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
+                        android:id="@+id/split_videoview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSeekbarplus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivMidline" >
+
+                    <com.rd.xpkuisdk.ui.extrangseekbar.ExtRangeSeekbarPlus
+                        android:id="@+id/m_extRangeSeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_rangseekbarplus_trim_height" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rlSeekbarplus"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <RadioGroup
+                        android:id="@+id/trim_menu_group"
+                        android:layout_width="97dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/menu_bg"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/trim_shot"
+                            android:layout_width="48dp"
+                            android:layout_height="25dp"
+                            android:background="@null"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:textColor="@drawable/trim_menu_radiobtn"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <RadioButton
+                            android:id="@+id/trim_long"
+                            android:layout_width="48dp"
+                            android:layout_height="25dp"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:textColor="@drawable/trim_menu_radiobtn"
+                            android:textSize="@dimen/text_size_18" />
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llmenu"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/public_menu_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/public_menu_back_color"
+                    android:gravity="bottom"
+                    android:onClick="clickView" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/ebtnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="bottom"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/public_menu_cancel"
+                        android:gravity="center"
+                        android:onClick="clickView"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/menu_line"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:id="@+id/public_menu_sure"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/public_menu_back_color"
+                    android:gravity="bottom"
+                    android:onClick="clickView" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/ebtnSure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="bottom"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/public_menu_sure"
+                        android:gravity="center"
+                        android:onClick="clickView"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.rd.xpkuisdk.ui.PriviewLinearLayout>
+    </com.rd.xpkuisdk.ui.PriviewLayout>
+
+</com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout>

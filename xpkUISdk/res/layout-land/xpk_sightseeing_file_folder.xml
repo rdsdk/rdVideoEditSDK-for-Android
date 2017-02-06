@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_menu_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rlBottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/land_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/public_background_color" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/land_title_style"
+                android:drawableTop="@drawable/land_edit_music"
+                android:text="@string/music" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:background="@color/edit_menu_bg" />
+
+        <TextView
+            android:id="@+id/tv_BeginScan"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/music_library_scan_bg"
+            android:gravity="center"
+            android:text="@string/begin_scan"
+            android:textColor="@drawable/select_camera_popwin_textcolor"
+            android:textSize="@dimen/pic_datetime_text_size" />
+
+        <CheckBox
+            android:id="@+id/cb_selectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/sightseeing_file_titleRight_margin"
+            android:background="@drawable/music_library_deleteall"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottomMenu"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/viewLeft"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent"
+            android:background="@color/edit_menu_bg" >
+
+            <ImageView
+                android:id="@+id/public_menu_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/land_edit_close"
+                android:onClick="clickView" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/public_background_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white" >
+
+                <ListView
+                    android:id="@+id/lv_folderList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/edit_menu_bg"
+                    android:divider="@color/edit_music_divider"
+                    android:dividerHeight="0.5dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp" >
+                </ListView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/edit_music_divider" />
+
+            <LinearLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sightseeing_file_showFilePath_height"
+                android:background="@color/edit_menu_bg"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/setting_about_copyrightinfo_text_size" >
+
+                <TextView
+                    android:id="@+id/tv_rootPath"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:ellipsize="middle"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/sightseeing_file_title_text_size" />
+
+                <com.rd.xpkuisdk.ui.CircleProgressBar
+                    android:id="@+id/cpb_loadFileProgress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="invisible"
+                    rd:extindetermiate="true"
+                    rd:extindetermiateDrawable="@drawable/loading_waiting_progress" />
+
+                <TextView
+                    android:id="@+id/tv_backRootPath"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/land_back_bg"
+                    android:contentDescription="@null"
+                    android:gravity="center"
+                    android:text="@string/left"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColor="@drawable/land_text_item_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

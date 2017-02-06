@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview_edit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_menu_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvEditorDuration"
+        style="@style/styleEditorDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:background="@null" />
+
+    <LinearLayout
+        android:id="@+id/ll_menu_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/sub_menu_bgcolor"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp" >
+
+       <LinearLayout
+            android:id="@+id/menus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_intercept"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/intercept_button"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_intercept" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_spilt"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/splite"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_spilt" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_edit"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/edit_button"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_edit_pic" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_speed"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/speed"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_speed" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_duration"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/speed"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/photo_duration"
+                android:visibility="gone" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_text"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/edit"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_text"
+                android:visibility="gone" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_copy"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/copy"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_copy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addmenus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_addimage"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/addmenu_addimage"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_addimage" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_addvideo"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/addmenu_addvideo"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_addvideo" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_addtext"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/addmenu_addtext"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_addtext" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/preview_transition"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/addmenu_transition"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_transition" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sp_addmenus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/sp_preview_addimage"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/sp_preview_addimage"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_addimage" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/sp_preview_addvideo"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/sp_preview_addvideo"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/addmenu_addvideo" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/sp_preview_transition"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/sp_preview_transition"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/transition" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/sp_preview_addtext"
+                style="@style/edit_menu_style"
+                android:drawableTop="@drawable/sp_preview_addtext"
+                android:onClick="onPreviewOptionClick"
+                android:text="@string/preview_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_menu_view"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_drag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:paddingRight="2dp" >
+
+                <com.rd.xpkuisdk.ui.DraggableAddGridView
+                    android:id="@+id/gridVideosDstArray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="11dp"
+                android:layout_height="@dimen/priview_item_height_plus"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/xpk_menu_gradient_bg" >
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/priview_item_width_plus"
+        android:layout_height="@dimen/priview_item_height_plus" >
+
+        <RelativeLayout
+            android:id="@+id/rlLevel2"
+            android:layout_width="@dimen/priview_item_rect"
+            android:layout_height="@dimen/priview_item_rect"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/rlLevel3"
+                android:layout_width="@dimen/priview_item_height"
+                android:layout_height="@dimen/priview_item_height"
+                android:layout_centerInParent="true" >
+
+                <FrameLayout
+                    android:id="@+id/flView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <com.rd.xpkuisdk.ui.ExtListItemView
+                        android:id="@+id/ivItemExt"
+                        android:layout_width="@dimen/priview_item_height"
+                        android:layout_height="@dimen/priview_item_height" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true" >
+
+                    <ImageView
+                        android:id="@+id/ivItemType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:id="@+id/tvDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvItemNum1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/item_priview_num_bg"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_11" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/item_priview_delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

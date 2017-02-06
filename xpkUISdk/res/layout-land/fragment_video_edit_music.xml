@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:extItem="http://schemas.android.com/apk/res-auto"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/land_bottom_height"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/land_title_style"
+                android:drawableTop="@drawable/land_edit_music"
+                android:text="@string/music" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:background="@color/edit_menu_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_middle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/iv_music_track_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/edit_music_play" />
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.rd.xpkuisdk.ui.ExpRangeSeekBarMusic
+                android:id="@+id/rs_music_track_range_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                rd:isSide="true" >
+            </com.rd.xpkuisdk.ui.ExpRangeSeekBarMusic>
+
+            <TextView
+                android:id="@+id/tvEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="00:00"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/ivLandDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/land_music_delete" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLandMusicBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:id="@+id/rlMusicSubMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/ivMusicIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/edit_music_icon" />
+
+                <TextView
+                    android:id="@+id/tvMusicName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toLeftOf="@id/tvMusicDuration"
+                    android:layout_toRightOf="@id/ivMusicIcon"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/edit_music_add"
+                    android:textColor="@drawable/select_camera_popwin_textcolor"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ImageView
+                    android:id="@+id/ivMusicLibrary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tvMusicName"
+                    android:background="@drawable/edit_music_arrow" />
+            </RelativeLayout>
+
+            <ToggleButton
+                android:id="@+id/tbOriginVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:background="@null"
+                android:button="@drawable/origin_voice_togglebutton"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/tbOriginVoice"
+                android:text="@string/edit_music_media_voice"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,262 @@
+<com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <com.rd.xpkuisdk.ui.PriviewLayout
+        android:id="@+id/mroot_priview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.rd.xpkuisdk.ui.PriviewLinearLayout
+            android:id="@+id/the_priview_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/rlSeekbar" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <RelativeLayout
+                            android:id="@+id/viewLeft"
+                            android:layout_width="@dimen/land_left_width"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:background="@color/edit_menu_bg" >
+
+                            <ImageView
+                                android:id="@+id/public_menu_sure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/land_edit_sure"
+                                android:onClick="clickView" />
+
+                            <ImageView
+                                android:id="@+id/public_menu_cancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/public_menu_sure"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/land_edit_close"
+                                android:onClick="clickView" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/viewRight"
+                            android:layout_width="@dimen/land_right_width"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/edit_menu_bg" >
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/viewRight"
+                            android:layout_toRightOf="@+id/viewLeft" >
+
+                            <com.rd.lib.ui.PreviewFrameLayout
+                                android:id="@+id/rlPreview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@color/black" >
+
+                                <com.rd.lib.ui.PreviewFrameLayout
+                                    android:id="@+id/rlPreview_player"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center" >
+
+                                    <com.rd.xpk.editor.EnhancePlaybackView
+                                        android:id="@+id/epvPreview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true" />
+
+                                    <ImageView
+                                        android:id="@+id/ivPlayerState"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:contentDescription="@string/empty"
+                                        android:onClick="clickView"
+                                        android:scaleType="center"
+                                        android:src="@drawable/btn_play" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlAddTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="7dp"
+                                        android:background="@drawable/progress_time_bg"
+                                        android:visibility="invisible" >
+
+                                        <TextView
+                                            android:id="@+id/tvAddTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size_25" />
+
+                                        <TextView
+                                            android:id="@+id/tvOldTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvAddTime"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size_18" />
+                                    </RelativeLayout>
+                                </com.rd.lib.ui.PreviewFrameLayout>
+
+                                <com.rd.xpkuisdk.ui.ProgressView
+                                    android:id="@+id/progressView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true" />
+                            </com.rd.lib.ui.PreviewFrameLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSeekbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/land_bottom_height"
+                    android:layout_alignParentBottom="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlTitle"
+                        android:layout_width="@dimen/land_left_width"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            style="@style/land_title_style"
+                            android:drawableTop="@drawable/land_edit_intercept"
+                            android:text="@string/preview_intercept" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/rlTitle"
+                        android:background="@color/edit_menu_bg" />
+
+                    <ImageView
+                        android:id="@+id/ivSeekBarPosition"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/preview_rangseekbarplus_height"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:id="@+id/ivMidline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_above="@+id/ivSeekBarPosition" />
+
+                    <TextView
+                        android:id="@+id/tvInterceptFrontTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/rlTitle"
+                        android:background="@null"
+                        android:text="00:00"
+                        android:textColor="@color/transparent_white"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tvInterceptBehindTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:paddingRight="15dp"
+                        android:text="00:00"
+                        android:textColor="@color/transparent_white"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <LinearLayout
+                        android:id="@+id/timeline_media"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivMidline"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvInterceptBehindTime"
+                        android:layout_toRightOf="@+id/tvInterceptFrontTime"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
+                            android:id="@+id/split_videoview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivMidline"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tvInterceptBehindTime"
+                        android:layout_toRightOf="@+id/tvInterceptFrontTime" >
+
+                        <com.rd.xpkuisdk.ui.extrangseekbar.ExtRangeSeekbarPlus
+                            android:id="@+id/m_extRangeSeekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/preview_rangseekbarplus_height" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/verticalCenter"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tvRemainDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/rlSeekbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/verticalCenter"
+                    android:background="@drawable/edit_duration_bg"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="1dp"
+                    android:text="00:00"
+                    android:textColor="@color/main_orange"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+        </com.rd.xpkuisdk.ui.PriviewLinearLayout>
+    </com.rd.xpkuisdk.ui.PriviewLayout>
+
+</com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout>

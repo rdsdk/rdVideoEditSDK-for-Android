@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- xxhdpi   1080 -->
+    <dimen name="video_list_grid_item_width">75dp</dimen>
+    <dimen name="video_list_grid_item_height">75dp</dimen>
+    <dimen name="btn_down_width">30dp</dimen>
+    <dimen name="priview_item_width">128dp</dimen>
+    <dimen name="priview_item_height">72dp</dimen>
+    <dimen name="priview_item_height_plus">90dp</dimen>
+    <dimen name="priview_item_width_plus">82dp</dimen>
+    <dimen name="priview_item_rect">76dp</dimen>
+    <dimen name="add_media_width">70dp</dimen>
+    <dimen name="ttf_item_height">42dp</dimen>
+
+    <!-- thumbnail -->
+
+    <dimen name="thumbnail_trim_width">138dp</dimen>
+    <dimen name="thumbnail_trim_height">78dp</dimen>
+    <dimen name="style_src_margin">10dp</dimen>
+    <dimen name="down_width">22dp</dimen>
+    <dimen name="splite_layout_height">210dp</dimen>
+    <dimen name="audio_tv_margin">40dp</dimen>
+    <dimen name="radiobtn_padding">25dp</dimen>
+    <dimen name="music_btn_margin">43dp</dimen>
+    <dimen name="point_width">6dp</dimen>
+    <dimen name="highlight_width_preview">2dp</dimen>
+    <!-- <dimen name="preview_rangseekbarplus_trim_height">78dp</dimen> -->
+
+</resources>

@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context="com.rd.xpk.VideoPrieviewActivity" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <com.rd.lib.ui.PreviewFrameLayout
+            android:id="@+id/rlPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <VideoView
+                android:id="@+id/svpriview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+       </com.rd.lib.ui.PreviewFrameLayout>
+
+        <ImageView
+            android:id="@+id/ivPlayerState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/empty"
+            android:onClick="clickView"
+            android:scaleType="center"
+            android:src="@drawable/btn_play" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tvEditorCurrentPos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="" />
+
+         <com.rd.xpkuisdk.ui.RdSeekBar
+            android:id="@+id/sbEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tvEditorDuration"
+            android:layout_toRightOf="@+id/tvEditorCurrentPos"
+            android:progressDrawable="@drawable/video_detail_player_progress"
+            android:thumb="@null" />
+
+        <TextView
+            android:id="@+id/tvEditorDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="" />
+    </RelativeLayout>
+
+</LinearLayout>

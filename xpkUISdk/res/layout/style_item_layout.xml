@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rd.xpkuisdk.ui.SpecialItemFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.rd.xpkuisdk.ui.ExtListItemStyle
+        android:id="@+id/style_item_src"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:src="@null" />
+
+    <ImageView
+        android:id="@+id/style_src"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/style_src_margin"
+        android:background="@null"
+        android:src="@null" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:minHeight="25dp"
+        android:minWidth="25dp" >
+
+        <ImageView
+            android:id="@+id/ttf_state"
+            android:layout_width="@dimen/down_width"
+            android:layout_height="@dimen/down_width"
+            android:src="@drawable/down_btn" />
+
+        <com.rd.xpkuisdk.ui.CircleProgressBarView
+            android:id="@+id/ttf_pbar"
+            android:layout_width="@dimen/down_width"
+            android:layout_height="@dimen/down_width"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</com.rd.xpkuisdk.ui.SpecialItemFrameLayout>

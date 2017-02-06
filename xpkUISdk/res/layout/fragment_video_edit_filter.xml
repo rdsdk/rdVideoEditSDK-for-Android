@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/hsvFilterType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="invisible" >
+
+        <RadioGroup
+            android:id="@+id/rgFliter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbFliterWuCha"
+                style="@style/FliterBucketStyle"
+                android:checked="true"
+                android:text="@string/filter_wucha" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterGeTe"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_gete" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterLemo"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_lomo" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterLengdiao"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_lengdiao" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterBomo"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_bomo" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterYese"
+                style="@style/FliterBucketStyle"
+                android:text="@string/filter_yese" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/rbFliterHuaijiu"
+                style="@style/FliterBucketStyle"
+                android:layout_marginRight="10dp"
+                android:text="@string/filter_huaijiu" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/viewMidLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="@color/edit_music_divider" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp" >
+
+            <GridView
+                android:id="@+id/gvFliter"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:listSelector="@color/transparent"
+                android:numColumns="auto_fit"
+                android:scrollbars="none"
+                android:stretchMode="none" >
+            </GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

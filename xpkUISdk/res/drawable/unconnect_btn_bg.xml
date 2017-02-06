@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <corners android:radius="20dp" />
+
+    <padding
+        android:bottom="5dp"
+        android:left="20dp"
+        android:right="20dp"
+        android:top="5dp" />
+
+    <stroke
+        android:width="0.1dp"
+        android:color="@color/transparent_black" />
+
+    <solid android:color="@drawable/unconnect_btn_bg_color" />
+
+</shape>

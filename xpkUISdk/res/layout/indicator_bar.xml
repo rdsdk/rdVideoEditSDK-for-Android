@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rd.lib.ui.RotateRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rrlIndicatorBar"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" >
+
+    <RelativeLayout
+        android:id="@+id/living_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/camera_list_back_color" >
+
+        <RelativeLayout
+            android:id="@+id/lrliving_bar0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:visibility="gone">
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnCancelRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:padding="8dp"
+                android:background="@null"
+                android:src="@drawable/public_menu_cancel"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/camera_help"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnOverRecord"
+                android:orientation="horizontal" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnbeauty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/btnSwitchCamera"
+                    android:clickable="true"
+                    android:src="@drawable/living_beauty"
+                    android:visibility="invisible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnSwitchCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/btnCameraMore"
+                    android:clickable="true"
+                    android:src="@drawable/btn_switch_camera" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnCameraMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/btn_camera_more" />
+            </LinearLayout>
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnOverRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:background="@null"
+                android:src="@drawable/public_menu_sure"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llliving_bar90"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnCancelRecord90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:background="@null"
+                android:clickable="true"
+                android:src="@drawable/public_menu_cancel"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnShootingRatio90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/btn_shooting_ratio"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnbeauty90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/living_beauty"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnWating90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/living_waiting"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnSwitchCamera90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_camera" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnFlashModeCtrl90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/camera_flash_status" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llliving_bar270"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnFlashModeCtrl270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/camera_flash_status" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnSwitchCamera270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/btn_switch_camera" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnWating270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/living_waiting"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnbeauty270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/living_beauty"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnShootingRatio270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/btn_shooting_ratio"
+                android:visibility="visible" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnCancelRecord270"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:padding="8dp"
+                android:background="@null"
+                android:src="@drawable/public_menu_cancel"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <!-- 进度条图片 -->
+
+    <RelativeLayout
+        android:id="@+id/video_new_relative"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/living_bar"
+        android:background="@color/message_text_hint" >
+
+        <ImageView
+            android:id="@+id/video_new_img_time_atlast"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#fff87a00" />
+
+        <LinearLayout
+            android:id="@+id/video_new_seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_new_img_time_start"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/video_new_seekbar"
+            android:background="@android:color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    <!-- 时间布局 -->
+
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/living_bar">
+
+	    <com.rd.lib.ui.RotateRelativeLayout
+	        android:id="@+id/rrltvTimer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content">
+
+	        <TextView
+	            android:id="@+id/tvTimer"
+	            style="@style/TimerTextStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/record_timer_back"
+	            android:gravity="center_vertical"
+	            android:paddingLeft="20dp"
+	            android:textSize="@dimen/text_size_18"
+	            android:visibility="gone" />
+	    </com.rd.lib.ui.RotateRelativeLayout>
+	</RelativeLayout>
+    
+    <!-- 黑屏和质量按钮 -->
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/living_bar"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="14dp">
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/btnBlackScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_camera_blackscreen_btn_back"/>
+<!--         <com.rd.lib.ui.ExtButton -->
+<!--             android:id="@+id/btnQualityOrBlackScreen" -->
+<!--             android:layout_width="45dp" -->
+<!--             android:layout_height="45dp" -->
+<!--             android:background="@null" -->
+<!--             android:gravity="bottom|center_horizontal" -->
+<!--             android:textColor="@drawable/normal_bottom_button_text_color" -->
+<!--             android:textSize="@dimen/text_size_11" /> -->
+    </com.rd.lib.ui.RotateRelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/living_cameramore_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/living_bar"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical" >
+
+            <com.rd.lib.ui.RotateImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="56dp"
+                android:src="@drawable/iving_cameramore_bar_bg1"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/corners_bg"
+                android:orientation="horizontal" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnShootingRatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/btnWating"
+                    android:clickable="true"
+                    android:src="@drawable/btn_shooting_ratio"
+                    android:visibility="visible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnWating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/btnFlashModeCtrl"
+                    android:clickable="true"
+                    android:src="@drawable/living_waiting"
+                    android:visibility="visible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnFlashModeCtrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:clickable="true"
+                    android:src="@drawable/camera_flash_status" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.rd.lib.ui.RotateRelativeLayout>

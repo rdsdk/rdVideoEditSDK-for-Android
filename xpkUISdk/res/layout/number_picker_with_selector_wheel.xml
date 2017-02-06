@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:numpicker="http://schemas.android.com/apk/res-auto" >
+
+    <!-- @hide Color for the solid color background if such for optimized rendering. -->
+    <!-- <attr name="solidColor" format="color|reference" /> -->
+    <!-- @hide The divider for making the selection area. -->
+    <!-- <attr name="selectionDivider" format="reference" /> -->
+    <!-- @hide The height of the selection divider. -->
+    <!-- <attr name="selectionDividerHeight" format="dimension" /> -->
+    <!-- @hide The distance between the two selection dividers. -->
+    <!-- <attr name="selectionDividersDistance" format="dimension" /> -->
+    <!-- @hide The min height of the NumberPicker. -->
+    <!-- <attr name="internalMinHeight" format="dimension" /> -->
+    <!-- @hide The max height of the NumberPicker. -->
+    <!-- <attr name="internalMaxHeight" format="dimension" /> -->
+    <!-- @hide The min width of the NumberPicker. -->
+    <!-- <attr name="internalMinWidth" format="dimension" /> -->
+    <!-- @hide The max width of the NumberPicker. -->
+    <!-- <attr name="internalMaxWidth" format="dimension" /> -->
+    <!-- @hide The layout of the number picker. -->
+    <!-- <attr name="internalLayout" format="reference" /> -->
+    <!-- @hide The drawable for pressed virtual (increment/decrement) buttons. -->
+    <!-- <attr name="virtualButtonPressedDrawable" format="reference" /> -->
+<!--   android:textColor="?android:attr/textColorPrimary" -->
+    <view
+        android:id="@+id/np__numberpicker_input"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        class="net.simonvt.numberpicker.NumberPicker$CustomEditText"
+        android:background="@null"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+</merge>

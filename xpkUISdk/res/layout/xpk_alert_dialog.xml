@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xpk_dialog_bg"
+    android:minWidth="200dp"
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables" >
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical|left"
+        android:minHeight="60dp"
+        android:textColor="@color/edit_text_gray"
+        android:textSize="17dp"
+        android:visibility="visible"
+        tools:ignore="SelectableText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/grid_listview_item_backgroup" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ListView
+            android:id="@+id/lvItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnPositive"
+                style="@style/alert_dialog_positive_btn_text_style"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:minWidth="100dp" />
+
+            <ImageView
+                android:id="@+id/ivInterval"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnNegative"
+                style="@style/alert_dialog_positive_btn_text_style"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:minWidth="100dp" />
+
+            <ImageView
+                android:id="@+id/ivExtra"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnExtra"
+                style="@style/alert_dialog_positive_btn_text_style"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:minWidth="100dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

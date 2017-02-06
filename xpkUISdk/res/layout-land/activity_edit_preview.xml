@@ -1,0 +1,275 @@
+<com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <com.rd.xpkuisdk.ui.PriviewLayout
+        android:id="@+id/mroot_priview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.rd.xpkuisdk.ui.PriviewLinearLayout
+            android:id="@+id/the_priview_layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <FrameLayout
+                    android:id="@+id/flUpperZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/theframe" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RelativeLayout
+                            android:id="@+id/viewLeft"
+                            android:layout_width="@dimen/land_left_width"
+                            android:layout_height="match_parent"
+                            android:background="@color/edit_menu_bg" >
+
+                            <ImageView
+                                android:id="@+id/ivSure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/land_edit_sure" />
+
+                            <ImageView
+                                android:id="@+id/ivCancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/ivSure"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/land_edit_close" />
+
+                            <ImageView
+                                android:id="@+id/public_menu_sure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/land_edit_sure"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/public_menu_cancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/public_menu_sure"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="15dp"
+                                android:background="@drawable/land_edit_close"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/viewRight"
+                            android:layout_width="@dimen/land_right_width"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/edit_menu_bg" >
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/viewRight"
+                            android:layout_toRightOf="@+id/viewLeft" >
+
+                            <com.rd.lib.ui.PreviewFrameLayout
+                                android:id="@+id/rlPreview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true" >
+
+                                <com.rd.xpk.editor.EnhancePlaybackView
+                                    android:id="@+id/epvPreview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                                <com.rd.lib.ui.PreviewFrameLayout
+                                    android:id="@+id/rlPreview_player"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true" >
+
+                                    <ImageView
+                                        android:id="@+id/ivPlayerState"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:contentDescription="@string/empty"
+                                        android:onClick="clickView"
+                                        android:scaleType="center"
+                                        android:src="@drawable/btn_play" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlAddTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="7dp"
+                                        android:background="@drawable/progress_time_bg"
+                                        android:visibility="invisible" >
+
+                                        <TextView
+                                            android:id="@+id/tvAddTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size_25" />
+
+                                        <TextView
+                                            android:id="@+id/tvOldTime"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvAddTime"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/text_size_18" />
+                                    </RelativeLayout>
+                                </com.rd.lib.ui.PreviewFrameLayout>
+
+                                <com.rd.xpkuisdk.ui.ProgressView
+                                    android:id="@+id/progressView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlSplitView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:visibility="gone" >
+                                </RelativeLayout>
+
+                                <ImageView
+                                    android:id="@+id/ivProportion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="7dp"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/edit_more_orientation_button" />
+                            </com.rd.lib.ui.PreviewFrameLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewhint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/theframe"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/land_bottom_height"
+                    android:layout_alignParentBottom="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlTitle"
+                        android:layout_width="@dimen/land_left_width"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tvLandTitle"
+                            style="@style/land_title_style"
+                            android:drawableTop="@drawable/land_edit_partedit"
+                            android:text="@string/partedit" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/viewDivider"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/rlTitle"
+                        android:background="@color/edit_menu_bg" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/viewDivider" >
+
+                        <include layout="@layout/preview_edit" />
+
+                        <include layout="@layout/preview_edit_split" />
+                    </FrameLayout>
+                </RelativeLayout>
+
+                <com.rd.xpkuisdk.ui.RdSeekBar
+                    android:id="@+id/sbPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_above="@id/theframe"
+                    android:layout_marginLeft="@dimen/land_left_width"
+                    android:layout_marginRight="@dimen/land_right_width"
+                    android:progressDrawable="@drawable/video_editor_progress"
+                    android:thumb="@null" />
+
+                <LinearLayout
+                    android:id="@+id/llGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/theframe"
+                    android:layout_marginLeft="@dimen/land_left_width"
+                    android:background="@color/transparent_black"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_drag_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:paddingRight="2dp" >
+
+                            <com.rd.xpkuisdk.ui.DraggableAddGridView
+                                android:id="@+id/gridVideosDstArray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:scrollbars="none" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </com.rd.xpkuisdk.ui.PriviewLinearLayout>
+        <!-- 可拖动的层 -->
+
+        <com.rd.xpkuisdk.ui.DraggedTrashLayout
+            android:id="@+id/thelinearDraggedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_black80"
+            android:splitMotionEvents="false"
+            android:visibility="gone" >
+
+            <com.rd.xpkuisdk.ui.DraggedView
+                android:id="@+id/dragged_info_trash_View"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.rd.xpkuisdk.ui.DraggedTrashLayout>
+    </com.rd.xpkuisdk.ui.PriviewLayout>
+
+</com.rd.xpkuisdk.ui.NoneMultiTouchLinearLayout>

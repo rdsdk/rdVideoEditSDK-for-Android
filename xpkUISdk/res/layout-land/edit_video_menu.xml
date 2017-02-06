@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llEditorGroups"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbMusic"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_music"
+            android:text="@string/music" />
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbAudio"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_rb_audio"
+            android:text="@string/audio" />
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbSubtitle"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_word"
+            android:text="@string/subtitle" />
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbFilter"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_filter"
+            android:text="@string/filter" />
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbSpecial"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_special"
+            android:text="@string/special" />
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbPartedit"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/edit_partedit"
+            android:text="@string/partedit" />
+    </LinearLayout>
+
+</LinearLayout>

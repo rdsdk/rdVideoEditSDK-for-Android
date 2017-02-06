@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <com.rd.xpkuisdk.ui.PriviewLayout
+        android:id="@+id/mroot_priview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.rd.xpkuisdk.ui.PriviewLinearLayout
+                android:id="@+id/the_priview_layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical" >
+
+                <com.rd.xpkuisdk.ui.DraggableGridView
+                    android:id="@+id/gridVideosDstArray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbars="none" />
+            </com.rd.xpkuisdk.ui.PriviewLinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sort_gradient_bg_180" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/sort_gradient_bg" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 可拖动的层 -->
+
+        <com.rd.xpkuisdk.ui.DraggedTrashLayout
+            android:id="@+id/thelinearDraggedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:splitMotionEvents="false"
+            android:visibility="gone" >
+
+            <com.rd.xpkuisdk.ui.DraggedView
+                android:id="@+id/draggedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.rd.xpkuisdk.ui.DraggedTrashLayout>
+    </com.rd.xpkuisdk.ui.PriviewLayout>
+
+    <include layout="@layout/public_menu" />
+
+</LinearLayout>

@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_fullscreen_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false"
+        android:visibility="visible" >
+
+        <!-- 拍摄视频界面摄影 -->
+
+        <include layout="@layout/preview_video" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <!-- 引用拍摄界面除底部栏的按钮控件 -->
+
+            <include layout="@layout/indicator_bar" />
+
+            <!-- 底部栏背景图片 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/camera_list_back_color"
+                android:visibility="visible" >
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 滤镜按钮 -->
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnFilterListControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_effects_default"
+                android:gravity="bottom|center_horizontal"
+                android:textColor="@drawable/normal_bottom_button_text_color"
+                android:textSize="@dimen/text_size_11" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llLeftRightControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rrlbtnRecord"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlSelectRecOrPhoto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.rd.lib.ui.RotateRelativeLayout
+                    android:id="@+id/lvSelectRec1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="64dp" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/btnSelectRec1"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/selectrecorphoto_mark" />
+
+                    <TextView
+                        android:id="@+id/tvItembtnSelectRecCaption1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/btnSelectRec1"
+                        android:text="视频"
+                        android:textColor="@color/red"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_15" />
+                </com.rd.lib.ui.RotateRelativeLayout>
+
+                <com.rd.lib.ui.RotateRelativeLayout
+                    android:id="@+id/lvSelectPhoto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_toRightOf="@+id/lvSelectRec1" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/btnSelectPhoto1"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/selectrecorphoto_mark"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tvItembtnSelectPhotoCaption1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/btnSelectPhoto1"
+                        android:text="照片"
+                        android:textColor="@color/white"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_15" />
+                </com.rd.lib.ui.RotateRelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSelectRecOrPhoto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <com.rd.lib.ui.RotateRelativeLayout
+                    android:id="@+id/lvSelectRec2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="64dp"
+                    android:layout_toLeftOf="@+id/lvSelectPhoto2" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/btnSelectRec2"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/selectrecorphoto_mark"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tvItembtnSelectRecCaption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/btnSelectRec2"
+                        android:text="视频"
+                        android:textColor="@color/white"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_15" />
+                </com.rd.lib.ui.RotateRelativeLayout>
+
+                <com.rd.lib.ui.RotateRelativeLayout
+                    android:id="@+id/lvSelectPhoto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="64dp"
+                    android:layout_marginLeft="14dp" >
+
+                    <com.rd.lib.ui.ExtButton
+                        android:id="@+id/btnSelectPhoto2"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/selectrecorphoto_mark" />
+
+                    <TextView
+                        android:id="@+id/tvItembtnSelectPhotoCaption2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toRightOf="@+id/btnSelectPhoto2"
+                        android:text="照片"
+                        android:textColor="@color/red"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_15" />
+                </com.rd.lib.ui.RotateRelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 拍摄按钮 -->
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlbtnRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp" >
+
+            <Button
+                android:id="@+id/btnRecord"
+                style="@style/main_entry_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_shutter_stop_record" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <!-- 删除按钮 -->
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlbtnDeleteVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnDeleteVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/screen_delete"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/normal_bottom_button_text_color"
+                android:textSize="@dimen/text_size_16" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <!-- 横屏删除按钮 -->
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlbtnDeleteVideoForLanscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnDeleteVideoForLanscape"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="#00000000"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@drawable/normal_bottom_button_text_color"
+                android:textSize="@dimen/text_size_15" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <!-- 完成OK按钮 -->
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlbtnOverRecordForLanscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnOverRecordForLanscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_over_rec_for_lanscape"
+                android:gravity="bottom|center_horizontal"
+                android:textColor="@drawable/normal_bottom_button_text_color"
+                android:textSize="@dimen/text_size_11" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_square_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#001f8fe4"
+        android:splitMotionEvents="false"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 引用拍摄界面除底部栏的按钮控件 -->
+
+            <RelativeLayout
+                android:id="@+id/living_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/camera_list_back_color" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnCancelRecord1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="22dp"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/public_menu_cancel"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvTimer1"
+                    style="@style/TimerTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/camera_time_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="gone" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnHelp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:src="@drawable/camera_help"
+                    android:visibility="invisible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnOverRecord1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:src="@drawable/public_menu_sure"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <!-- 时间限制进度条 -->
+
+            <RelativeLayout
+                android:id="@+id/video_new_relative1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/message_text_hint" >
+
+                <ImageView
+                    android:id="@+id/video_new_img_time_atlast1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#fff87a00" />
+
+                <LinearLayout
+                    android:id="@+id/video_new_seekbar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/video_new_img_time_start1"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/video_new_seekbar1"
+                    android:background="@android:color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 摄像头预览区域 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/public_editor_backgroup" >
+
+                <com.rd.xpkuisdk.ui.GlTouchView
+                    android:id="@+id/glTouchView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <com.rd.lib.ui.PreviewFrameLayout
+                        android:id="@+id/frameSquarePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" >
+
+                        <RelativeLayout
+                            android:id="@+id/frameAspectRatioPreview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </com.rd.lib.ui.PreviewFrameLayout>
+                </com.rd.xpkuisdk.ui.GlTouchView>
+
+                <com.rd.lib.ui.ExtButton
+                    android:id="@+id/btnBlackScreen1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_camera_blackscreen_btn_back" />
+            </RelativeLayout>
+
+            <!-- 工具栏设置区域 -->
+
+            <LinearLayout
+                android:id="@+id/llSettingbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="#33333b"
+                android:orientation="horizontal" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnShootingRatio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btnbeauty"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:src="@drawable/btn_shooting_ratio" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnbeauty1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btnWating"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:src="@drawable/living_beauty"
+                    android:visibility="visible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnWating1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btnSwitchCamera"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:src="@drawable/living_waiting"
+                    android:visibility="visible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnSwitchCamera1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/btnFlashModeCtrl"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:src="@drawable/btn_switch_camera" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnFlashModeCtrl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="0"
+                    android:clickable="true"
+                    android:src="@drawable/camera_flash_status" />
+            </LinearLayout>
+
+            <!-- 最底部操作区域 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/camera_list_back_color" >
+
+                <!-- 视频 照片切换按钮" -->
+
+                <LinearLayout
+                    android:id="@+id/llLeftRightControl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/llFitlerAndRecordLayout1"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/rlSelectRecOrPhoto3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <com.rd.lib.ui.RotateRelativeLayout
+                            android:id="@+id/lvSelectRec3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="0dp" >
+
+                            <com.rd.lib.ui.ExtButton
+                                android:id="@+id/btnSelectRec3"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:background="@drawable/selectrecorphoto_mark" />
+
+                            <TextView
+                                android:id="@+id/tvItembtnSelectRecCaption3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_toRightOf="@+id/btnSelectRec3"
+                                android:text="视频"
+                                android:textColor="@color/red"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/text_size_15" />
+                        </com.rd.lib.ui.RotateRelativeLayout>
+
+                        <com.rd.lib.ui.RotateRelativeLayout
+                            android:id="@+id/lvSelectPhoto3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toRightOf="@+id/lvSelectRec3" >
+
+                            <com.rd.lib.ui.ExtButton
+                                android:id="@+id/btnSelectPhoto3"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:background="@drawable/selectrecorphoto_mark"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvItembtnSelectPhotoCaption3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_toRightOf="@+id/btnSelectPhoto3"
+                                android:text="照片"
+                                android:textColor="@color/white"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/text_size_15" />
+                        </com.rd.lib.ui.RotateRelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSelectRecOrPhoto4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <com.rd.lib.ui.RotateRelativeLayout
+                            android:id="@+id/lvSelectRec4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="0dp"
+                            android:layout_toLeftOf="@+id/lvSelectPhoto4" >
+
+                            <com.rd.lib.ui.ExtButton
+                                android:id="@+id/btnSelectRec4"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:background="@drawable/selectrecorphoto_mark"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tvItembtnSelectRecCaption4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_toRightOf="@+id/btnSelectRec4"
+                                android:text="视频"
+                                android:textColor="@color/white"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/text_size_15" />
+                        </com.rd.lib.ui.RotateRelativeLayout>
+
+                        <com.rd.lib.ui.RotateRelativeLayout
+                            android:id="@+id/lvSelectPhoto4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="0dp"
+                            android:layout_marginLeft="14dp" >
+
+                            <com.rd.lib.ui.ExtButton
+                                android:id="@+id/btnSelectPhoto4"
+                                android:layout_width="6dp"
+                                android:layout_height="6dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:background="@drawable/selectrecorphoto_mark" />
+
+                            <TextView
+                                android:id="@+id/tvItembtnSelectPhotoCaption4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_toRightOf="@+id/btnSelectPhoto4"
+                                android:text="照片"
+                                android:textColor="@color/red"
+                                android:textIsSelectable="false"
+                                android:textSize="@dimen/text_size_15" />
+                        </com.rd.lib.ui.RotateRelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFitlerAndRecordLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <!-- 滤镜按钮 -->
+
+                    <Button
+                        android:id="@+id/btnFilterListControl1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/icon_effects_default" />
+
+                    <!-- 拍摄按钮 -->
+
+                    <com.rd.lib.ui.RotateRelativeLayout
+                        android:id="@+id/rrlbtnRecord1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/btnRecord1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_shutter_stop_record" />
+                    </com.rd.lib.ui.RotateRelativeLayout>
+
+                    <!-- 删除按钮 -->
+
+                    <com.rd.lib.ui.RotateRelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginRight="32dp"
+                        android:layout_weight="0" >
+
+                        <com.rd.lib.ui.ExtButton
+                            android:id="@+id/btnDeleteVideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/screen_delete"
+                            android:gravity="bottom|center_horizontal"
+                            android:textColor="@drawable/normal_bottom_button_text_color"
+                            android:textSize="@dimen/text_size_11" />
+                    </com.rd.lib.ui.RotateRelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:id="@+id/rlFilterList"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="bottom" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_entry_capture_bottom_back"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/filter_list_padding_size" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btncloseFilterList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_close_filterlist"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <com.rd.xpkuisdk.ui.HorizontalListViewCamera
+                android:id="@+id/lvFilterList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_entry_capture_bottom_back"
+                android:paddingBottom="10dp"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/llfiltersContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/filter_list_padding_size" />
+            </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
+        </LinearLayout>
+    </com.rd.lib.ui.RotateRelativeLayout>
+
+    <include layout="@layout/traning_message" />
+
+    <TextView
+        android:id="@+id/waiting_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="120sp"
+        android:visibility="gone" >
+    </TextView>
+
+    <!-- 黑屏铺满 -->
+
+    <FrameLayout
+        android:id="@+id/flBlackScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:visibility="gone" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- 防止部分分辨率机型中间合不拢 -->
+        <!-- 闸门底部 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:background="@color/transparent" />
+
+            <ImageView
+                android:id="@+id/ivOpenCamAnimBottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:contentDescription="@string/empty"
+                android:scaleType="fitXY"
+                android:src="@drawable/video_edit_start_anim_bottom" />
+        </LinearLayout>
+        <!-- 闸门顶部 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivOpenCamAnimTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.57"
+                android:contentDescription="@string/empty"
+                android:scaleType="fitXY"
+                android:src="@drawable/video_edit_start_anim_top" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.43"
+                android:background="@color/transparent" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

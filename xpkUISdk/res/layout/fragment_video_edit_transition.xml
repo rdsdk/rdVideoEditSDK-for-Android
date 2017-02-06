@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:orientation="vertical" >
+
+    <!-- 中间的横向滚动布局 -->
+
+    <com.rd.xpkuisdk.ui.HorizontalListViewEx
+        android:id="@+id/hlv_transition_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_container_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.rd.xpkuisdk.ui.HorizontalListViewEx>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/mediaObj_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/transition_radom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:text="@string/transition_random"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+    <!-- 最下面的横向滚动布局 -->
+
+    <com.rd.xpkuisdk.ui.HorizontalListViewEx
+        android:id="@+id/hlv_editing_media_object"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="10dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_container_layout_id2"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="top"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </com.rd.xpkuisdk.ui.HorizontalListViewEx>
+
+</RelativeLayout>

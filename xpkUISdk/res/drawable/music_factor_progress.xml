@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 滑竿背景 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/message_text_hint" />
+
+            <corners android:radius="1.5dp" />
+        </shape>
+    </item>
+    <!-- 进度条 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/white" />
+
+                <corners android:radius="1.5dp" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <solid android:color="@color/transparent_black" />
+
+                <corners android:radius="1.5dp" />
+
+                <stroke
+                    android:width="1dp"
+                    android:color="@color/transparent" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/autoview_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/whatissplit"
+        android:layout_margin="8dp"
+        android:textColor="@color/edit_text_gray"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/dialog_for_split"
+        android:layout_margin="3dp"
+        android:textColor="@color/edit_text_gray"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:id="@+id/dialog_sure"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:textColor="@drawable/alert_button_text_color"
+        android:textSize="@dimen/text_size_18"
+        android:text="@string/sure"/>
+
+</LinearLayout>

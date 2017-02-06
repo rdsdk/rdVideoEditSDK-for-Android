@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xpksdk_main_bg_color" >
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sightseeing_file_showFilePath_height"
+        android:layout_below="@+id/preview_videos_title_bar"
+        android:background="@color/edit_menu_bg"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/setting_about_copyrightinfo_text_size" >
+
+        <ImageButton
+            android:id="@+id/btn_backRootPath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/edit_back_button" />
+
+        <TextView
+            android:id="@+id/tv_rootPath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:ellipsize="middle"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/sightseeing_file_title_text_size" />
+
+        <com.rd.xpkuisdk.ui.CircleProgressBar
+            android:id="@+id/cpb_loadFileProgress"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            rd:extindetermiate="true"
+            rd:extindetermiateDrawable="@drawable/loading_waiting_progress" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/root"
+        android:background="@color/white" >
+
+        <ListView
+            android:id="@+id/lv_folderList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edit_menu_bg"
+            android:divider="@color/edit_music_divider"
+            android:dividerHeight="0.5dp"
+            android:paddingLeft="8dp"
+            android:paddingBottom="55dp"
+            android:paddingRight="8dp" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/rlScan"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent_black" >
+
+            <TextView
+                android:id="@+id/tv_BeginScan"
+                android:layout_width="230dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/music_library_scan_bg"
+                android:gravity="center"
+                android:text="@string/begin_scan"
+                android:textColor="@drawable/select_camera_popwin_textcolor"
+                android:textSize="@dimen/pic_datetime_text_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/preview_videos_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_menu_bgcolor"
+        android:minHeight="50dp"
+        android:splitMotionEvents="false" >
+
+        <Button
+            android:id="@+id/btn_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/public_menu_cancel"
+            android:layout_marginLeft="10dp"
+            android:onClick="clickView" />
+
+        <CheckBox
+            android:id="@+id/cb_selectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/sightseeing_file_titleRight_margin"
+            android:background="@drawable/music_library_deleteall"
+            android:button="@null" />
+
+        <com.rd.lib.ui.ExtTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cb_selectAll"
+            android:layout_toRightOf="@+id/btn_Back"
+            android:background="@null"
+            android:ellipsize="marquee"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:singleLine="true"
+            android:text="@string/activity_label_sightseeing_file"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_title_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/root"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/edit_music_divider" />
+
+</RelativeLayout>

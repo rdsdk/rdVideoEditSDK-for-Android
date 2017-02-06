@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rd.xpkuisdk.ui.HorizontalListViewEx xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hlv_show_styel_listview"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/frag_music_menu_height"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/ll_container_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="10dp" >
+    </LinearLayout>
+
+</com.rd.xpkuisdk.ui.HorizontalListViewEx>

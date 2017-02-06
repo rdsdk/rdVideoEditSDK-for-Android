@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/split_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <!-- android:layout_height="@dimen/splite_layout_height" -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlBottom" >
+
+        <com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView
+            android:id="@+id/priview_edit_split"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none"
+            android:scrollbarStyle="@null"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/timeline_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.rd.xpkuisdk.ui.VideoThumbNailView
+                    android:id="@+id/split_videoview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView>
+
+        <TextView
+            android:id="@+id/prepare_split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/edit_split_line"
+            android:paddingTop="21dp"
+            android:paddingLeft="4dp"
+            android:text="@string/edit_click_split"
+            android:textColor="@color/transparent_white"
+            android:textSize="@dimen/text_size_11" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/prepare_split"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="-20dp" >
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:text="00:00.0"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/split_item_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:text="05:00.0"
+                android:textColor="@color/main_orange"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/tvEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:minHeight="20dp"
+                android:text="00:00"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/public_menu" />
+    </RelativeLayout>
+
+</RelativeLayout>

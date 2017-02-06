@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/scaning_media_dialog_text_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sightseeing_file_showList_item_marginLeft"
+        android:paddingRight="5dp" >
+
+        <!-- android:paddingLeft="@dimen/trim_video_hint_text_size" -->
+        <!-- android:paddingRight="@dimen/sightseeing_file_titleRight_margin" -->
+
+        <TextView
+            android:id="@+id/tv_folderPathName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/select_music_scan_content"
+            android:drawablePadding="15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/sightseeing_file_showList_item_text_size" />
+
+        <CheckBox
+            android:id="@+id/cb_select_one_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/music_library_checkbox"
+            android:button="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </LinearLayout>
+
+</RelativeLayout>

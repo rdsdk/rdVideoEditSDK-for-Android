@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_audio_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llPlayState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_time_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivPlayerState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty"
+            android:minHeight="28dp"
+            android:minWidth="28dp"
+            android:onClick="clickView"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/edit_music_play" />
+
+        <com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView
+            android:id="@+id/audio_horizontal_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/audio_subtitleline_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.rd.xpkuisdk.ui.ThumbNailLine
+                    android:id="@+id/audio_subline_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp" />
+            </LinearLayout>
+        </com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llPlayState" >
+
+        <TextView
+            android:id="@+id/tv_audio_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlBottom"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="@dimen/audio_tv_margin"
+            android:layout_marginRight="@dimen/audio_tv_margin"
+            android:background="@drawable/video_edit_audio_tip_background"
+            android:gravity="center_horizontal"
+            android:text="@string/audio_tip"
+            android:textColor="#545454"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/midLine"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/midLine"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-25dp" >
+
+            <TextView
+                android:id="@+id/tv_audio_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:drawablePadding="1dp"
+                android:drawableTop="@drawable/video_edit_autio_reset_background"
+                android:gravity="center_horizontal"
+                android:text="@string/audio_reset"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_13" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_audio_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/audio_record_record" />
+
+                <TextView
+                    android:id="@+id/tv_audio_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/audio_press"
+                    android:textColor="@color/transparent_white"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_audio_audition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:drawablePadding="1dp"
+                android:drawableTop="@drawable/video_edit_audio_audition_background"
+                android:gravity="center_horizontal"
+                android:text="@string/audio_audition"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

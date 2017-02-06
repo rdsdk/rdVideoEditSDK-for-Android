@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvDialogItem"
+    style="@style/alert_listview_dialog_text_style"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alert_listview_dialog_item_height"
+    android:layout_gravity="center"
+    android:gravity="center" />

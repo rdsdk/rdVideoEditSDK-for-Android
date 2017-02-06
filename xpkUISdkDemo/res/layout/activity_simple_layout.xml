@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/xpk"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="打开视频编辑(方式一)相册选择" />
+
+    <Button
+        android:id="@+id/xpkedit"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="打开视频编辑(方式二)" />
+
+    <Button
+        android:id="@+id/xpkrec"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="录制并编辑" />
+
+    <Button
+        android:id="@+id/xpkrec_back"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="简单录制" />
+
+    <Button
+        android:id="@+id/xpk_player"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="播放器" />
+
+    <Button
+        android:id="@+id/xpk_trim"
+        style="@style/txtStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="onVideo"
+        android:text="截取" />
+
+</LinearLayout>

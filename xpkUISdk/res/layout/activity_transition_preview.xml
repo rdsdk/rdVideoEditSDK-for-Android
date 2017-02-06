@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.rd.xpkuisdk.ui.MultiLineRadioGroup
+            android:id="@+id/multi_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/rlDefault"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="center" >
+
+                <RadioButton
+                    android:id="@+id/transitionDefault"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/transition_default_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/transition_default"
+                    android:textColor="@drawable/edit_text_color"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/transition_null"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_null_button"
+                    android:text="@string/show_style_item_null" />
+
+                <RadioButton
+                    android:id="@+id/transition_wind"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_wind_button"
+                    android:text="@string/show_style_item_wind" />
+
+                <RadioButton
+                    android:id="@+id/transition_recovery"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_recovery_button"
+                    android:text="@string/show_style_item_recovery" />
+
+                <RadioButton
+                    android:id="@+id/transition_mosaic"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_mosaic_button"
+                    android:text="@string/show_style_item_mosaic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/transition_to_up"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_toup_button"
+                    android:text="@string/show_style_item_to_up" />
+
+                <RadioButton
+                    android:id="@+id/transition_to_down"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_todown_button"
+                    android:text="@string/show_style_item_to_down" />
+
+                <RadioButton
+                    android:id="@+id/transition_to_left"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_toleft_button"
+                    android:text="@string/show_style_item_to_left" />
+
+                <RadioButton
+                    android:id="@+id/transition_to_right"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_toright_button"
+                    android:text="@string/show_style_item_to_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/transition_flash_white"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_flash_white_button"
+                    android:text="@string/show_style_item_flash_white" />
+
+                <RadioButton
+                    android:id="@+id/transition_flash_black"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_flash_black_button"
+                    android:text="@string/show_style_item_flash_black" />
+
+                <RadioButton
+                    android:id="@+id/transition_watch"
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_watch_button"
+                    android:text="@string/show_style_item_watch" />
+
+                <RadioButton
+                    style="@style/transition_style"
+                    android:drawableTop="@drawable/transition_watch_normal"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </com.rd.xpkuisdk.ui.MultiLineRadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/rlTransitionApplyToAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/ivTransitionApplyToAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transition_apply_to_all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivTransitionApplyToAll"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/transition_apply_to_all"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rlTransitionApplyToAll"
+            android:layout_marginBottom="20dp" >
+
+            <TextView
+                android:id="@+id/tvTransitionDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="1.00秒"
+                android:textColor="@color/transparent_white"
+                android:textSize="@dimen/text_size_14" />
+
+            <SeekBar
+                android:id="@+id/sbTransitionTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvTransitionDuration"
+                android:max="170"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:progressDrawable="@drawable/transition_duration_progress"
+                android:thumb="@drawable/transition_duration_thumb" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/split_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <!-- android:layout_height="@dimen/splite_layout_height" -->
+
+    <ImageView
+        android:id="@+id/split_PlayerState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/edit_music_play" />
+
+    <TextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="10:85"
+        android:textColor="@color/transparent_white"
+        android:textSize="@dimen/text_size_14" />
+
+    <LinearLayout
+        android:id="@+id/llScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tvEnd"
+        android:layout_toRightOf="@+id/split_PlayerState"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView
+                android:id="@+id/priview_edit_split"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:cacheColorHint="@color/transparent"
+                android:fadingEdge="none"
+                android:scrollbarStyle="@null"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/timeline_media"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.rd.xpkuisdk.ui.VideoThumbNailView
+                        android:id="@+id/split_videoview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.rd.xpkuisdk.videoeditor.widgets.TimelineHorizontalScrollView>
+
+            <TextView
+                android:id="@+id/prepare_split"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableStart="@drawable/edit_split_line"
+                android:paddingLeft="4dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llScrollView"
+        android:layout_marginBottom="5dp" >
+
+        <TextView
+            android:id="@+id/split_item_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:minHeight="20dp"
+            android:text="05:00"
+            android:textColor="@color/main_orange"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+
+</RelativeLayout>

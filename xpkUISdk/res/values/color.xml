@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="public_background_color">#27262C</color>
+    <color name="wordbg">#383838</color>
+    <color name="kxred">#13cadb</color>
+    <color name="kxred_dialog_translucent">#8013cadb</color>
+    <color name="red">#E5004F</color>
+    <color name="mainbg">#1E1E28</color>
+    <color name="white">#FFFFFF</color>
+    <color name="border_no_checked">#888888</color>
+    <color name="item_title_txcolor">#88888888</color>
+    <color name="item_title_bar_bg">#efefef</color>
+    <color name="item_songname_txcolor">#464646</color>
+    <color name="item_duration_txcolor">#b1b1b1</color>
+    <color name="item_art_txcolor">#88888888</color>
+    <color name="item_line_bgcolor">#ebeef3</color>
+    <color name="black">#ff000000</color>
+    <color name="public_title_text_color">#D1D5DE</color>
+    <color name="public_title_text_color_d">#545454</color>
+    <color name="public_title_text_color_p">#9FD1D5DE</color>
+    <color name="transparent">#00000000</color>
+    <color name="video_Details_textview_text_color">#545454</color>
+    <color name="kx_title_bar_bg">#E7E7E7</color>
+    <color name="main_navigation_text_color">#888888</color>
+    <color name="main_navigation_select_color">#ffffff</color>
+    <color name="main_classify_video_text_color">#444444</color>
+    <color name="white_divider">#33ffffff</color>
+    <color name="orientation_text">#afafaf</color>
+    <color name="orientation_text_translucent">#80afafaf</color>
+    <color name="public_gradient_background_color">#0027262C</color>
+    <color name="edit_item_more">#f87a00</color>
+    <color name="edit_item_more_press">#80f87a00</color>
+    <color name="crop_rotate_main_bg">#0e0e10</color>
+    <color name="edit_menu_bg">#33333b</color>
+    <color name="edit_menu_bg_transparent">#0033333b</color>
+    <color name="edit_music_divider">#62626e</color>
+    <color name="edit_music_soundtrack_bg">#19181d</color>
+    <color name="main_orange_old">#f87a00</color>
+    <color name="main_orange">#ffd500</color>
+    <color name="main_orange_transparent_66">#b2ffd500</color>
+    <color name="main_orange_transparent_50">#b2ffd500</color>
+    <color name="edit_text_gray">#545454</color>
+
+    <!-- <color name="apk_download_progressbar_color">#11a9e8</color> -->
+    <color name="scan_music_dialog_color">#D7D7D7</color>
+    <color name="create_video_title_color">#171b24</color>
+    <color name="create_video_type_color">#545454</color>
+    <color name="create_video_or_color">#808080</color>
+    <color name="edit_page_bg">#F0F1F0</color>
+    <color name="edit_page_hint">#545454</color>
+    <color name="share_white">#ffffff</color>
+    <color name="author_text_color">#00bebe</color>
+    <color name="kxblue">#13cadb</color>
+    <color name="share_text_selector_color">#b60000</color>
+    <color name="trim_thumbnail_bg_color">#9B9B9B</color>
+    <color name="aboutlogin_titlebg">#ededed</color>
+    <color name="maincolor">#ffff0000</color>
+    <color name="mainmaincolor">#b60000</color>
+    <color name="xpksdk_main_bg_color">#ff000000</color>
+    <color name="tab_item_checked_text_color">#FFFFFF</color>
+
+    <!-- 半透明黑色  50透明度 0000000 黑色码 -->
+    <color name="transparent_black">#50000000</color>
+    <color name="transparent_black80">#80000000</color>
+    <color name="transparent_black95">#95000000</color>
+    <color name="thumb_checked">#B213cadb</color>
+    <!-- 半透明 50 白色 -->
+    <color name="transparent_white">#88FFFFFF</color>
+    <color name="transparent80_white">#CDFFFFFF</color>
+    <!-- 半透明  橙色 -->
+    <color name="transparent_orange">#a9e38a43</color>
+
+    <!-- 搜索界面颜色 -->
+
+    <color name="search_hint_color">#b4b4b4</color>
+    <color name="search_hository_item_color">#545454</color>
+    <color name="search_hot_item_color">#171b24</color>
+    <color name="search_related">#9b9b9b</color>
+    <color name="kxsp_video_trim_dialog_bgcolor"> #ededed</color>
+    <color name="local_menu_radiobutton_n">#434343</color>
+    <color name="local_menu_radiobutton_spacing">#a1a1a1</color>
+
+    <!-- 保存分享 -->
+    <color name="weibo_input_text_color">#1b1b1b</color>
+    <color name="video_share_remove_text_color">#424242</color>
+    <color name="video_share_enable_location_text_color">#545454</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#000000</color>
+    <color name="darkgray">#AAAAAA</color>
+
+    <!-- 15/06/23 标题栏全部白色背景 -->
+    <color name="titlebar_bg_color">#1469ac</color>
+    <color name="message_item_line_color">#b0b0b0</color>
+    <color name="baseline_color">#ebeef3</color>
+    <color name="message_item_textcolor">#171b27</color>
+    <color name="message_text_hint">#888888</color>
+    <color name="titlebar_bg_new">#f6f7f9</color>
+    <color name="rangseekbar_progress_tvcolor">#171b24</color>
+    <!-- 标题栏颜色，快秀黑色   快修视频白色 -->
+    <color name="public_titilebar_title_textcolor">#ff000000</color>
+    <!-- <color name="public_title_bg_color">#1469ac</color> -->
+    <!-- 视频裁剪用到 颜色 -->
+    <color name="crop_shadow_color">#CF000000</color>
+    <color name="crop_shadow_wp_color">#4F000000</color>
+    <color name="crop_wp_markers">#7FFFFFFF</color>
+    <color name="not_found_text_color">#888888</color>
+    <color name="grid_listview_item_backgroup">#E8E9ED</color>
+    <color name="grid_listview_item_outer">#9D9DB2</color>
+    <color name="share_titlebar_color">#FDC0BF</color>
+    <color name="rangeseekbarstart">#1cb3a0</color>
+    <color name="rangeseekbarend">#33c3e8</color>
+    <!-- <color name="rangeseekbarstart">#bf1cb3a0</color>1cb3a0 -->
+    <!-- <color name="rangeseekbarend">#bf33c3e8</color>33c3e8 -->
+    <color name="main_color">#13cadb</color>
+    <color name="edit_rightbtn_textcolor">#13cadb</color>
+    <color name="music_text_background">#34333b</color>
+    <color name="music_text_selected">#13cadb</color>
+    <color name="color1">#cccccc</color>
+    <color name="borderline_color">#888888</color>
+    <color name="trash_border_color">#E50050</color>
+    <color name="sub_menu_bgcolor">#27262C</color>
+    <color name="sub_menu_bgcolor_transparent">#8027262C</color>
+    <!-- 27262C -->
+    <color name="square_checked_border">#13CBDC</color>
+    <color name="special_checked">#13cadb</color>
+    <color name="camera_list_back_color">#70000000</color>
+    <color name="auto_tx_color">#13cadb</color>
+    <color name="progress_between">#ffd500</color>
+    <color name="progress_progress">#fcbc7f</color>
+    <color name="progress_n">#2a2a2c</color>
+    <color name="doodle_text_color">#13cada</color>
+    <color name="linear_seekbar_color">#fff87a00</color>
+    <color name="linear_seekbar_color_translucent">#80f87a00</color>
+    <color name="sp_music_divider">#323337</color>
+    <color name="trim_point_color">#D7225A</color>
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:drawingCacheQuality="high"
+    android:minHeight="80.0dip"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/sItemIcon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:background="@drawable/transition_up"
+        android:padding="1dip"
+        android:src="@drawable/transition_up"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="0dip"/>
+
+    <TextView
+       android:id="@+id/title" 
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content" 
+       android:layout_alignTop="@+id/sItemIcon"
+       android:layout_toRightOf="@+id/sItemIcon"
+       android:gravity="center_vertical"
+       android:layout_marginLeft="20dip"
+       android:layout_centerVertical="true"
+       android:textStyle="bold"
+       android:singleLine="true"
+       android:textColor="#000000"
+       android:textSize="18.0sp" />
+
+   <Button android:id="@+id/view_btn"
+       android:scaleType="fitStart"
+	   android:layout_width="30dp"
+	   android:layout_height="33dp"
+		android:background="@drawable/trash_n"
+		
+	 	android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip" />
+
+
+</RelativeLayout>

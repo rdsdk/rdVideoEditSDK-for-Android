@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sub_menu_bgcolor"
+    android:paddingLeft="8dp" >
+
+    <!-- 220*98 -->
+    <TextView
+        android:id="@+id/ttf_tv"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/transparent_white"
+        android:paddingLeft="14dp"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ttf_img"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" >
+
+        <ImageView
+            android:id="@+id/ttf_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/down_width"
+            android:minWidth="@dimen/down_width"
+            android:src="@drawable/down_btn" />
+
+        <com.rd.xpkuisdk.ui.CircleProgressBarView
+            android:id="@+id/ttf_pbar"
+            android:layout_width="@dimen/down_width"
+            android:layout_height="@dimen/down_width"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

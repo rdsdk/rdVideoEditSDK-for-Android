@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/orientation_title"
+        android:textColor="@color/orientation_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp" >
+
+        <LinearLayout
+            android:id="@+id/llMoreOrientation1_1"
+            style="@style/OrientationDialogStyle" >
+
+            <ImageView
+                android:id="@+id/ivMoreOrientation1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/edit_more_orientation_1_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:text="@string/orientation_1_1"
+                android:textColor="@color/orientation_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMoreOrientationLandscape"
+            style="@style/OrientationDialogStyle" >
+
+            <ImageView
+                android:id="@+id/ivMoreOrientationLandscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/edit_more_orientation_landscape" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:text="@string/orientation_landscape"
+                android:textColor="@color/orientation_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMoreOrientationPortrait"
+            style="@style/OrientationDialogStyle" >
+
+            <ImageView
+                android:id="@+id/ivMoreOrientationPortrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/edit_more_orientation_portrait" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/orientation_portrait"
+                android:textColor="@color/orientation_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMoreOrientationAuto"
+            style="@style/OrientationDialogStyle" >
+
+            <ImageView
+                android:id="@+id/ivMoreOrientationAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/edit_more_orientation_auto" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:text="@string/orientation_auto"
+                android:textColor="@color/orientation_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

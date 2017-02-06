@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- xxxhdpi   2K -->
+    <dimen name="video_list_grid_item_width">75dp</dimen>
+    <dimen name="video_list_grid_item_height">75dp</dimen>
+    <dimen name="btn_down_width">30dp</dimen>
+    <dimen name="add_media_width">70dp</dimen>
+    <dimen name="ttf_item_height">42dp</dimen>
+
+    <!-- thumbnail -->
+    <dimen name="style_src_margin">10dp</dimen>
+    <dimen name="down_width">22dp</dimen>
+    <dimen name="splite_layout_height">210dp</dimen>
+    <!-- <dimen name="rangseekbarHeight">45dp</dimen> -->
+    <dimen name="audio_tv_margin">50dp</dimen>
+    <dimen name="music_btn_margin">48dp</dimen>
+
+    <!-- landscape -->
+    <dimen name="land_left_width">65dp</dimen>
+    <dimen name="land_right_width">65dp</dimen>
+    <dimen name="land_right_button_width">55dp</dimen>
+    <dimen name="land_right_button_height">55dp</dimen>
+    <dimen name="land_bottom_height">70dp</dimen>
+    <dimen name="land_button1_margin_height">20dp</dimen>
+    <dimen name="land_button2_margin_height">15dp</dimen>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态 -->
+    <!-- <item android:drawable="@drawable/draggable_grid_close_item_n" android:state_pressed="true"/> -->
+	<!-- 普通状态 -->
+    <item android:drawable="@drawable/draggable_grid_close_item_n"/>
+
+</selector>

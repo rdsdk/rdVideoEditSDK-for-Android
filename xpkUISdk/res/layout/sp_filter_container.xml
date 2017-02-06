@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sp_rl_filter_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" >
+
+    <HorizontalScrollView
+        android:id="@+id/sp_hsv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:id="@+id/ll_sp_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter1"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_01" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_1"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter2"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_02" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_2"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter3"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_03" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter3"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_3"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter4"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_04" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter4"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_4"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter5"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_05" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter5"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_5"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter6"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_06" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter6"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_6"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter7"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_07" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter7"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_7"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter8"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_08" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter8"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_8"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter9"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_09" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter9"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_9"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/sp_rl_filter10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="spFilterClickView" >
+
+                    <ImageView
+                        android:id="@+id/sp_iv_filter10"
+                        style="@style/sp_iv_music_style"
+                        android:background="@drawable/jlu_res_selected"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        style="@style/sp_iv_music_style"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/sp_filter_10" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/sp_tv_filter10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_rl_filter10"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/sp_filter_10"
+                    android:textColor="@drawable/sp_music_text_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

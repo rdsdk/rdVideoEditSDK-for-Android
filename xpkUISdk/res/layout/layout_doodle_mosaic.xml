@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="@null" >
+
+        <RadioGroup
+            android:id="@+id/rg_mosaic_menu_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_00"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_more_n"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_01"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_01"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_02"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_02"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_03"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_03"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_04"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_04"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_05"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_05"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_06"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_06"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_07"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_07"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_08"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_08"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_09"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_09"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_10"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_11"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_mosaic_style_12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/doodle_mosaic_style_background_12"
+                android:button="@null" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_mosaic_privious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/doodle_previous_step_background" />
+
+            <ImageView
+                android:id="@+id/iv_mosaic_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/doodle_next_step_background" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_doodle_paint_size_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp" >
+
+                <ImageView
+                    android:id="@+id/iv_mosaic_paint_image"
+                    android:layout_width="20px"
+                    android:layout_height="20px"
+                    android:layout_centerInParent="true"
+                    android:background="#ff0000"
+                    android:contentDescription="@null"
+                    android:scaleType="matrix" />
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/sb_doodle_paint_size_seekbar"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:progressDrawable="@drawable/doodle_seek_bar_progress"
+                android:thumb="@drawable/doodle_seek_bar_thum" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_doodle_mosaic_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/doodle_mosaic_cancel_background"
+            android:visibility="gone" >
+        </ImageView>
+
+        <RadioGroup
+            android:id="@+id/rg_doodle_paint_eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_doodle_paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/doodle_paint_background"
+                android:text="涂鸦笔"
+                android:textColor="@color/doodle_text_color"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rb_doodle_eraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:drawableTop="@drawable/doodle_eraser_background"
+                android:text="橡皮擦"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_doodle_mosaic_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/doodle_mosaic_done_background"
+            android:visibility="gone" >
+        </ImageView>
+    </RelativeLayout>
+
+</RelativeLayout>

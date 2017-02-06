@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/camera_preview_layout_margin_bottom"
+    android:background="@drawable/public_editor_backgroup" >
+
+    <com.rd.xpkuisdk.ui.GlTouchView
+        android:id="@+id/glTouchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/frameAspectRatioPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.rd.xpkuisdk.ui.GlTouchView>
+
+</RelativeLayout>

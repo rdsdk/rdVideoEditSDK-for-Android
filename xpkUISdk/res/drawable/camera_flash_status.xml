@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中摄影界面顶部部闪光灯按钮的状态改变，从上到下分别是选中时、默认时 -->
+    <item android:drawable="@drawable/camare_flare_p" android:state_selected="true"/>
+    <item android:drawable="@drawable/camare_flare_n" />
+
+</selector>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="86dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="0dp"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="top|center_horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_transition_item_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" >
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/media_id"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/tran_shape"
+                android:gravity="center"
+                android:hint="99"
+                android:textSize="@dimen/text_size_13" 
+                android:textColor="@color/white" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/media_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/tran_shape"
+                android:gravity="center_vertical"
+                android:hint="09:59"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_13" 
+                android:textColor="@color/white" >
+            </TextView>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

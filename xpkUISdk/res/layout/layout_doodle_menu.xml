@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_doodle_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Done" />
+
+        <Button
+            android:id="@+id/btn_doodle_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btn_doodle_done"
+            android:text="Undo" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_doodle_menu_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3C3B43"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_doodle_paint_style"
+            style="@style/sub_menu_rbtn_style"
+            android:checked="true"
+            android:text="@string/subtitle_style" />
+
+        <RadioButton
+            android:id="@+id/rb_doodle_paint_ttf"
+            style="@style/sub_menu_rbtn_style"
+            android:text="@string/subtitle_font_style"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rb_doodle_paint_color"
+            style="@style/sub_menu_rbtn_style"
+            android:text="@string/subtitle_color" />
+
+        <RadioButton
+            android:id="@+id/rb_doodle_paint_size"
+            style="@style/sub_menu_rbtn_style"
+            android:text="@string/subtitle_size" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_doodle_pain_setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/rl_doodle_paint_style_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_doodle_paint_style" />
+
+        <include
+            android:id="@+id/rl_doodle_paint_ttf_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_doodle_paint_ttf"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_doodle_paint_color_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_doodle_paint_color"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_doodle_paint_size_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_doodle_paint_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

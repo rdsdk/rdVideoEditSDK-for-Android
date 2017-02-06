@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="drag_handle" type="id"/>
+    <item name="click_remove" type="id"/>
+    <item name="texture_view_player" type="id"/>
+    <item name="left_view_width" type="id"/>
+    <item name="playhead_offset" type="id"/>
+    <item name="playhead_type" type="id"/>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llBucket"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_camera_popwind_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="17dp"
+        android:text="@string/select_camera_photo"
+        android:textColor="@drawable/select_camera_popwin_textcolor"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/tvVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
+        android:text="@string/select_camera_video"
+        android:textColor="@drawable/select_camera_popwin_textcolor"
+        android:textSize="@dimen/text_size_18" />
+
+</LinearLayout>

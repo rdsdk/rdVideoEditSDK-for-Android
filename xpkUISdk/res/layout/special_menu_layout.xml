@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/special_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242424"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/sp_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/sp_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/sp_style"
+                style="@style/special_radio_btn_style"
+                android:checked="true"
+                android:text="@string/subtitle_style" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/sp_size"
+                style="@style/special_radio_btn_style"
+                android:layout_marginLeft="20dp"
+                android:text="@string/subtitle_size" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/save_special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/music_library_additem_bg"
+            android:gravity="center"
+            android:minHeight="25dp"
+            android:minWidth="45dp"
+            android:text="@string/add"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <GridView
+            android:id="@+id/special_style_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="1dp"
+            android:background="#27262c"
+            android:cacheColorHint="@null"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="4"
+            android:scrollbars="@null"
+            android:verticalSpacing="5dp" >
+        </GridView>
+
+        <com.rd.xpkuisdk.ui.TimeLine
+            android:id="@+id/timeline_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/subtitle_size_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <com.rd.xpkuisdk.ui.SizePicker
+                    android:id="@+id/subtitle_sizepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </com.rd.xpkuisdk.ui.TimeLine>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/special_menu_groups"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#1E1E28"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/funny"
+            style="@style/special_radio_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="5dp"
+            android:text="@string/funny" />
+
+        <RadioButton
+            android:id="@+id/unclassified"
+            style="@style/special_radio_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/funny"
+            android:padding="5dp"
+            android:text="@string/unclassified" />
+
+        <RadioButton
+            android:id="@+id/special_more"
+            style="@style/special_radio_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/down_btn"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/more" />
+    </RelativeLayout>
+    <!-- </RelativeLayout> -->
+
+</LinearLayout>

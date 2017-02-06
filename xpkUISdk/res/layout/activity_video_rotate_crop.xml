@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crop_rotate_main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <!-- 16:9 的视频 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/crop_rotate_main_bg"
+        android:gravity="center" >
+
+        <com.rd.lib.ui.PreviewFrameLayout
+            android:id="@+id/rlVideoCropFramePreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center" >
+
+            <com.rd.xpk.editor.EnhancePlaybackView
+                android:id="@+id/vvMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.rd.xpkuisdk.crop2.CropView
+                android:id="@+id/cvVideoCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ivVideoConver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/public_editor_backgroup"
+                android:contentDescription="@string/empty"
+                android:visibility="gone" />
+        </com.rd.lib.ui.PreviewFrameLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llRotateMirror"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/public_menu_back_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivRotateCounterClock"
+            style="@style/crop_rotate_mirror_style"
+            android:onClick="clickView"
+            android:src="@drawable/crop_rotate_counter_clockwise" />
+
+        <ImageView
+            android:id="@+id/ivMirrorUpdown"
+            style="@style/crop_rotate_mirror_style"
+            android:onClick="clickView"
+            android:src="@drawable/crop_mirror_updown" />
+
+        <ImageView
+            android:id="@+id/ivMirrorLeftright"
+            style="@style/crop_rotate_mirror_style"
+            android:onClick="clickView"
+            android:src="@drawable/crop_mirror_leftright" />
+
+        <TextView
+            android:id="@+id/tvResetAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickView"
+            android:padding="10dp"
+            android:text="@string/crop_mirror_reset"
+            android:textColor="@color/main_orange"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/ivProportion"
+            style="@style/crop_rotate_mirror_style"
+            android:onClick="clickView"
+            android:src="@drawable/edit_proportion" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/public_menu_back_color" >
+
+        <include layout="@layout/public_menu" />
+    </RelativeLayout>
+
+</LinearLayout>

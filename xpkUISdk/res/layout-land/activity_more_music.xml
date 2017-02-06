@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_menu_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/viewLeft"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/edit_menu_bg" >
+
+            <ImageView
+                android:id="@+id/public_menu_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/land_edit_close"
+                android:onClick="clickView" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/musicpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/viewLeft"
+            android:background="@color/edit_menu_bg" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/viewLeft"
+            android:background="@color/edit_music_soundtrack_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/land_bottom_height"
+        android:background="@color/public_background_color" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/land_title_style"
+                android:drawableTop="@drawable/land_edit_music"
+                android:text="@string/music" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:background="@color/edit_menu_bg" />
+
+        <RadioGroup
+            android:id="@+id/musicgroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/ebtnMusicItem"
+            android:layout_toRightOf="@id/rlTitle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/mymusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/land_rg_item_underline"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/mymusic"
+                android:textColor="@drawable/edit_menu_color"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/edit_menu_bg" />
+
+            <RadioButton
+                android:id="@+id/localmusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/land_rg_item_underline"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/localmusic"
+                android:textColor="@drawable/edit_menu_color"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="8dp"
+                android:background="@color/edit_menu_bg" />
+
+            <RadioButton
+                android:id="@+id/historymusic_rbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/land_rg_item_underline"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/histroymusic"
+                android:textColor="@drawable/edit_menu_color"
+                android:textSize="17dp" />
+        </RadioGroup>
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/ebtnMusicItem"
+            android:layout_width="135dp"
+            android:layout_height="30dp"
+			android:layout_toLeftOf="@+id/cbHistorySelectAll"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/land_moremusic_item_bg"
+            android:drawableRight="@drawable/music_library_scan"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="25dp"
+            android:text="@string/scan_media"
+            android:textColor="@drawable/select_camera_popwin_textcolor" />
+
+        <CheckBox
+            android:id="@+id/cbHistorySelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/music_library_deleteall"
+            android:visibility="invisible"
+            android:button="@null" />
+    </RelativeLayout>
+
+</LinearLayout>

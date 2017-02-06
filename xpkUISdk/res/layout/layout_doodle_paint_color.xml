@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:squareview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.rd.ui.ColorPicker
+        android:id="@+id/subtitle_picker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_paint_color_bottom_layout" >
+    </com.rd.ui.ColorPicker>
+
+    <LinearLayout
+        android:id="@+id/ll_paint_color_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_stroke"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <RadioGroup
+            android:id="@+id/shadow_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.rd.ui.SquareView
+                android:id="@+id/subtitle_stroke_none"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:button="@color/transparent"
+                android:checked="true"
+                squareview:square_bg="@color/transparent_white"
+                squareview:square_text="@string/none" />
+
+            <com.rd.ui.SquareView
+                android:id="@+id/subtitle_stroke_white"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:button="@color/transparent"
+                squareview:square_bg="@color/white" />
+
+            <com.rd.ui.SquareView
+                android:id="@+id/subtitle_stroke_black"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:button="@color/transparent"
+                squareview:square_bg="@color/black" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

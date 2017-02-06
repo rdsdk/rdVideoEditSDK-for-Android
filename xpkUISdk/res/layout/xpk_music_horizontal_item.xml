@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_local_music_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rl_music_item_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_item_layout_01"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_item_thubmnail_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_item_text_01"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/music_text_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_selected_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_music_item_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_item_layout_02"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_item_thubmnail_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_item_text_02"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/music_text_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_selected_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_music_item_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_item_layout_03"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_item_thubmnail_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_item_text_03"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/music_text_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_selected_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_music_item_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/ll_item_layout_04"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_item_thubmnail_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_item_text_04"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/music_text_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_selected_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xpksdk_main_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_to_video_selected_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainbg"
+        android:minHeight="@dimen/public_titlebar_minheight" >
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/public_menu_cancel" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="-1dp"
+                android:background="@drawable/radiobtn_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/select_media_title_video"
+                android:textColor="@drawable/video_selected_rb_textcolor"
+                android:textSize="@dimen/text_size_16" />
+
+            <RadioButton
+                android:id="@+id/rbPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/radiobtn_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/select_media_title_photo"
+                android:textColor="@drawable/video_selected_rb_textcolor"
+                android:textSize="@dimen/text_size_16" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/select_camera_button" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/media_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/xpksdk_main_bg_color"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/import_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/text_size_14"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageButton
+            android:id="@+id/import_btn"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/main_orange"
+            android:src="@drawable/import_btn_sure" />
+    </RelativeLayout>
+
+</LinearLayout>

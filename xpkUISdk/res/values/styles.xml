@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Animation.EffectsLiveCameraSetting" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/live_setting_open</item>
+        <item name="android:windowExitAnimation">@anim/live_setting_close</item>
+    </style>
+
+    <style name="TimerTextStyle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">14.0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:shadowColor">#ff7f7f7f</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="FliterBucketStyle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/item_fliter_underline</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+    </style>
+
+    <style name="main_entry_button" parent="default_audio_button">
+        <item name="android:textSize">@dimen/text_size_11</item>
+        <item name="android:textColor">@drawable/normal_bottom_button_text_color</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">-14dp</item>
+    </style>
+
+    <style name="main_title_bar_button" parent="@style/public_title_bar_button">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="search_title_button" parent="@style/public_title_bar_button">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:minWidth">45dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="dialogAnimation" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+    <style name="listviewDialogAnimation" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@drawable/dialog_trans</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/dialogAnimation</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@drawable/dialog_trans</item>
+    </style>
+
+    <style name="alert_listview_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">@dimen/main_classify_title_left_text_size</item>
+    </style>
+
+    <style name="alert_listview_dialog_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">@dimen/main_classify_title_left_text_size</item>
+    </style>
+
+    <style name="listviewDialog" parent="dialog">
+        <item name="android:windowAnimationStyle">@style/listviewDialogAnimation</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="selectDialog" parent="dialog">
+        <item name="android:windowBackground">@drawable/alert_dialog_bg</item>
+        <item name="android:maxWidth">300dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="public_title_bar_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">30dp</item>
+        <item name="android:paddingLeft">3.3dp</item>
+        <item name="android:paddingRight">3.3dp</item>
+        <item name="android:paddingTop">3.3dp</item>
+        <item name="android:paddingBottom">5.5dp</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@drawable/main_button_text_color</item>
+    </style>
+
+    <style name="edit_more_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">30dp</item>
+        <item name="android:paddingLeft">3.3dp</item>
+        <item name="android:paddingRight">3.3dp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@drawable/edit_more_text_color</item>
+    </style>
+
+    <style name="padding_margin">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="crop_mode_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@drawable/select_camera_popwin_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="crop_radiogroup_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/edit_proportion_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">@dimen/text_size_11.5</item>
+    </style>
+
+    <style name="crop_radiogroup_land_style" parent="@style/crop_radiogroup_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">0</item>
+    </style>
+
+    <style name="alert_dialog_negtive_btn_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">16dp</item>
+    </style>
+
+    <style name="alert_dialog_positive_btn_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">16dp</item>
+    </style>
+
+    <style name="crop_rotate_mirror_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="info_title_style">
+        <item name="android:textSize">@dimen/editview_text_size</item>
+        <item name="android:textColor">@color/edit_page_hint</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="alert_dialog_bg_style">
+        <item name="android:background">@drawable/alert_dialog_bg</item>
+    </style>
+
+    <style name="land_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/transparent_white</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">@dimen/text_size_13</item>
+    </style>
+
+    <style name="music_library_titlemenu">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textColor">@drawable/select_camera_popwin_textcolor</item>
+        <item name="android:textSize">@dimen/text_size_13</item>
+    </style>
+
+    <!-- gridview样式 -->
+    <style name="classify_gridview">
+        <item name="android:numColumns">1</item>
+    </style>
+    <!-- 下载音乐进度条 -->
+
+    <style name="download_progressbar_style" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">5dip</item>
+        <item name="android:max">100</item>
+        <item name="android:minHeight">1dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+    </style>
+
+    <style name="selected_music_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="default_audio_button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="baseline_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/baseline_color</item>
+    </style>
+
+    <style name="public_titlebar_style_new">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/public_titlebar_minheight</item>
+    </style>
+
+    <style name="public_titlebar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/public_titlebar_minheight</item>
+    </style>
+
+    <style name="video_list_grid_view_style" parent="android:Widget.GridView">
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:columnWidth">@dimen/video_list_grid_item_width</item>
+        <item name="android:alwaysDrawnWithCache">true</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:horizontalSpacing">@dimen/video_list_grid_item_space_size</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:paddingLeft">@dimen/video_list_grid_item_space_size</item>
+        <item name="android:paddingRight">@dimen/video_list_grid_item_space_size</item>
+        <item name="android:paddingBottom">@dimen/video_list_grid_item_space_size</item>
+        <item name="android:verticalSpacing">@dimen/video_list_grid_item_space_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="main_entry_no_videos" parent="android:Widget.TextView">
+        <item name="android:drawableTop">@drawable/ic_gallery_empty1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/not_found_text_color</item>
+        <item name="android:textSize">@dimen/text_size_21</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">@dimen/text_size_10</item>
+    </style>
+
+    <style name="listview_item_duration" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_white</item>
+        <!-- <item name="android:textSize">@dimen/text_size_11</item> -->
+        <item name="android:textSize">@dimen/text_size_11.5</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+    <style name="listview_item_text_shadow" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">1</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">0.5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="listview_item_text_time" parent="listview_item_text_shadow">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/transparent_white</item>
+    </style>
+
+    <style name="twvThumb">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="priview_text_style">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="transition_style">
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@drawable/edit_text_color</item>
+        <item name="android:minWidth">55dp</item>
+        <item name="android:background"> @null</item>
+        <item name="android:drawablePadding"> 5dp</item>
+    </style>
+
+    <style name="menu_style" parent="@style/priview_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">55dp</item>
+        <item name="android:background"> @null</item>
+    </style>
+
+    <style name="edit_menu" parent="@style/menu_style">
+        <item name="android:button">@null</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:layout_marginLeft">@dimen/edit_video_ment_item_marginLeft</item>
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+    </style>
+
+    <style name="edit_land_menu" parent="@style/menu_style">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+        <item name="android:onClick">clickView</item>
+    </style>
+
+    <style name="edit_menu_style" parent="@style/menu_style">
+        <item name="android:button">@null</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+    </style>
+
+    <style name="edit_menu_s" parent="@style/priview_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">70dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@color/public_menu_back_color</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/edit_text_color</item>
+    </style>
+
+    <style name="crop_rotate_menu" parent="@style/priview_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/edit_text_color</item>
+    </style>
+
+    <style name="media_timeline_item">
+        <item name="android:longClickable">true</item>
+    </style>
+
+    <style name="main_text_style">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="speed_tv_style">
+        <item name="android:minHeight">100dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/speed_line_button_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/speed_line_button_back_color</item>
+    </style>
+    <!-- 分割线 -->
+    <style name="speed_line_style">
+        <item name="android:minHeight">100dp</item>
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+    <!-- 字幕菜单 -->
+    <style name="subtitle_menu_style">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="sub_menu_rbtn_style" parent="@style/subtitle_menu_style">
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+        <item name="android:background">@drawable/item_subtitle_underline</item>
+    </style>
+
+    <style name="land_sub_menu_rbtn_style" parent="@style/subtitle_menu_style">
+        <item name="android:textColor">@drawable/edit_menu_color</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@drawable/land_item_subtitle_underline</item>
+    </style>
+
+    <style name="special_radio_btn_style" parent="@style/sub_menu_rbtn_style">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/item_special_underline</item>
+    </style>
+
+    <style name="audio_text_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="styleEditorDuration" parent="android:Widget.TextView">
+        <item name="android:background">@drawable/transparent_btn_bg</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="music_radio_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@drawable/edit_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/music_radiobutton_backgroud</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">@dimen/dimen_10</item>
+        <item name="android:paddingBottom">@dimen/dimen_10</item>
+    </style>
+
+    <style name="alert_listview_cancel_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">@dimen/main_classify_title_left_text_size</item>
+    </style>
+
+    <style name="list_alert_cancel_text_style" parent="android:Widget.TextView">
+        <item name="android:textColor">@drawable/alert_button_text_color</item>
+        <item name="android:textSize" tools:ignore="SpUsage">@dimen/main_classify_title_left_text_size</item>
+    </style>
+
+    <style name="listviewStyle_trans">
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:background">@null</item>
+    </style>
+    <!-- 编辑更多选项按钮风格 -->
+    <style name="edit_more_button_style">
+        <item name="android:textColor">@drawable/edit_more_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background"> @null</item>
+    </style>
+
+    <!-- 编辑更多画面比例的布局风格 -->
+    <style name="OrientationDialogStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- 极录客radiogroup风格 -->
+    <style name="sp_rg_music_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@drawable/sp_music_text_color</item>
+        <item name="android:button">@null</item>
+    </style>
+    
+    <!-- 极录客imageview风格 -->
+    <style name="sp_iv_music_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

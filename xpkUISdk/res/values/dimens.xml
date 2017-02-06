@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- defalut lib values -->
+    <dimen name="top_title_text_size">19dp</dimen>
+    <dimen name="search_title_textsize">16dp</dimen>
+    <dimen name="activity_setting_text_size">16dp</dimen>
+    <dimen name="sendcode_width">180dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="padding">5dp</dimen>
+    <dimen name="margin">20dp</dimen>
+    <dimen name="marginTop">15dp</dimen>
+    <dimen name="text_size_23">23dp</dimen>
+    <dimen name="text_size_30">30dp</dimen>
+    <dimen name="text_size_10">10dp</dimen>
+    <dimen name="text_size_11">11dp</dimen>
+    <dimen name="text_size_11.5">11.5dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_13">13.3dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_15">15dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_18">18.6dp</dimen>
+    <dimen name="text_size_20">20dp</dimen>
+    <dimen name="text_size_21">21dp</dimen>
+    <dimen name="text_size_22">22dp</dimen>
+    <dimen name="text_size_19">19dp</dimen>
+    <dimen name="text_size_25">25dp</dimen>
+    <dimen name="main_top_text_height">40dp</dimen>
+    <dimen name="text_size_rangseekbar">13dp</dimen>
+    <dimen name="text_size_rangseekbar_bigger">15dp</dimen>
+    <dimen name="rangeseekbar_height">55dp</dimen>
+    <dimen name="state_width">38dp</dimen>
+    <dimen name="radiobottom_height">3dp</dimen>
+
+    <!-- 评论界面 -->
+    <dimen name="video_cmt_text_size_16">16dp</dimen>
+    <dimen name="video_cmt_text_size_14">14dp</dimen>
+    <dimen name="video_cmt_text_size_15">15dp</dimen>
+    <dimen name="video_cmt_text_size_13">13dp</dimen>
+    <dimen name="video_cmt_et_min_height">80dp</dimen>
+    <dimen name="video_cmt_hint_height">40dp</dimen>
+    <dimen name="local_head_height">190dp</dimen>
+    <dimen name="heand_w_h">60dp</dimen>
+    <dimen name="linear_margintop">5dp</dimen>
+    <dimen name="buttonpadding">10dp</dimen>
+    <dimen name="editview_text_size">16sp</dimen>
+    <dimen name="local_others">14sp</dimen>
+    <dimen name="button_text_size">15dp</dimen>
+    <dimen name="mainhead">30dp</dimen>
+    <dimen name="discuss_thum_w">100dp</dimen>
+    <dimen name="discuss_thum_h">60dp</dimen>
+    <dimen name="athaoyou">14sp</dimen>
+    <dimen name="public_share_hint_textsize">10sp</dimen>
+
+    <!-- 视频详情 -->
+    <dimen name="relation_video_item_thumbnail_height">60dp</dimen>
+    <dimen name="relation_video_item_thumbnail_width">107dp</dimen>
+    <dimen name="related_video_title_tv_size">16dp</dimen>
+    <dimen name="related_video_plater_timer_tv_size">12dp</dimen>
+    <dimen name="related_video_text_size_18">18.6dp</dimen>
+    <dimen name="related_video_text_size_14">14dp</dimen>
+    <dimen name="related_video_option_height">50dp</dimen>
+    <dimen name="btn_textsize">14sp</dimen>
+    <dimen name="submit_width">40dp</dimen>
+    <dimen name="create_title_margintop">8dp</dimen>
+    <dimen name="select_pic_width">70dp</dimen>
+    <dimen name="save_gvPlatformList_width">134dp</dimen>
+    <dimen name="save_share_athaoyou_height">30dp</dimen>
+    <dimen name="save_share_linear_height">50dp</dimen>
+    <dimen name="video_detail_player_margin_top">-5dp</dimen>
+    <!-- 首页tab选项相关 -->
+    <dimen name="tabview_paddingLeft">15dp</dimen>
+    <dimen name="tabview_paddingRight">15dp</dimen>
+    <dimen name="tabview_paddingTop">10dp</dimen>
+    <dimen name="tabview_paddingBottom">10dp</dimen>
+    <dimen name="tabview_paddingRight_selected">9dp</dimen>
+    <!-- 首页分类 -->
+    <dimen name="classfiy_tabpage_title_minheight">40dp</dimen>
+    <dimen name="classfiy_tabpage_text_size">18dp</dimen>
+    <dimen name="classify_head_advertis_height">30dp</dimen>
+    <dimen name="classify_head_advertis_text_size">15dp</dimen>
+    <dimen name="main_classify_title_left_img_height">13dp</dimen>
+    <dimen name="main_classify_title_left_text_size">19dp</dimen>
+    <dimen name="main_classify_gvimg_item_text_size">14dp</dimen>
+    <dimen name="alert_listview_dialog_item_height">40dp</dimen>
+    <dimen name="alert_listview_dialog_item_text_size">19dp</dimen>
+    <!-- 个人主页 -->
+    <dimen name="tab_layer_radiobtn_right_margin">20dp</dimen>
+    <dimen name="scaning_music_dialog_bottom_height">45dp</dimen>
+    <dimen name="select_music_text_size">18dp</dimen>
+    <!-- 积分记录界面， -->
+    <dimen name="sore_item_textsize">17sp</dimen>
+    <!-- 游览文件界面 -->
+    <dimen name="sightseeing_file_titleRight_margin">8dp</dimen>
+    <dimen name="sightseeing_file_title_text_size">16dp</dimen>
+    <dimen name="sightseeing_file_showFilePath_height">60dp</dimen>
+    <dimen name="sightseeing_file_showList_item_marginLeft">5dp</dimen>
+    <dimen name="sightseeing_file_showList_item_text_size">15dp</dimen>
+    <dimen name="select_music_list_margin">55dp</dimen>
+    <dimen name="select_music_bottom_left">14dp</dimen>
+    <dimen name="select_music_bottom_right">16dp</dimen>
+    <dimen name="select_music_bottom_padding">14dp</dimen>
+    <dimen name="setting_about_copyrightinfo_text_size">10dp</dimen>
+    <dimen name="pic_datetime_text_size">18sp</dimen>
+    <dimen name="comdialog_width">40dp</dimen>
+    <dimen name="share_and_save_btn_height">45dp</dimen>
+
+    <!-- 搜索记录 -->
+
+    <dimen name="hository_item_margin">8dp</dimen>
+    <dimen name="hository_item_padding">5dp</dimen>
+    <dimen name="hository_item_textsize">16dp</dimen>
+    <dimen name="search_padding">4dp</dimen>
+
+    <!-- save share -->
+
+    <dimen name="sharevp_width">60dp</dimen>
+    <dimen name="oneheight">130dp</dimen>
+    <dimen name="select_music_tab_layer_height">40dp</dimen>
+    <dimen name="select_music_tab_layer_rb_size">16dp</dimen>
+    <dimen name="video_details_icon_w">60dp</dimen>
+    <dimen name="friend_item_w">40dp</dimen>
+    <dimen name="audio_speark">120dp</dimen>
+    <!-- 个人中心 -->
+    <dimen name="local_video_user_name_text_size">17dp</dimen>
+    <dimen name="local_video_user_birthdate_text_size">16dp</dimen>
+    <dimen name="item_idol_name_tx_size">16dp</dimen>
+    <dimen name="item_idol_summary_tx_size">15dp</dimen>
+    <dimen name="share_listview_height">50dp</dimen>
+    <dimen name="public_titlebar_minheight">50dp</dimen>
+    <dimen name="downloading_minwidth">250dp</dimen>
+    <dimen name="login_text_size">20sp</dimen>
+    <dimen name="video_editor_list_item_size">40dp</dimen>
+    <dimen name="video_list_view_item_height_min">85dp</dimen>
+    <dimen name="video_list_view_item_divider_height">10dp</dimen>
+    <dimen name="video_list_view_item_padding">5dp</dimen>
+    <dimen name="video_list_view_thumb_item_width">80dp</dimen>
+    <dimen name="video_list_view_thumb_item_height">80dp</dimen>
+    <dimen name="video_list_view_item_height">85dp</dimen>
+    <dimen name="video_list_grid_duration_item_height">14.6dp</dimen>
+    <dimen name="video_list_grid_item_space_size">5dp</dimen>
+
+    <!--  -->
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_90">90dp</dimen>
+    <dimen name="dimen_7">7dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+    <dimen name="borderline_width4">4dp</dimen>
+    <dimen name="borderline_width2">2dp</dimen>
+    <dimen name="ttf_item_height">38dp</dimen>
+    <dimen name="thumbnail_width">96dp</dimen>
+    <dimen name="thumbnail_height">54dp</dimen>
+    <dimen name="down_width">20dp</dimen>
+    <dimen name="rangseekbarHeight">30dp</dimen>
+    <dimen name="handWidth">15dp</dimen>
+    <dimen name="progressbarWidth">2dp</dimen>
+    <dimen name="music_item_width">83dp</dimen>
+    <dimen name="music_item_height">82dp</dimen>
+    <dimen name="mix_audio_padding_size">2dp</dimen>
+    <dimen name="mix_audio_list_item_play_state_size">25dp</dimen>
+    <dimen name="mix_audio_list_item_play_state_margin_top">42dp</dimen>
+    <dimen name="mix_audio_list_item_play_state_margin_left">40dp</dimen>
+    <dimen name="filter_list_item_size">64dp</dimen>
+    <dimen name="filter_list_padding_size">5dp</dimen>
+    <dimen name="doodle_button_width">80dp</dimen>
+    <dimen name="audio_tv_margin">20dp</dimen>
+    <dimen name="radiobtn_padding">18dp</dimen>
+    <dimen name="camera_preview_layout_margin_bottom">0dp</dimen>
+    <dimen name="audio_reset_layout_margin_bottom">25dp</dimen>
+    <dimen name="edit_video_ment_item_marginLeft">15dp</dimen>
+</resources>

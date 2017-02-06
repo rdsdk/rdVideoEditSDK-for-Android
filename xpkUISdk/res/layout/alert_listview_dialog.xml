@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+
+    <ListView
+        android:id="@+id/lvContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/dialog_corners_bg"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp"
+        android:drawSelectorOnTop="false"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent" />
+
+    <Button
+        android:id="@+id/btnAlertCancel"
+        style="@style/list_alert_cancel_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alert_listview_dialog_item_height"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dialog_corners_bg"
+        android:text="取消" />
+
+</LinearLayout>

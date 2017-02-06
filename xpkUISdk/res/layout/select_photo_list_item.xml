@@ -1,0 +1,36 @@
+<com.rd.lib.ui.PreviewFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0.1dip" >
+
+    <!-- android:background="@color/grid_listview_item_outer" -->
+
+    <com.rd.lib.ui.RotateImageView
+        android:id="@+id/ivPhotoListThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:minHeight="@dimen/video_list_grid_item_height"
+        android:minWidth="@dimen/video_list_grid_item_width" />
+
+    <TextView
+        android:id="@+id/ivVideoDur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/select_photo_video_duration_bg"
+        android:contentDescription="@null"
+        android:gravity="right|center_vertical"
+        android:paddingRight="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+
+    <com.rd.xpkuisdk.ui.NumItemView
+        android:id="@+id/ivPhotoListSelected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</com.rd.lib.ui.PreviewFrameLayout>

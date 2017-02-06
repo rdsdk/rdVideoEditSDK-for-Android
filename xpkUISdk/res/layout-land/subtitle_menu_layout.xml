@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subtitle_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3C3B43"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/thelocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3C3B43"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ivFold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/land_sub_arrow_down" />
+
+        <RadioGroup
+            android:id="@+id/subtitle_menu_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3C3B43"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/subtitle_style"
+                style="@style/land_sub_menu_rbtn_style"
+                android:checked="true"
+                android:text="@string/subtitle_style" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/subtitle_ttf"
+                style="@style/land_sub_menu_rbtn_style"
+                android:text="@string/subtitle_font_style" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/subtitle_color"
+                style="@style/land_sub_menu_rbtn_style"
+                android:text="@string/subtitle_color" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/edit_music_divider" />
+
+            <RadioButton
+                android:id="@+id/subtitle_size"
+                style="@style/land_sub_menu_rbtn_style"
+                android:text="@string/subtitle_size" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#3C3B43"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#323232" >
+
+                    <EditText
+                        android:id="@+id/subtitle_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivClear"
+                        android:background="#323232"
+                        android:hint="@string/sub_hint"
+                        android:imeOptions="flagNoExtractUi"
+                        android:maxLength="100"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/transparent_white"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView
+                        android:id="@+id/ivClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/subtitle_clear" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/subtitle_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/music_library_additem_bg"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:minWidth="50dp"
+                android:text="@string/add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sub_menu_bgcolor" >
+
+        <include layout="@layout/subtitle_ttf_layout" />
+
+        <include layout="@layout/subtitle_color_layout" />
+
+        <include layout="@layout/subtitle_size_layout" />
+
+        <include layout="@layout/subtitle_style_layout" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.rd" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.rd.disableSplitTouch" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnableSplitTouch" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="Theme.rd.fullscreen" parent="@style/Theme.rd">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.rd.sharesdk" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

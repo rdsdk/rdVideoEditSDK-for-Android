@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crop_rotate_main_bg"
+    android:orientation="vertical" >
+
+    <!-- 16:9 的视频 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/crop_rotate_main_bg" >
+
+        <RelativeLayout
+            android:id="@+id/viewLeft"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/edit_menu_bg" >
+
+            <ImageView
+                android:id="@+id/public_menu_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/land_button1_margin_height"
+                android:background="@drawable/land_edit_sure"
+                android:onClick="clickView" />
+
+            <ImageView
+                android:id="@+id/public_menu_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/public_menu_sure"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/land_button2_margin_height"
+                android:background="@drawable/land_edit_close"
+                android:onClick="clickView" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/viewRight"
+            android:layout_width="@dimen/land_right_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/edit_menu_bg" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/viewRight"
+            android:layout_toRightOf="@+id/viewLeft" >
+
+            <com.rd.lib.ui.PreviewFrameLayout
+                android:id="@+id/rlVideoCropFramePreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center" >
+
+                <com.rd.xpk.editor.EnhancePlaybackView
+                    android:id="@+id/vvMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.rd.xpkuisdk.crop2.CropView
+                    android:id="@+id/cvVideoCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/ivVideoConver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/public_editor_backgroup"
+                    android:contentDescription="@string/empty"
+                    android:visibility="gone" />
+            </com.rd.lib.ui.PreviewFrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCropMode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/land_bottom_height"
+        android:background="@color/sub_menu_bgcolor" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="@dimen/land_left_width"
+            android:layout_height="@dimen/land_bottom_height" >
+
+            <TextView
+                style="@style/land_title_style"
+                android:drawableTop="@drawable/land_edit_edit"
+                android:text="@string/edit" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:background="@color/edit_menu_bg" />
+
+        <LinearLayout
+            android:id="@+id/llRotateMirror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/rlTitle"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/ivRotateCounterClock"
+                style="@style/crop_rotate_mirror_style"
+                android:onClick="clickView"
+                android:src="@drawable/crop_rotate_counter_clockwise" />
+
+            <ImageView
+                android:id="@+id/ivMirrorUpdown"
+                style="@style/crop_rotate_mirror_style"
+                android:onClick="clickView"
+                android:src="@drawable/crop_mirror_updown" />
+
+            <ImageView
+                android:id="@+id/ivMirrorLeftright"
+                style="@style/crop_rotate_mirror_style"
+                android:onClick="clickView"
+                android:src="@drawable/crop_mirror_leftright" />
+
+            <TextView
+                android:id="@+id/tvResetAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickView"
+                android:padding="10dp"
+                android:text="@string/crop_mirror_reset"
+                android:textColor="@color/main_orange"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/ivProportion"
+                style="@style/crop_rotate_mirror_style"
+                android:onClick="clickView"
+                android:src="@drawable/edit_proportion" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/subtitle_style_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:visibility="visible" >
+
+    <GridView
+        android:id="@+id/style_sub"
+        style="@style/listviewStyle_trans"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:scrollbars="@null" >
+    </GridView>
+
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 垃圾箱 -->
+    <item android:drawable="@drawable/trash_p" android:state_pressed="true"/>
+    <item android:drawable="@drawable/trash_n"/>
+
+</selector>

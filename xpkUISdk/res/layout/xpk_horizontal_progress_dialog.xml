@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:rd="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/horiProgressDialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:ignore="UseCompoundDrawables" >
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="SelectableText" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp" >
+
+        <ProgressBar
+            android:id="@+id/horiProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="170dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_vertical"
+            android:progressDrawable="@drawable/horizontal_progress_bg" />
+
+        <ImageView
+            android:id="@+id/ivCancelExport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/hori_progress_dialog_cancel" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvExportProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        tools:ignore="SelectableText" />
+
+</LinearLayout>

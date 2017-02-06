@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:attrdata="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/public_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/xpksdk_public_title_bar" />
+
+    <com.rd.lib.ui.PreviewFrameLayout
+        android:id="@+id/rlImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black" >
+
+        <com.rd.lib.ui.PreviewFrameLayout
+            android:id="@+id/rlVideoCropFramePreview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <com.rd.xpk.editor.EnhancePlaybackView
+                android:id="@+id/epvPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/ivPlayerState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/empty"
+                android:onClick="clickView"
+                android:scaleType="center"
+                android:src="@drawable/btn_play" />
+        </com.rd.lib.ui.PreviewFrameLayout>
+
+        <com.rd.xpkuisdk.ui.RdSeekBar
+            android:id="@+id/sbEditor"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:progressDrawable="@drawable/video_editor_progress"
+            android:thumb="@color/transparent"
+            android:thumbOffset="0dp" />
+
+        <TextView
+            android:id="@+id/tvEditorDuration"
+            style="@style/styleEditorDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sbEditor"
+            android:layout_alignParentRight="true" />
+    </com.rd.lib.ui.PreviewFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+        </RelativeLayout>
+
+        <com.rd.xpkuisdk.ui.DragItemScrollView
+            android:id="@+id/drag_image_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            attrdata:sArrays="@array/duration_array" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/durationApplyToAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/image_duration_applytoall"
+                android:paddingLeft="20dp"
+                android:text="@string/apply_to_all"
+                android:textSize="@dimen/text_size_13"
+                android:onClick="clickView"
+                android:textColor="@drawable/image_duration_applytoall_textcolor" />
+       
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/public_menu" />
+
+</LinearLayout>

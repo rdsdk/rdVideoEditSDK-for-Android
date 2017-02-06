@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llPhotoBucket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/select_bucket" />
+
+        <TextView
+            android:id="@+id/tvPhotoBuckname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxWidth="200dp"
+            android:paddingLeft="4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/ivSelectBucket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/select_bucket_dropdown" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlNoVideos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tvNoVideos"
+            style="@style/main_entry_no_videos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/ic_gallery_empty1"
+            android:gravity="center"
+            android:text="@string/photo_not_found"
+            android:textSize="@dimen/text_size_16" />
+    </RelativeLayout>
+
+    <com.rd.xpkuisdk.ui.BounceGridView
+        android:id="@+id/gridVideosSelector"
+        style="@style/video_list_grid_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llPhotoBucket"
+        android:numColumns="4" >
+    </com.rd.xpkuisdk.ui.BounceGridView>
+
+</RelativeLayout>
