@@ -21,12 +21,12 @@
 * **照片**
 	当前摄像头画面保存到图片
 	
-####&emsp;部分功能截图
+####&emsp;截图
 <img src="website/static/camera1.jpg" width = "200" /> <img src="website/static/camera2.jpg" width = "200" /> <img src="website/static/camera3.jpg" width = "200" />
 
 <img src="website/static/camera4.jpg" width = "600" />
 
-####2.编辑
+####2.视频编辑
 * **滤镜**
 	内置主流滤镜，支持扩展更多滤镜
 * **字幕、特效**
@@ -55,17 +55,26 @@
 	支持图片时长设置；
 	支持视频调序等
 	
-####&emsp;部分功能截图
+####&emsp;截图
 <img src="website/static/edit1.jpg" width = "200" /> <img src="website/static/edit2.jpg" width = "200" /> <img src="website/static/edit3.jpg" width = "200" /> <img src="website/static/edit4.jpg" width = "200" />
 
 <img src="website/static/edit5.jpg" width = "200" /> <img src="website/static/edit6.jpg" width = "200" /> <img src="website/static/edit7.jpg" width = "200" /> <img src="website/static/edit8.jpg" width = "200" />
 
-[**申请试用**](http://dianbook.17rd.com/business/verify/login)
+###[申请试用](http://dianbook.17rd.com/business/verify/login)
 
-**锐动视频编辑SDK开发文档:**
+**开发文档:**
 
 [点击查看](Android锐动视频编辑SDK文档.pdf)
 
-**锐动视频编辑SDK接口文档:**
+**JAVA接口文档:**
 
 [点击查看](http://htmlpreview.github.io/?https://github.com/rdsdk/rdVideoEditSDK-for-Android/blob/master/xpkUISdk/docs/xpkUISdk/index.html)
+
+**咨询电话: 4008989105**
+
+**客服电话: 15313066905 (周一至周五 9:00-18:00)**
+
+**客服邮箱：<2637433751@qq.com>**
+
+
+
