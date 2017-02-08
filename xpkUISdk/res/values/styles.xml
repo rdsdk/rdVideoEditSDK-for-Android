@@ -25,7 +25,7 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">60dp</item>
+        <item name="android:minHeight">50dp</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_18</item>
         <item name="android:button">@null</item>

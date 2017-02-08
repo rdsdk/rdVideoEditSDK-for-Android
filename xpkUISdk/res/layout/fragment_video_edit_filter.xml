@@ -8,14 +8,12 @@
         android:id="@+id/hsvFilterType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:visibility="invisible" >
+        android:scrollbars="none" >
 
         <RadioGroup
             android:id="@+id/rgFliter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:orientation="horizontal" >
 
             <RadioButton
@@ -108,9 +106,10 @@
         android:background="@color/edit_music_divider" />
 
     <HorizontalScrollView
+        android:id="@+id/hsvFilterItem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="3dp"
         android:scrollbars="none" >
 
         <LinearLayout
