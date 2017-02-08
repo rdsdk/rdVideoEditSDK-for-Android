@@ -73,7 +73,7 @@ www.rdsdk.com 致力于专业的人做专业的事，降低客户的开发时间
 
 **开发文档:**
 
-[点击查看](Android锐动视频编辑SDK文档.pdf)
+[点击查看](https://rdsdk.github.io/rdVideoEditSDK-for-Android/Android%E9%94%90%E5%8A%A8%E8%A7%86%E9%A2%91%E7%BC%96%E8%BE%91SDK%E6%96%87%E6%A1%A3.pdf)
 
 **JAVA接口文档:**
 
