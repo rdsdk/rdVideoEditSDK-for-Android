@@ -60,7 +60,16 @@
 
 <img src="website/static/edit5.jpg" width = "200" /> <img src="website/static/edit6.jpg" width = "200" /> <img src="website/static/edit7.jpg" width = "200" /> <img src="website/static/edit8.jpg" width = "200" />
 
-###[申请试用](http://dianbook.17rd.com/business/verify/login)
+
+###功能试用：
+
+您可以在安卓市场搜索“秀拍客”，我们使用本SDK整合的app。目前很多国内外软件企业已经整合到他们的产品中，我们这里不方便进行罗列。
+
+###关于授权：
+
+www.rdsdk.com 致力于专业的人做专业的事，降低客户的开发时间和开发成本，你只需要支付很少的费用，花上几个小时就能增加视频编辑功能。
+
+[单击申请试用](http://dianbook.17rd.com/business/verify/login)
 
 **开发文档:**
 
@@ -69,6 +78,8 @@
 **JAVA接口文档:**
 
 [点击查看](http://htmlpreview.github.io/?https://github.com/rdsdk/rdVideoEditSDK-for-Android/blob/master/xpkUISdk/docs/xpkUISdk/index.html)
+
+###洽谈咨询：
 
 **咨询电话: 4008989105**
 
