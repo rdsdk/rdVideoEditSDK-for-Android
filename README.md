@@ -56,10 +56,9 @@
 	支持视频调序等
 	
 ####&emsp;部分功能截图
-<img src="website/static/edit1.jpg" width = "200" /><img src="website/static/edit2.jpg" width = "200" /><img src="website/static/edit3.jpg" width = "200" /> <img src="website/static/edit4.jpg" width = "200" />
+<img src="website/static/edit1.jpg" width = "200" /> <img src="website/static/edit2.jpg" width = "200" /> <img src="website/static/edit3.jpg" width = "200" /> <img src="website/static/edit4.jpg" width = "200" />
 
-<img src="website/static/edit5.jpg" width = "200" /><img src="website/static/edit6.jpg" width = "200" /><img src="website/static/edit7.jpg" width = "200" /> <img src="website/static/edit8.jpg" width = "200" />
-
+<img src="website/static/edit5.jpg" width = "200" /> <img src="website/static/edit6.jpg" width = "200" /> <img src="website/static/edit7.jpg" width = "200" /> <img src="website/static/edit8.jpg" width = "200" />
 
 [**申请试用**](http://dianbook.17rd.com/business/verify/login)
 
