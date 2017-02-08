@@ -77,7 +77,7 @@ www.rdsdk.com 致力于专业的人做专业的事，降低客户的开发时间
 
 **JAVA接口文档:**
 
-[点击查看](http://htmlpreview.github.io/?https://github.com/rdsdk/rdVideoEditSDK-for-Android/blob/master/xpkUISdk/docs/xpkUISdk/index.html)
+[点击查看](https://rdsdk.github.io/rdVideoEditSDK-for-Android/xpkUISdk/docs/xpkUISdk/index.html)
 
 ###洽谈咨询：
 
