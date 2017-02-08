@@ -23,7 +23,6 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.rd.xpkuisdk.XpkSdk;
 import com.rd.xpkuisdk.XpksdkService;
 
