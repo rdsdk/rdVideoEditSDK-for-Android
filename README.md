@@ -1,8 +1,8 @@
 # 锐动视频编辑SDK android版
 &emsp;&emsp;集视频拍摄和视频剪辑功能于一体,同时包含视频配音配乐、字幕特效、滤镜、转场等各种功能，全方位满足开发者的需求，并可以快速植入到APP中。`编辑预览时支持智能硬件解码，选择视频时不需要转码，减少用户等待时间`。
 
-###SDK功能介绍:
-####1.拍摄
+### SDK功能介绍:
+#### 1.拍摄
 * **实时美颜**	
 * **多段拍摄**
 	一个视频可以分多段次拍摄,并支持回删
@@ -21,7 +21,7 @@
 * **照片**
 	当前摄像头画面保存到图片
 	
-####&emsp;截图
+#### &emsp;截图
 <img src="website/static/camera1.jpg" width = "200" /> <img src="website/static/camera2.jpg" width = "200" /> <img src="website/static/camera3.jpg" width = "200" />
 
 <img src="website/static/camera4.jpg" width = "600" />
@@ -55,20 +55,20 @@
 	支持图片时长设置；
 	支持视频调序等
 	
-####&emsp;截图
+#### &emsp;截图
 <img src="website/static/edit1.jpg" width = "200" /> <img src="website/static/edit2.jpg" width = "200" /> <img src="website/static/edit3.jpg" width = "200" /> <img src="website/static/edit4.jpg" width = "200" />
 
 <img src="website/static/edit5.jpg" width = "200" /> <img src="website/static/edit6.jpg" width = "200" /> <img src="website/static/edit7.jpg" width = "200" /> <img src="website/static/edit8.jpg" width = "200" />
 
-###最新SDK下载(以下链接是最新的，github代码会稍有延迟)：
+### 最新SDK下载(以下链接是最新的，github代码会稍有延迟)：
 
 [SDK下载请单击](http://d.56show.com/rdsdk/private/pack/rd_videoedit_android_20170321.zip)
 
-###功能试用：
+### 功能试用：
 
 您可以在安卓市场搜索“秀拍客”，我们使用本SDK整合的app。目前很多国内外软件企业已经整合到他们的产品中，我们这里不方便进行罗列。
 
-###关于授权：
+### 关于授权：
 
 www.rdsdk.com 致力于专业的人做专业的事，降低客户的开发时间和开发成本，你只需要支付很少的费用，花上几个小时就能增加视频编辑功能。
 
@@ -82,7 +82,7 @@ www.rdsdk.com 致力于专业的人做专业的事，降低客户的开发时间
 
 [点击查看](https://rdsdk.github.io/rdVideoEditSDK-for-Android/xpkUISdk/docs/xpkUISdk/index.html)
 
-###洽谈咨询：
+### 洽谈咨询：
 
 **SDK交流群：** [305128688](http://shang.qq.com/wpa/qunwpa?idkey=bb9ac035ffa2d930719535a3b5d4542a780bb0f94613385fd93c996ee816ef05)
 
