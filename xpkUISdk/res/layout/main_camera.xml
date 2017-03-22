@@ -24,6 +24,69 @@
 
             <include layout="@layout/indicator_bar" />
 
+            <!-- 底部工具栏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/camera_list_back_color"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnFlashModeCtrl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:scaleType="center"
+                    android:src="@drawable/camera_flash_status" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnSwitchCamera5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:scaleType="center"
+                    android:src="@drawable/btn_switch_camera" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnbeauty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:scaleType="center"
+                    android:src="@drawable/living_beauty"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <!-- 底部分割线 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@null"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/camera_list_back_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/camera_list_back_color" />
+            </LinearLayout>
+
             <!-- 底部栏背景图片 -->
 
             <RelativeLayout
@@ -34,9 +97,10 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <!-- 滤镜按钮 -->
+        <!-- 左边按钮 -->
 
         <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlbtnBottomLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -45,10 +109,10 @@
             android:layout_marginRight="0dp" >
 
             <com.rd.lib.ui.ExtButton
-                android:id="@+id/btnFilterListControl"
+                android:id="@+id/btnBottomLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/icon_effects_default"
+                android:background="@drawable/camera_face_button"
                 android:gravity="bottom|center_horizontal"
                 android:textColor="@drawable/normal_bottom_button_text_color"
                 android:textSize="@dimen/text_size_11" />
@@ -211,10 +275,10 @@
                 android:background="@drawable/btn_shutter_stop_record" />
         </com.rd.lib.ui.RotateRelativeLayout>
 
-        <!-- 删除按钮 -->
+        <!-- 右边按钮 -->
 
         <com.rd.lib.ui.RotateRelativeLayout
-            android:id="@+id/rrlbtnDeleteVideo"
+            android:id="@+id/rrlbtnBottomRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -223,41 +287,19 @@
             android:layout_marginRight="0dp" >
 
             <com.rd.lib.ui.ExtButton
-                android:id="@+id/btnDeleteVideo"
+                android:id="@+id/btnBottomRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/screen_delete"
+                android:background="@drawable/camera_album_button"
                 android:gravity="center_vertical"
                 android:textColor="@drawable/normal_bottom_button_text_color"
                 android:textSize="@dimen/text_size_16" />
         </com.rd.lib.ui.RotateRelativeLayout>
 
-        <!-- 横屏删除按钮 -->
-
-        <com.rd.lib.ui.RotateRelativeLayout
-            android:id="@+id/rrlbtnDeleteVideoForLanscape"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="22dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp" >
-
-            <com.rd.lib.ui.ExtButton
-                android:id="@+id/btnDeleteVideoForLanscape"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="#00000000"
-                android:gravity="center"
-                android:text="删除"
-                android:textColor="@drawable/normal_bottom_button_text_color"
-                android:textSize="@dimen/text_size_15" />
-        </com.rd.lib.ui.RotateRelativeLayout>
-
         <!-- 完成OK按钮 -->
 
         <com.rd.lib.ui.RotateRelativeLayout
-            android:id="@+id/rrlbtnOverRecordForLanscape"
+            android:id="@+id/rrlbtnBottomRightForLandscape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -266,10 +308,10 @@
             android:layout_marginRight="0dp" >
 
             <com.rd.lib.ui.ExtButton
-                android:id="@+id/btnOverRecordForLanscape"
+                android:id="@+id/btnBottomRightForLandscape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_over_rec_for_lanscape"
+                android:background="@drawable/camera_album_button"
                 android:gravity="bottom|center_horizontal"
                 android:textColor="@drawable/normal_bottom_button_text_color"
                 android:textSize="@dimen/text_size_11" />
@@ -303,25 +345,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="22dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@null"
                     android:padding="8dp"
-                    android:src="@drawable/public_menu_cancel"
+                    android:src="@drawable/edit_back_button"
                     android:visibility="visible" />
-
-                <TextView
-                    android:id="@+id/tvTimer1"
-                    style="@style/TimerTextStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/camera_time_bg"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:textSize="@dimen/text_size_18"
-                    android:visibility="gone" />
 
                 <com.rd.lib.ui.RotateImageView
                     android:id="@+id/btnHelp1"
@@ -334,47 +362,36 @@
                     android:visibility="invisible" />
 
                 <com.rd.lib.ui.RotateImageView
-                    android:id="@+id/btnOverRecord1"
+                    android:id="@+id/btnShootingRatio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_toLeftOf="@+id/btnWating1"
+                    android:clickable="true"
+                    android:src="@drawable/btn_shooting_ratio" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnWating1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_toLeftOf="@+id/btnMenuBlackScreen1"
+                    android:clickable="true"
+                    android:src="@drawable/living_waiting"
+                    android:visibility="visible" />
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnMenuBlackScreen1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="18dp"
                     android:background="@null"
-                    android:padding="8dp"
-                    android:src="@drawable/public_menu_sure"
+                    android:src="@drawable/main_camera_blackscreen_btn_back"
                     android:visibility="visible" />
-            </RelativeLayout>
-
-            <!-- 时间限制进度条 -->
-
-            <RelativeLayout
-                android:id="@+id/video_new_relative1"
-                android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:background="@color/message_text_hint" >
-
-                <ImageView
-                    android:id="@+id/video_new_img_time_atlast1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:background="#fff87a00" />
-
-                <LinearLayout
-                    android:id="@+id/video_new_seekbar1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal" >
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/video_new_img_time_start1"
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/video_new_seekbar1"
-                    android:background="@android:color/white"
-                    android:visibility="gone" />
             </RelativeLayout>
 
             <!-- 摄像头预览区域 -->
@@ -402,80 +419,127 @@
                     </com.rd.lib.ui.PreviewFrameLayout>
                 </com.rd.xpkuisdk.ui.GlTouchView>
 
-                <com.rd.lib.ui.ExtButton
-                    android:id="@+id/btnBlackScreen1"
+                <!-- 时间布局 -->
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/main_camera_blackscreen_btn_back" />
+                    android:layout_height="wrap_content" >
+
+                    <com.rd.lib.ui.RotateRelativeLayout
+                        android:id="@+id/rrltvTimer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:layout_marginTop="12px" >
+
+                        <TextView
+                            android:id="@+id/tvTimer1"
+                            style="@style/TimerTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/record_timer_back"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:textSize="@dimen/text_size_18"
+                            android:visibility="gone" />
+                    </com.rd.lib.ui.RotateRelativeLayout>
+                </RelativeLayout>
             </RelativeLayout>
 
-            <!-- 工具栏设置区域 -->
+            <!-- 时间限制进度条 -->
+
+            <RelativeLayout
+                android:id="@+id/video_new_relative1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/camera_list_back_color"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/video_new_img_time_atlast1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#fff87a00" />
+
+                <LinearLayout
+                    android:id="@+id/video_new_seekbar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/video_new_img_time_start1"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/video_new_seekbar1"
+                    android:background="@android:color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 正方形工具栏设置区域 -->
 
             <LinearLayout
                 android:id="@+id/llSettingbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:background="#33333b"
+                android:background="@color/camera_list_back_color"
                 android:orientation="horizontal" >
 
                 <com.rd.lib.ui.RotateImageView
-                    android:id="@+id/btnShootingRatio1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btnFlashModeCtrl1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_toLeftOf="@+id/btnbeauty"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:clickable="true"
-                    android:src="@drawable/btn_shooting_ratio" />
-
-                <com.rd.lib.ui.RotateImageView
-                    android:id="@+id/btnbeauty1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_toLeftOf="@+id/btnWating"
-                    android:layout_weight="0"
-                    android:clickable="true"
-                    android:src="@drawable/living_beauty"
-                    android:visibility="visible" />
-
-                <com.rd.lib.ui.RotateImageView
-                    android:id="@+id/btnWating1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_toLeftOf="@+id/btnSwitchCamera"
-                    android:layout_weight="0"
-                    android:clickable="true"
-                    android:src="@drawable/living_waiting"
-                    android:visibility="visible" />
+                    android:scaleType="center"
+                    android:src="@drawable/camera_flash_status" />
 
                 <com.rd.lib.ui.RotateImageView
                     android:id="@+id/btnSwitchCamera1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_toLeftOf="@+id/btnFlashModeCtrl"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:clickable="true"
+                    android:scaleType="center"
                     android:src="@drawable/btn_switch_camera" />
 
                 <com.rd.lib.ui.RotateImageView
-                    android:id="@+id/btnFlashModeCtrl1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/btnbeauty1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:clickable="true"
-                    android:src="@drawable/camera_flash_status" />
+                    android:scaleType="center"
+                    android:src="@drawable/living_beauty"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <!-- 底部分割线 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@null"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/camera_list_back_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/camera_list_back_color" />
             </LinearLayout>
 
             <!-- 最底部操作区域 -->
@@ -631,17 +695,17 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal" >
 
-                    <!-- 滤镜按钮 -->
+                    <!-- 正方形左边按钮 -->
 
                     <Button
-                        android:id="@+id/btnFilterListControl1"
+                        android:id="@+id/btnBottomLeftForSquare"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="0dp"
                         android:layout_marginLeft="32dp"
                         android:layout_weight="0"
-                        android:background="@drawable/icon_effects_default" />
+                        android:background="@drawable/camera_face_button" />
 
                     <!-- 拍摄按钮 -->
 
@@ -661,7 +725,7 @@
                             android:background="@drawable/btn_shutter_stop_record" />
                     </com.rd.lib.ui.RotateRelativeLayout>
 
-                    <!-- 删除按钮 -->
+                    <!-- 正方形右边按钮 -->
 
                     <com.rd.lib.ui.RotateRelativeLayout
                         android:layout_width="wrap_content"
@@ -672,10 +736,10 @@
                         android:layout_weight="0" >
 
                         <com.rd.lib.ui.ExtButton
-                            android:id="@+id/btnDeleteVideo1"
+                            android:id="@+id/btnBottomRightForSquare"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/screen_delete"
+                            android:background="@drawable/camera_album_button"
                             android:gravity="bottom|center_horizontal"
                             android:textColor="@drawable/normal_bottom_button_text_color"
                             android:textSize="@dimen/text_size_11" />
@@ -702,7 +766,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/main_entry_capture_bottom_back"
                 android:gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="@dimen/filter_list_padding_size" >
 
                 <com.rd.lib.ui.RotateImageView
@@ -711,23 +775,138 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/btn_close_filterlist"
                     android:clickable="true" />
+
+                <com.rd.lib.ui.RotateRelativeLayout
+                    android:id="@+id/camare_filter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <RadioGroup
+                        android:id="@+id/camare_filter_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/camare_filter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/camare_filter"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/camare_face_filter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/camare_face_filter"
+                            android:textColor="@color/transparent_white"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/camare_thin_face"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/camare_thin_face"
+                            android:textColor="@color/transparent_white"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <RadioButton
+                            android:id="@+id/camare_eye"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="@string/camare_eye"
+                            android:textColor="@color/transparent_white"
+                            android:textSize="@dimen/text_size_14" />
+                    </RadioGroup>
+                </com.rd.lib.ui.RotateRelativeLayout>
             </LinearLayout>
 
-            <com.rd.xpkuisdk.ui.HorizontalListViewCamera
-                android:id="@+id/lvFilterList"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/main_entry_capture_bottom_back"
-                android:paddingBottom="10dp"
-                android:scrollbars="none" >
+                android:layout_height="wrap_content" >
+
+                <com.rd.xpkuisdk.ui.HorizontalListViewCamera
+                    android:id="@+id/lvFilterList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_entry_capture_bottom_back"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none" >
+
+                    <include layout="@layout/camare_filters_container" />
+                </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
+
+                <com.rd.xpkuisdk.ui.HorizontalListViewCamera
+                    android:id="@+id/lvFilterListface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_entry_capture_bottom_back"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none"
+                    android:visibility="invisible" >
+
+                    <include layout="@layout/camare_filters_container" />
+                </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
 
                 <LinearLayout
-                    android:id="@+id/llfiltersContainer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/filter_list_padding_size" />
-            </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
+                    android:id="@+id/camare_thin_face_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_entry_capture_bottom_back"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <SeekBar
+                        android:id="@+id/sbCamareThinFaceSbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:padding="1dp"
+                        android:progressDrawable="@drawable/video_editor_progress"
+                        android:thumb="@color/transparent"
+                        android:thumbOffset="0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/camare_eye_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_entry_capture_bottom_back"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible" >
+
+                    <SeekBar
+                        android:id="@+id/sbCamareEyeSbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:padding="1dp"
+                        android:progressDrawable="@drawable/video_editor_progress"
+                        android:thumb="@color/transparent"
+                        android:thumbOffset="0dp" />
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
     </com.rd.lib.ui.RotateRelativeLayout>
 
@@ -744,7 +923,6 @@
         android:textSize="120sp"
         android:visibility="gone" >
     </TextView>
-
     <!-- 黑屏铺满 -->
 
     <FrameLayout

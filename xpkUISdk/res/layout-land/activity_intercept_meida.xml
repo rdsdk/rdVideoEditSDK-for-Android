@@ -23,7 +23,8 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_above="@+id/rlSeekbar" >
+                    android:layout_above="@+id/rlSeekbar"
+                    android:layout_marginBottom="@dimen/preview_intercept_marginbottom" >
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -142,13 +143,15 @@
                 <RelativeLayout
                     android:id="@+id/rlSeekbar"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/land_bottom_height"
+                    android:layout_height="@dimen/preview_rangseekbarplus_height_hint"
                     android:layout_alignParentBottom="true" >
 
                     <RelativeLayout
                         android:id="@+id/rlTitle"
                         android:layout_width="@dimen/land_left_width"
-                        android:layout_height="match_parent" >
+                        android:layout_height="@dimen/preview_rangseekbarplus_height"
+                        android:layout_marginTop="@dimen/preview_intercept_margintop"
+                        android:gravity="center" >
 
                         <TextView
                             style="@style/land_title_style"
@@ -159,29 +162,19 @@
                     <View
                         android:layout_width="0.5dp"
                         android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/preview_intercept_margintop"
                         android:layout_toRightOf="@+id/rlTitle"
                         android:background="@color/edit_menu_bg" />
-
-                    <ImageView
-                        android:id="@+id/ivSeekBarPosition"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/preview_rangseekbarplus_height"
-                        android:layout_centerVertical="true" />
-
-                    <ImageView
-                        android:id="@+id/ivMidline"
-                        android:layout_width="wrap_content"
-                        android:layout_height="1dp"
-                        android:layout_above="@+id/ivSeekBarPosition" />
 
                     <TextView
                         android:id="@+id/tvInterceptFrontTime"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
+                        android:layout_height="@dimen/preview_rangseekbarplus_height"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="@dimen/preview_intercept_margintop"
                         android:layout_toRightOf="@+id/rlTitle"
                         android:background="@null"
+                        android:gravity="center"
                         android:text="00:00"
                         android:textColor="@color/transparent_white"
                         android:textSize="@dimen/text_size_14" />
@@ -189,49 +182,47 @@
                     <TextView
                         android:id="@+id/tvInterceptBehindTime"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/preview_rangseekbarplus_height"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/preview_intercept_margintop"
                         android:background="@null"
+                        android:gravity="center"
                         android:paddingRight="15dp"
                         android:text="00:00"
                         android:textColor="@color/transparent_white"
                         android:textSize="@dimen/text_size_14" />
 
-                    <LinearLayout
-                        android:id="@+id/timeline_media"
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivMidline"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_toLeftOf="@+id/tvInterceptBehindTime"
-                        android:layout_toRightOf="@+id/tvInterceptFrontTime"
-                        android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp" >
-
-                        <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
-                            android:id="@+id/split_videoview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical" />
-                    </LinearLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/ivMidline"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
                         android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@+id/tvInterceptBehindTime"
                         android:layout_toRightOf="@+id/tvInterceptFrontTime" >
 
+                        <LinearLayout
+                            android:id="@+id/timeline_media"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="@dimen/preview_intercept_margintop"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" >
+
+                            <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
+                                android:id="@+id/split_videoview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+
                         <com.rd.xpkuisdk.ui.extrangseekbar.ExtRangeSeekbarPlus
                             android:id="@+id/m_extRangeSeekBar"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/preview_rangseekbarplus_height" />
-                    </RelativeLayout>
+                            android:layout_height="@dimen/preview_rangseekbarplus_height_hint" />
+                    </FrameLayout>
                 </RelativeLayout>
 
                 <View
@@ -246,11 +237,11 @@
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/rlSeekbar"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="-5dp"
+                    android:layout_marginBottom="@dimen/preview_intercept_marginbottom"
                     android:layout_marginLeft="10dp"
                     android:layout_toRightOf="@+id/verticalCenter"
                     android:background="@drawable/edit_duration_bg"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:paddingTop="1dp"
                     android:text="00:00"
                     android:textColor="@color/main_orange"

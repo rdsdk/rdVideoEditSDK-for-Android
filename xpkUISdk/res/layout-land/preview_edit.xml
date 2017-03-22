@@ -80,6 +80,13 @@
                 android:drawableTop="@drawable/copy"
                 android:onClick="onPreviewOptionClick"
                 android:text="@string/preview_copy" />
+
+           <com.rd.lib.ui.ExtButton
+               android:id="@+id/preview_reverse"
+               style="@style/edit_menu_style"
+               android:drawableTop="@drawable/reverse"
+               android:onClick="onPreviewOptionClick"
+               android:text="@string/preview_reverse" />
         </LinearLayout>
 
         <LinearLayout

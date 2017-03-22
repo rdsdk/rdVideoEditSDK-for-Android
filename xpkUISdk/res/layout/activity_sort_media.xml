@@ -37,13 +37,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/sort_gradient_bg_180" >
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/sort_gradient_bg" >

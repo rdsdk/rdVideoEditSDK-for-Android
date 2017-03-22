@@ -93,74 +93,69 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" >
 
-                <ImageView
-                    android:id="@+id/ivSeekBarPosition"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/preview_rangseekbarplus_height"
-                    android:layout_centerVertical="true" />
-
-                <ImageView
-                    android:id="@+id/ivMidline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="1dp"
-                    android:layout_above="@+id/ivSeekBarPosition" />
-
-                <TextView
-                    android:id="@+id/tvRemainDuration"
-                    style="@style/styleEditorDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@id/ivSeekBarPosition"
-                    android:layout_centerHorizontal="true"
-                    android:background="@null"
-                    android:textColor="@color/main_orange"
-                    android:textSize="@dimen/text_size_16" />
-
-                <TextView
-                    android:id="@+id/tvInterceptFrontTime"
-                    style="@style/styleEditorDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@id/ivSeekBarPosition"
-                    android:background="@null"
-                    android:textSize="@dimen/text_size_14" />
-
-                <TextView
-                    android:id="@+id/tvInterceptBehindTime"
-                    style="@style/styleEditorDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@id/ivSeekBarPosition"
-                    android:layout_alignParentRight="true"
-                    android:background="@null"
-                    android:textSize="@dimen/text_size_14" />
-
-                <LinearLayout
-                    android:id="@+id/timeline_media"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ivMidline"
-                    android:orientation="horizontal"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp" >
-
-                    <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
-                        android:id="@+id/split_videoview"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/preview_rangseekbarplus_height"
-                        android:layout_gravity="center_vertical" />
-                </LinearLayout>
-
                 <RelativeLayout
+                    android:id="@+id/progressLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/preview_intercept_margintop" >
+
+                    <TextView
+                        android:id="@+id/tvRemainDuration"
+                        style="@style/styleEditorDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textColor="@color/main_orange"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:id="@+id/tvInterceptFrontTime"
+                        style="@style/styleEditorDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tvInterceptBehindTime"
+                        style="@style/styleEditorDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:textSize="@dimen/text_size_14" />
+                </RelativeLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ivMidline" >
+                    android:layout_height="@dimen/preview_rangseekbarplus_height_hint"
+                    android:layout_below="@id/progressLayout"
+                    android:layout_marginTop="-15dp" >
+
+                    <LinearLayout
+                        android:id="@+id/timeline_media"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/preview_intercept_margintop"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <com.rd.xpkuisdk.ui.VideoThumbNailAlterView
+                            android:id="@+id/split_videoview"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/preview_rangseekbarplus_height"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
 
                     <com.rd.xpkuisdk.ui.extrangseekbar.ExtRangeSeekbarPlus
                         android:id="@+id/m_extRangeSeekBar"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/preview_rangseekbarplus_height" />
-                </RelativeLayout>
+                        android:layout_height="match_parent" />
+                </FrameLayout>
             </RelativeLayout>
 
             <LinearLayout

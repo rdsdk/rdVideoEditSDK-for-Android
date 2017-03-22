@@ -98,17 +98,17 @@
                     android:text="@string/music" />
 
                 <RadioButton
-                    android:id="@+id/rb_audio"
-                    style="@style/edit_menu"
-                    android:drawableTop="@drawable/edit_rb_audio"
-                    android:text="@string/audio" />
-
-                <RadioButton
                     android:id="@+id/rb_filter1"
                     style="@style/edit_menu"
                     android:drawableTop="@drawable/edit_filter"
                     android:text="@string/filter"
                     android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_audio"
+                    style="@style/edit_menu"
+                    android:drawableTop="@drawable/edit_rb_audio"
+                    android:text="@string/audio" />
 
                 <RadioButton
                     android:id="@+id/rb_word"

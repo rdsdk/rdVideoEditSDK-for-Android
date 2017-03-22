@@ -50,6 +50,9 @@ public class AppImpl extends Application {
 				new SdkHandler().getCallBack());
 		// 自定义Crash handler,实际项目可不加入
 		MyCrashHandler.getInstance().init(this);
+		faceHanlder = new FaceHandler(this);
 	}
+
+	private FaceHandler faceHanlder;
 
 }

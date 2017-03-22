@@ -44,18 +44,12 @@ public class SdkHandler {
 			MediaMetadataRetriever retriever = new MediaMetadataRetriever();
 			try {
 				retriever.setDataSource(videoPath);
-				int nRotation = Integer
-						.parseInt(retriever
-								.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_ROTATION));
-				boolean bInvertWH = nRotation % 180 != 0;
 				int nVideoWidth = Integer
 						.parseInt(retriever
-								.extractMetadata(bInvertWH ? MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT
-										: MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
+								.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
 				int nVideoHeight = Integer
 						.parseInt(retriever
-								.extractMetadata(bInvertWH ? MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH
-										: MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
+								.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
 				int duration = Integer
 						.parseInt(retriever
 								.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION));
