@@ -27,7 +27,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">50dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
         <item name="android:button">@null</item>
         <item name="android:background">@drawable/item_fliter_underline</item>
         <item name="android:layout_marginLeft">10dp</item>
@@ -52,14 +52,14 @@
         <item name="android:layout_height">40dp</item>
     </style>
 
-    <style name="dialogAnimation" parent="android:Animation.Dialog">
-        <item name="android:windowEnterAnimation">@null</item>
-        <item name="android:windowExitAnimation">@null</item>
-    </style>
-
     <style name="listviewDialogAnimation" parent="android:Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/slide_in</item>
         <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="dialogNoAnimation" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
     </style>
 
     <style name="dialog" parent="android:style/Theme.Dialog">
@@ -68,9 +68,13 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@drawable/dialog_trans</item>
         <item name="android:windowIsFloating">true</item>
-        <item name="android:windowAnimationStyle">@style/dialogAnimation</item>
+        <item name="android:windowAnimationStyle">@style/dialogNoAnimation</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:background">@drawable/dialog_trans</item>
+    </style>
+
+    <style name="dialogNoDim" parent="dialog">
+        <item name="android:backgroundDimEnabled">false</item>
     </style>
 
     <style name="alert_listview_text_style" parent="android:Widget.TextView">
@@ -339,6 +343,7 @@
         <item name="android:minWidth">40dp</item>
         <item name="android:layout_marginLeft">@dimen/edit_video_ment_item_marginLeft</item>
         <item name="android:textColor">@drawable/edit_menu_color</item>
+        <item name="android:drawablePadding">-5dp</item>
     </style>
 
     <style name="edit_land_menu" parent="@style/menu_style">
@@ -501,7 +506,7 @@
         <item name="android:textColor">@drawable/sp_music_text_color</item>
         <item name="android:button">@null</item>
     </style>
-    
+
     <!-- 极录客imageview风格 -->
     <style name="sp_iv_music_style">
         <item name="android:layout_width">wrap_content</item>

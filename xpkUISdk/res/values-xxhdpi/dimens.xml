@@ -26,5 +26,7 @@
     <dimen name="point_width">6dp</dimen>
     <dimen name="highlight_width_preview">2dp</dimen>
     <!-- <dimen name="preview_rangseekbarplus_trim_height">78dp</dimen> -->
+    <dimen name="camera_filter_more_content_height">140dp</dimen>
+    <dimen name="fu_paddingLeft">12dp</dimen>
 
 </resources>

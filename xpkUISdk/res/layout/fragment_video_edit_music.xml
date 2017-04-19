@@ -5,35 +5,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="47dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
-        <ToggleButton
-            android:id="@+id/tbOriginVoice"
+        <Button
+            android:id="@+id/btnVoice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:minHeight="40dp"
+            android:minWidth="60dp"
+            android:text="配音"
             android:background="@null"
-            android:button="@drawable/origin_voice_togglebutton"
-            android:checked="true"
-            android:textOff=""
-            android:textOn="" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:layout_toLeftOf="@id/tbOriginVoice"
-            android:text="@string/edit_music_media_voice"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_15" />
-    </RelativeLayout>
+            android:textSize="@dimen/text_size_15"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="47dp" >
+
+            <ToggleButton
+                android:id="@+id/tbOriginVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:button="@drawable/origin_voice_togglebutton"
+                android:checked="true"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/tbOriginVoice"
+                android:text="@string/edit_music_media_voice"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <ImageView
+        android:id="@+id/musicLine"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/edit_music_divider" />

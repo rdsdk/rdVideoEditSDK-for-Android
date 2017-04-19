@@ -37,6 +37,11 @@
             android:screenOrientation="locked"
             android:theme="@style/Theme.rd.fullscreen" />
         <activity
+            android:name="com.rd.xpkuisdk.SVideoEditActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="locked"
+            android:theme="@style/Theme.rd.fullscreen" />
+        <activity
             android:name="com.rd.xpkuisdk.CropRotateMirrorActivity"
             android:configChanges="keyboardHidden"
             android:screenOrientation="locked"

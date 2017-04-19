@@ -46,9 +46,11 @@
                 android:text="自动切换" />
         </RadioGroup>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="10dp" >
 
             <Switch
@@ -64,11 +66,37 @@
                 android:id="@+id/tvWizard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_marginLeft="15dp"
                 android:text="关闭向导模式"
                 android:textColor="#ffffff"
                 android:textSize="17dp" />
-        </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <Switch
+                android:id="@+id/swAutoRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track" />
+
+            <TextView
+                android:id="@+id/tvAutoRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="关闭自动重播"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -110,6 +138,48 @@
                 android:layout_marginLeft="10dp"
                 android:background="#000000"
                 android:text="配乐" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/rgVoiceTrack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/VoiceTrack"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:clickable="false"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp" >
+
+                <RadioButton
+                    android:id="@+id/rbVoiceTrak1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp"
+                    android:text="配音一" />
+
+                <RadioButton
+                    android:id="@+id/rbVoiceTrak2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="配音二(只能在配乐开启时有效)" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/VoiceTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="配音" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -159,14 +229,14 @@
             android:orientation="horizontal" >
 
             <CheckBox
+                android:id="@+id/mv"
+                style="@style/checkboxStyle"
+                android:text="MV" />
+
+            <CheckBox
                 android:id="@+id/specialEffects"
                 style="@style/checkboxStyle"
                 android:text="特效" />
-
-            <CheckBox
-                android:id="@+id/dubbing"
-                style="@style/checkboxStyle"
-                android:text="配音" />
 
             <CheckBox
                 android:id="@+id/titling"
@@ -244,6 +314,7 @@
                         android:id="@+id/text"
                         style="@style/checkboxStyle"
                         android:text="文字板" />
+                    
                 </LinearLayout>
 
                 <RelativeLayout
@@ -506,6 +577,22 @@
                 android:background="#000000"
                 android:text="视频水印" />
         </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/subTitleOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="#000000"
+            android:text="字幕在MV之外显示" />
+
+        <CheckBox
+            android:id="@+id/specialOuter"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="#000000"
+            android:text="特效在MV之外显示" />
     </LinearLayout>
 
 </ScrollView>

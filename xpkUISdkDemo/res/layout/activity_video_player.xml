@@ -51,11 +51,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <com.rd.xpkuisdk.XpkVideoView
-                android:id="@+id/svpriview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
+            <!-- java 代码addview 一个textview 提示防篡改视频 -->
+            <FrameLayout
+                android:id="@+id/videoParentGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.rd.xpkuisdk.XpkVideoView
+                        android:id="@+id/svpriview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+            </FrameLayout>
         </RelativeLayout>
 
         <ImageView

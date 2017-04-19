@@ -65,21 +65,25 @@
         android:layout_height="match_parent"
         android:layout_below="@id/llPlayState" >
 
-        <TextView
-            android:id="@+id/tv_audio_tip"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/rlBottom"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="25dp"
-            android:layout_marginLeft="@dimen/audio_tv_margin"
-            android:layout_marginRight="@dimen/audio_tv_margin"
-            android:background="@drawable/video_edit_audio_tip_background"
-            android:gravity="center_horizontal"
-            android:text="@string/audio_tip"
-            android:textColor="#545454"
-            android:textSize="@dimen/text_size_14"
-            android:visibility="gone" />
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tv_audio_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/video_edit_audio_tip_background"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/audio_tip"
+                android:textColor="#545454"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+        </RelativeLayout>
 
         <View
             android:id="@+id/midLine"

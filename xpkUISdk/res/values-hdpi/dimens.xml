@@ -4,5 +4,4 @@
     <!-- hdpi -->
     <dimen name="video_list_grid_item_width">75dp</dimen>
     <dimen name="video_list_grid_item_height">75dp</dimen>
-
-</resources>
+</resources>

@@ -53,6 +53,7 @@ public class AppImpl extends Application {
 		faceHanlder = new FaceHandler(this);
 	}
 
+	@SuppressWarnings("unused")
 	private FaceHandler faceHanlder;
 
 }

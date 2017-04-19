@@ -55,5 +55,10 @@
         <attr name="swTextMarginH" format="dimension" />
         <attr name="swAutoAdjustTextPosition" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="ExtCircle">
+        <attr name="circleChecked" format="boolean" />
+        <attr name="circleBgColor" format="color|reference" />
+        <attr name="circleBorderColor" format="color|reference" />
+    </declare-styleable>
 
 </resources>

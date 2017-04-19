@@ -12,10 +12,14 @@
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
-     limitations under the License.
+     limitations under the License.
 -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator" >
 
-<translate xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="1000"
-    android:fromYDelta="0"
-    android:toYDelta="-100%p" />
+    <translate
+        android:duration="1000"
+        android:fromYDelta="0"
+        android:toYDelta="-100%p" />
+
+</set>

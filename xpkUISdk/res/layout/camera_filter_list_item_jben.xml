@@ -4,26 +4,54 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp" >
+        android:layout_height="wrap_content" >
 
-        <com.rd.xpkuisdk.ui.CircleImageView
-            android:id="@+id/ivItemImage"
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" >
+
+            <com.rd.xpkuisdk.ui.CircleImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="@dimen/filter_list_item_size"
+                android:layout_height="@dimen/filter_list_item_size"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/ivSelectedFrame"
+                android:layout_width="@dimen/filter_list_item_size"
+                android:layout_height="@dimen/filter_list_item_size"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/down_item_layout"
             android:layout_width="@dimen/filter_list_item_size"
             android:layout_height="@dimen/filter_list_item_size"
             android:layout_gravity="center"
-            android:src="@drawable/camera_filter_" />
+            android:visibility="gone" >
 
-        <ImageView
-            android:id="@+id/ivSelectedFrame"
-            android:layout_width="@dimen/filter_list_item_size"
-            android:layout_height="@dimen/filter_list_item_size"
-            android:layout_gravity="center"
-            android:visibility="gone" />
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/down_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:minHeight="@dimen/down_width"
+                android:minWidth="@dimen/down_width"
+                android:src="@drawable/down_btn" />
+
+            <com.rd.xpkuisdk.ui.CircleProgressBarView
+                android:id="@+id/down_pbar"
+                android:layout_width="@dimen/down_width"
+                android:layout_height="@dimen/down_width"
+                android:layout_gravity="right|bottom"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tvItemCaption"

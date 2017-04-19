@@ -11,6 +11,12 @@
         android:layout_height="match_parent" >
 
         <com.rd.lib.ui.ExtButton
+            android:id="@+id/extbMV"
+            style="@style/edit_land_menu"
+            android:drawableTop="@drawable/rb_mv"
+            android:text="@string/mv" />
+
+        <com.rd.lib.ui.ExtButton
             android:id="@+id/extbMusic"
             style="@style/edit_land_menu"
             android:drawableTop="@drawable/edit_music"

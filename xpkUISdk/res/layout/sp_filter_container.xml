@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:extCircle="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sp_rl_filter_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="gone" >
+    android:layout_height="match_parent" >
 
     <HorizontalScrollView
         android:id="@+id/sp_hsv_filter"
@@ -27,18 +27,17 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter1"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_01" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_01"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="true" />
                 </RelativeLayout>
 
                 <TextView
@@ -60,19 +59,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter2"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_02" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_02"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -94,19 +90,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter3"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_03" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_03"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -128,19 +121,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter4"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_04" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_04"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -162,19 +152,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter5"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_05" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_05"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -196,19 +183,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter6"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter6"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_06" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_06"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -230,19 +214,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter7"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter7"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_07" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_07"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -264,19 +245,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter8"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter8"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_08" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_08"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -298,19 +276,16 @@
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter9"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter9"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_09" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_09"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView
@@ -327,25 +302,22 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp" >
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
 
                 <RelativeLayout
                     android:id="@+id/sp_rl_filter10"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="spFilterClickView" >
+                    android:layout_height="wrap_content" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_filter10"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_filter_10" />
+                        android:background="@null"
+                        android:src="@drawable/sp_filter_10"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange" />
                 </RelativeLayout>
 
                 <TextView

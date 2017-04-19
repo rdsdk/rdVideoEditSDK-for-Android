@@ -111,6 +111,7 @@
     <string name="subtitle">字幕</string>
     <string name="special">特效</string>
     <string name="filter">滤镜</string>
+    <string name="mv">MV</string>
     <string name="transition">转场</string>
     <string name="doodle">涂鸦</string>
     <string name="partedit">片段编辑</string>
@@ -301,11 +302,12 @@
     <string name="app_video">App内视频</string>
     <string name="video_save_success">已保存视频</string>
     <string name="video_save_fail">视频保存失败</string>
-    <string name="camera_min_limit_text">小哥，再多按我一会儿</string>
+    <string name="camera_min_limit_text">小主，再多按我一会儿</string>
     <string name="photo_save_success">已保存照片</string>
     <string name="photo_save_fail">照片保存失败</string>
     <string name="exporting">视频导出中，请耐心等待...</string>
-    <string name="reverse_exporting">倒序处理中，请稍后...</string>
+    <string name="reversing">倒序处理中，请稍后...</string>
+    <string name="reverse_cancel">视频尚未倒序完成，是否取消？</string>
     <string name="export_preparing">导出准备中...</string>
     <string name="export_failed">导出失败...</string>
     <string name="export_failed_no_free_space">导出失败,存储空间不足！</string>
@@ -380,11 +382,32 @@
     <string name="sp_filter_8">流云</string>
     <string name="sp_filter_9">清欢</string>
     <string name="sp_filter_10">描摹</string>
-    
+
+    <!-- 对话框提示 -->
+    <string name="cancel_all_changed">确定放弃所有操作？</string>
+    <string name="quit_edit">确定要放弃编辑吗？</string>
+    <string name="quit_partedit">您确定要放弃片段编辑吗？</string>
+    <string name="remove_item">是否删除此媒体项？</string>
+    <string name="album_no_all">您还未选择图片或视频哟!</string>
+    <string name="album_no_video">您还未选择视频哟!</string>
+    <string name="album_no_photo">您还未选择图片哟!</string>
+    <string name="album_dialog_ok">我知道了</string>
+    <string name="image_duration_apply_to_all">确定应用到所有图片吗？</string>
+    <string name="proportion_change_to_auto">有横屏视频,竖屏画面效果不佳,系统将选择最佳画面</string>
+    <string name="video_duration_too_short_to_split">视频小于0.5秒，不能分割</string>
+    <string name="video_duration_too_short_to_transition">视频小于0.5秒，无法添加转场</string>
+    <string name="video_duration_too_short_to_trim">视频小于1秒，无法截取</string>
+    <string name="export_duration_limit">当前视频时长超过了最长导出时间限制(%d秒)。您可以关闭本提示去调整，或继续导出</string>
+    <string name="cancel_export">视频尚未导出完成，是否取消？</string>
+
+
     <!-- 人脸道具 -->
+    <string name="camare_faceunity_beauty">美颜</string>
+    <string name="fu_blue">磨皮</string>
+    <string name="fu_color">美白</string>
+    <string name="fu_thin">瘦脸</string>
+    <string name="fu_eye">大眼</string>
     <string name="camare_filter">滤镜</string>
     <string name="camare_face_filter">贴纸</string>
-    <string name="camare_thin_face">瘦脸</string>
-    <string name="camare_eye">大眼</string>
 
 </resources>

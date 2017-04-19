@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rd.lib.ui.RotateRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlFilterList"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:gravity="bottom" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btncloseFilterList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_close_filterlist"
+                android:clickable="true" />
+
+            <View
+                style="@style/baseline_style"
+                android:background="#33333B" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/camera_filter_more_content_height" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" >
+
+                <com.rd.xpkuisdk.ui.HorizontalListViewCamera
+                    android:id="@+id/lvFilterList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbars="none" >
+
+                    <include layout="@layout/camare_filters_container" />
+                </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
+            </RelativeLayout>
+
+            <!-- faceUnity 开启美颜可自动调节瘦脸、磨皮  横竖屏切换layout -->
+
+            <LinearLayout
+                android:id="@+id/fuLayout_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible" />
+
+            <!-- <include layout="@layout/fu_beauty_layout" /> -->
+            <!-- <include layout="@layout/fu_beauty_layout_land" /> -->
+
+            <LinearLayout
+                android:id="@+id/fuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="invisible" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/fuViewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/fuPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/camare_filter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/main_entry_capture_bottom_back"
+            android:gravity="center_vertical" >
+
+            <RadioGroup
+                android:id="@+id/camare_filter_s"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/camare_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/camare_filter"
+                    android:textColor="@drawable/edit_menu_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/camare_face_beauty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/camare_faceunity_beauty"
+                    android:textColor="@drawable/edit_menu_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/camare_face_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/camare_face_filter"
+                    android:textColor="@drawable/edit_menu_color"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+        </com.rd.lib.ui.RotateRelativeLayout>
+    </LinearLayout>
+
+</com.rd.lib.ui.RotateRelativeLayout>

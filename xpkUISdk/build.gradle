@@ -3,8 +3,8 @@ apply plugin: 'com.android.library'
 dependencies {
     //本地libs/中的公开jar，以jcenter对应版本为准，屏蔽本地libs/中的公开jar
     compile fileTree(dir: 'libs', exclude: ['android-support-v4.jar', 'com.rd.base.jar', 'recorderbase.jar', 'fastjson-1.1.24.jar', 'okhttp-3.5.0.jar', 'okio-1.11.0.jar'], include: '*.jar')
-    compile 'com.rd:base:0.1.1'
-    compile 'com.rd:recorderbase:0.1.3'
+    compile 'com.rd:base:0.1.4'
+    compile 'com.rd:recorderbase:0.1.7'
     compile 'com.squareup.okio:okio:1.11.0'
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     compile 'com.alibaba:fastjson:1.1.24'

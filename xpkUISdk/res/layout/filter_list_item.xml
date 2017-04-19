@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:extCircle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" >
+
+            <com.rd.xpkuisdk.ui.ExtCircleImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="@dimen/filter_list_item_size"
+                android:layout_height="@dimen/filter_list_item_size"
+                android:background="@null"
+                extCircle:circleBgColor="@color/transparent"
+                extCircle:circleBorderColor="@color/main_orange"
+                extCircle:circleChecked="false" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/down_item_layout"
+            android:layout_width="@dimen/filter_list_item_size"
+            android:layout_height="@dimen/filter_list_item_size"
+            android:layout_gravity="center"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/down_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:minHeight="@dimen/down_width"
+                android:minWidth="@dimen/down_width"
+                android:src="@drawable/down_btn" />
+
+            <com.rd.xpkuisdk.ui.CircleProgressBarView
+                android:id="@+id/down_pbar"
+                android:layout_width="@dimen/down_width"
+                android:layout_height="@dimen/down_width"
+                android:layout_gravity="right|bottom"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvItemCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/text_size_12" />
+
+</LinearLayout>

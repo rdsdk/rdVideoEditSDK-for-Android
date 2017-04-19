@@ -30,7 +30,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="@string/mymusic"
-                android:textColor="@color/white" />
+                android:textColor="@drawable/radio_music_txcolor" />
 
             <RadioButton
                 android:id="@+id/localmusic_rbtn"
@@ -44,7 +44,7 @@
                 android:checked="true"
                 android:gravity="center"
                 android:text="@string/localmusic"
-                android:textColor="@color/white" />
+                android:textColor="@drawable/radio_music_txcolor" />
 
             <RadioButton
                 android:id="@+id/historymusic_rbtn"
@@ -56,7 +56,7 @@
                 android:button="@null"
                 android:gravity="center"
                 android:text="@string/histroymusic"
-                android:textColor="@color/white" />
+                android:textColor="@drawable/radio_music_txcolor" />
         </RadioGroup>
 
         <android.support.v4.view.ViewPager

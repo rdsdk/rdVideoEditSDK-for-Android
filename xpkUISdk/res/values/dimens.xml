@@ -174,4 +174,8 @@
     <dimen name="camera_preview_layout_margin_bottom">0dp</dimen>
     <dimen name="audio_reset_layout_margin_bottom">25dp</dimen>
     <dimen name="edit_video_ment_item_marginLeft">15dp</dimen>
-</resources>
+
+    <!-- faceunity -->
+    <dimen name="camera_filter_more_content_height">180dp</dimen>
+
+</resources>

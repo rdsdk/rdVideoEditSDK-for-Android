@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#33333b"
-    android:orientation="vertical" >
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#33333b"
+              android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,33 +14,33 @@
         android:padding="10dp"
         android:text="Android视频编辑SDK-Demo"
         android:textColor="#ffffff"
-        android:textSize="18dp" />
+        android:textSize="18dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="10dp"
-            android:paddingTop="10dp" >
+            android:paddingTop="10dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp" >
+                android:layout_marginTop="20dp">
 
                 <TextView
                     style="@style/txtStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="录制功能"
-                    android:textColor="#88ffffff" />
+                    android:text="录制/拍摄"
+                    android:textColor="#88ffffff"/>
 
                 <Button
                     android:id="@+id/xpk_camera_config"
@@ -52,55 +52,67 @@
                     android:background="@drawable/layout_stroke"
                     android:onClick="onVideo"
                     android:padding="5dp"
-                    android:text="设置" />
+                    android:text="设置"/>
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpkrec_square"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="方式一：正方形录制" />
+                android:text="(1)正方形录制"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpkrec_wide"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="方式二：长方形录制" />
+                android:text="(2)全屏录制"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpkrec"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="方式三：正方形，长方形可切换录制" />
+                android:text="(3)正方形，全屏可切换录制"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <!-- <Button -->
+            <!-- android:id="@+id/xpkrec_anti_change" -->
+            <!-- style="@style/buttonStyle" -->
+            <!-- android:onClick="onVideo" -->
+            <!-- android:text="(4)防改录制" /> -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp" >
+                android:layout_marginTop="20dp">
 
                 <TextView
                     style="@style/txtStyle"
@@ -108,7 +120,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="视频编辑"
-                    android:textColor="#88ffffff" />
+                    android:textColor="#88ffffff"/>
 
                 <Button
                     android:id="@+id/xpk_ui_config"
@@ -120,145 +132,210 @@
                     android:background="@drawable/layout_stroke"
                     android:onClick="onVideo"
                     android:padding="5dp"
-                    android:text="设置" />
+                    android:text="设置"/>
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpkedit"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="方式一：直接进入编辑" />
+                android:text="(1)无相册选择，进入编辑"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpk"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="方式二：选择相册" />
+                android:text="(2)从相册选择后进入编辑"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_player"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="播放器" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#88ffffff" />
-
-            <TextView
-                style="@style/txtStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="视频截取"
-                android:textColor="#88ffffff" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_trim"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="方式一：自由截取" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_trim_item"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="方式二：定长截取" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#88ffffff" />
-
-            <TextView
-                style="@style/txtStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="相册"
-                android:textColor="#88ffffff" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_default_album"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="方式一：图片+视频" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_only_video"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="方式二：仅显示视频" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_marginLeft="10dp"
-                android:background="#88ffffff" />
-
-            <Button
-                android:id="@+id/xpk_only_photo"
-                style="@style/buttonStyle"
-                android:onClick="onVideo"
-                android:text="方式三：仅显示图片" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp" >
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="短视频(由视频编辑配置而成)"
+                    android:textColor="#88ffffff"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpkSVideoEdit"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(1)15秒短视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="视频截取"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/xpk_trim_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="设置"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_trim_l"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(1)横屏视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_trim_p"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(2)竖屏视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_trim_s"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(3)正方形视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="相册"
+                    android:textColor="#88ffffff"/>
+
+                <Button
+                    android:id="@+id/xpk_album_config"
+                    style="@style/buttonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/layout_stroke"
+                    android:onClick="onVideo"
+                    android:padding="5dp"
+                    android:text="设置"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_default_album"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(1)图片+视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_only_video"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(2)仅显示视频"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_only_photo"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="(3)仅显示图片"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
 
                 <TextView
                     style="@style/txtStyle"
@@ -266,7 +343,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="压缩"
-                    android:textColor="#88ffffff" />
+                    android:textColor="#88ffffff"/>
 
                 <Button
                     android:id="@+id/xpk_compress_config"
@@ -278,24 +355,68 @@
                     android:background="@drawable/layout_stroke"
                     android:onClick="onVideo"
                     android:padding="5dp"
-                    android:text="设置" />
+                    android:text="设置"/>
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
 
             <Button
                 android:id="@+id/xpk_compress"
                 style="@style/buttonStyle"
                 android:onClick="onVideo"
-                android:text="压缩视频" />
+                android:text="压缩视频"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="#88ffffff" />
+                android:background="#88ffffff"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/txtStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="其它"
+                    android:textColor="#88ffffff"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/xpk_player"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="播 放 器"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
+
+            <Button
+                android:id="@+id/reset_config"
+                style="@style/buttonStyle"
+                android:onClick="onVideo"
+                android:text="重置设置"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88ffffff"/>
         </LinearLayout>
     </ScrollView>
 

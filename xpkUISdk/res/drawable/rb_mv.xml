@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下编辑视频关闭按钮的状态改变，从上到下分别是选中时、默认时 -->
+    <item android:drawable="@drawable/mv_ed" android:state_pressed="true"/>
+    <item android:drawable="@drawable/mv_ed" android:state_selected="true"/>
+    <item android:drawable="@drawable/mv_ed" android:state_checked="true"/>
+    <item android:drawable="@drawable/mv_n"/>
+
+</selector>

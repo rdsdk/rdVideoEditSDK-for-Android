@@ -1,57 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Switch
+                android:id="@+id/swEnableHWcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="  "
+                android:textOn="  "
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="使用硬件加速"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp" >
+            android:layout_marginBottom="5dp">
 
-            <RadioGroup
-                android:id="@+id/rgCompressWatermark"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/compressWatermark"
                 android:layout_marginTop="-20dp"
                 android:background="@drawable/layout_stroke"
-                android:orientation="horizontal"
-                android:paddingTop="20dp" >
+                android:orientation="vertical"
+                android:paddingTop="20dp">
 
-                <RadioButton
-                    android:id="@+id/rbCompressLeftBottom"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="左下" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/rbCompressLeftTop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="左上" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="x轴："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
 
-                <RadioButton
-                    android:id="@+id/rbCompressRightBottom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="右下" />
+                    <EditText
+                        android:id="@+id/etCompressWatermarkXAxis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="范围0-1.0"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
 
-                <RadioButton
-                    android:id="@+id/rbCompressRightTop"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="y轴："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etCompressWatermarkYAxis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="范围0-1.0"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="右上" />
-            </RadioGroup>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="x轴缩放比例："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etCompressWatermarkXZoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="默认为1"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="y轴缩放比例："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etCompressWatermarkYZoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="默认为1"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+            </LinearLayout>
 
             <CheckBox
                 android:id="@+id/compressWatermark"
@@ -59,13 +156,13 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:background="#000000"
-                android:text="视频水印" />
+                android:text="视频水印"/>
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +170,7 @@
                 android:layout_margin="10dp"
                 android:text="码率："
                 android:textColor="#ffffff"
-                android:textSize="17dp" />
+                android:textSize="17dp"/>
 
             <EditText
                 android:id="@+id/etCompressBitRate"
@@ -84,16 +181,16 @@
                 android:background="@drawable/layout_stroke"
                 android:gravity="center"
                 android:hint="默认为4M,单位M"
-                android:numeric="integer"
+                android:inputType="numberDecimal"
                 android:padding="5dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +198,7 @@
                 android:layout_margin="10dp"
                 android:text="视频宽度："
                 android:textColor="#ffffff"
-                android:textSize="17dp" />
+                android:textSize="17dp"/>
 
             <EditText
                 android:id="@+id/etCompressVideoWidth"
@@ -114,14 +211,14 @@
                 android:hint="默认为原始宽高"
                 android:numeric="integer"
                 android:padding="5dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -129,7 +226,7 @@
                 android:layout_margin="10dp"
                 android:text="视频高度："
                 android:textColor="#ffffff"
-                android:textSize="17dp" />
+                android:textSize="17dp"/>
 
             <EditText
                 android:id="@+id/etCompressVideoHeight"
@@ -142,7 +239,7 @@
                 android:hint="默认为原始宽高"
                 android:numeric="integer"
                 android:padding="5dp"
-                android:textColor="#ffffff" />
+                android:textColor="#ffffff"/>
         </LinearLayout>
     </LinearLayout>
 

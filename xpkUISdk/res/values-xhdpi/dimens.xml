@@ -31,5 +31,6 @@
     <dimen name="preview_intercept_marginbottom">-30dp</dimen>
     <dimen name="preview_rangseekbarplus_trim_height">75dp</dimen>
     <dimen name="point_width">5dp</dimen>
+    <dimen name="camera_filter_more_content_height">180dp</dimen>
 
 </resources>

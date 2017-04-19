@@ -1,38 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:extCircle="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sp_rl_music_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="gone" >
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/sp_rl_tb"
         android:layout_width="match_parent"
-        android:layout_height="47dp" >
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
-        <com.rd.xpkuisdk.ui.SwitchButton
-            android:id="@+id/sp_sbOriginVoice"
+        <Button
+            android:id="@+id/btnVoice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            app:swThumbColor="@color/white"
-            app:swBackDrawable="@drawable/sb_back_drawable" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:layout_toLeftOf="@id/sp_sbOriginVoice"
-            android:text="@string/edit_music_media_voice"
+            android:background="@null"
+            android:minHeight="40dp"
+            android:minWidth="60dp"
+            android:text="配音"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_15" />
-    </RelativeLayout>
+            android:textSize="@dimen/text_size_15"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="47dp" >
+
+            <com.rd.xpkuisdk.ui.SwitchButton
+                android:id="@+id/sp_sbOriginVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:swBackDrawable="@drawable/sb_back_drawable"
+                app:swThumbColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/sp_sbOriginVoice"
+                android:text="@string/edit_music_media_voice"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+    </LinearLayout>
 
     <View
+        android:id="@+id/mlineView"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_below="@+id/sp_rl_tb"
@@ -40,16 +61,19 @@
 
     <HorizontalScrollView
         android:id="@+id/sp_hsv_music"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
+        android:layout_below="@+id/mlineView"
+        android:layout_centerVertical="true"
         android:scrollbars="@null" >
 
         <LinearLayout
             android:id="@+id/ll_sp_music"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
             android:orientation="horizontal" >
 
             <RelativeLayout
@@ -63,15 +87,26 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <!-- <ImageView -->
+                    <!-- android:id="@+id/sp_iv_music_null" -->
+                    <!-- style="@style/sp_iv_music_style" -->
+                    <!-- android:background="@drawable/jlu_res_selected" /> -->
+
+
+                    <!-- <ImageView -->
+                    <!-- style="@style/sp_iv_music_style" -->
+                    <!-- android:layout_centerInParent="true" -->
+                    <!-- android:background="@drawable/sp_music_null" /> -->
+
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_null"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_null" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_null"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="true" />
                 </RelativeLayout>
 
                 <TextView
@@ -96,16 +131,17 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_chaowan"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_chaowan" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_chaowan"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
+
+                    <!-- <ImageView style="@style/sp_iv_music_style" /> -->
                 </RelativeLayout>
 
                 <TextView
@@ -130,16 +166,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_faxian"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_faxian" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_faxian"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -164,16 +199,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_heibai"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_heibai" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_heibai"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -198,16 +232,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_huiyi"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_huiyi" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_huiyi"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -232,16 +265,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_jietou"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_jietou" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_jietou"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -266,16 +298,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_lvxing"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_lvxing" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_lvxing"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -300,16 +331,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_qingxin"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_qingxin" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_qingxin"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView
@@ -335,16 +365,15 @@
                     android:layout_height="wrap_content"
                     android:onClick="spClickView" >
 
-                    <ImageView
+                    <com.rd.xpkuisdk.ui.ExtCircleImageView
                         android:id="@+id/sp_iv_music_saye"
                         style="@style/sp_iv_music_style"
-                        android:background="@drawable/jlu_res_selected"
-                        android:visibility="invisible" />
-
-                    <ImageView
-                        style="@style/sp_iv_music_style"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/sp_music_saye" />
+                        android:background="@null"
+                        android:src="@drawable/sp_music_saye"
+                        extCircle:circleBgColor="@color/transparent"
+                        extCircle:circleBorderColor="@color/main_orange"
+                        extCircle:circleChecked="false" />
                 </RelativeLayout>
 
                 <TextView

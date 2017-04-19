@@ -9,6 +9,7 @@ import android.os.Environment;
 
 import com.rd.xpkuisdk.XpkSdk;
 import com.rd.xpkuisdk.XpksdkService;
+import com.rd.xpkuisdk.demo.utils.SDKUtils;
 import com.rd.xpkuisdk.manager.FaceUnityConfig;
 
 /**
@@ -21,92 +22,77 @@ public class FaceHandler {
 
 	private Context context;
 	private final String root = Environment.getExternalStorageDirectory()
-			+ "/xpk/";
+			+ "/xpk/faceUnity/";
 
 	private FaceUnityConfig config = null;
 
+	// 自定义网络化加载faceUnity道具资源
+	private final String url = "http://dianbook.17rd.com/api/shortvideo/getfaceprop";
+
 	public FaceHandler(Context _context) {
 		context = _context;
-		final String dog = root + "BeagleDog.mp3", dogIcon = root
-				+ "beagledog.png";
-		final String colorCrown = root + "ColorCrown.mp3", colorCrownIcon = root
-				+ "colorcrown.png";
-		final String deer = root + "Deer.mp3", deerIcon = root + "deer.png";
-		final String happy = root + "HappyRabbi.mp3", happyIcon = root
-				+ "happyrabbi.png";
-		final String hartshorn = root + "hartshorn.mp3", hartShornIcon = root
-				+ "hartshorn.png";
-		final String item0204 = root + "item0204.mp3", item0204Icon = root
-				+ "item0204.png";
-		final String item0208 = root + "item0208.mp3", item0208Icon = root
-				+ "item0208.png";
-		final String item0210 = root + "item0210.mp3", item0210Icon = root
-				+ "item0210.png";
-		final String item0501 = root + "item0501.mp3", item0501Icon = root
-				+ "item0501.png";
-		final String mood = root + "Mood.mp3", moodIcon = root + "mood.png";
-		final String princessCrown = root + "PrincessCrown.mp3", PrincessCrownIcon = root
-				+ "princesscrown.png";
-		final String tiara = root + "tiara.mp3", tiaraIcon = root + "tiara.png";
-		final String yellowEar = root + "YellowEar.mp3", YellowEarIcon = root
-				+ "yellowear.png";
 
 		new AsyncTask<Integer, Integer, Integer>() {
-			// private ProgressDialog m_dlgProgress;
-
 			AssetManager asset;
 
 			@Override
 			protected void onPreExecute() {
-				// m_dlgProgress = ProgressDialog.show(SimpleActivity.this,
-				// null, "导出测试资源...");
 				asset = context.getAssets();
-
 				File f = new File(root);
-
 				if (!f.exists()) {
 					f.mkdirs();
 				}
-
 			};
 
 			@Override
 			protected Integer doInBackground(Integer... params) {
-
 				config = new FaceUnityConfig();
 				String v3 = root + "v3.mp3";
-				SimpleActivity.assetRes2File(asset, "v3.mp3", v3);
+				if (!new File(v3).exists()) {
+					SDKUtils.assetRes2File(asset, "faceunity/v3.mp3", v3);
+				}
 				config.setV3Path(v3);// 必须设置,否则无法初始化FaceUnity
-
 				String beauty = root + "face_beautification.mp3";
-				SimpleActivity.assetRes2File(asset, "face_beautification.mp3",
-						beauty);
+				if (!new File(beauty).exists()) {
+					SDKUtils.assetRes2File(asset,
+							"faceunity/face_beautification.mp3", beauty);
+				}
 				config.setBeautyPath(beauty);// 必须设置,否则无法设置美颜
 
-				addItem(asset, dog, "BeagleDog.mp3", dogIcon, "beagledog.png",
-						"BeagleDog");
-				addItem(asset, colorCrown, "ColorCrown.mp3", colorCrownIcon,
-						"colorcrown.png", "ColorCrown");
-				addItem(asset, deer, "Deer.mp3", deerIcon, "deer.png", "Deer");
-				addItem(asset, happy, "HappyRabbi.mp3", happyIcon,
-						"happyrabbi.png", "HappyRabbi");
-				addItem(asset, hartshorn, "hartshorn.mp3", hartShornIcon,
-						"hartshorn.png", "hartshorn");
-				addItem(asset, item0204, "item0204.mp3", item0204Icon,
-						"item0204.png", "item0204");
-				addItem(asset, item0208, "item0208.mp3", item0208Icon,
-						"item0208.png", "item0208");
-				addItem(asset, item0210, "item0210.mp3", item0210Icon,
-						"item0210.png", "item0210");
-				addItem(asset, item0501, "item0501.mp3", item0501Icon,
-						"item0501.png", "item0501");
-				addItem(asset, mood, "Mood.mp3", moodIcon, "mood.png", "Mood");
-				addItem(asset, princessCrown, "PrincessCrown.mp3",
-						PrincessCrownIcon, "princesscrown.png", "PrincessCrown");
-				addItem(asset, tiara, "tiara.mp3", tiaraIcon, "tiara.png",
-						"tiara");
-				addItem(asset, yellowEar, "YellowEar.mp3", YellowEarIcon,
-						"yellowear.png", "YellowEar");
+				// 设置开启美颜时美白的等级 (参数值0.0f-1.0f,开启FaceUnity且开启美颜之后生效)
+				config.setColor_level(0.48f);
+				// 设置开启美颜时磨皮的等级(参数值0.0f-4.0f,开启FaceUnity且开启美颜之后生效)
+				config.setBlur_level(4.0f);
+				// 设置开启美颜时瘦脸的等级 (有效参数值0.0f-2.0f,开启FaceUnity且开启美颜之后生效)
+				config.setCheek_thinning(0.68f);
+				// 设置开启美颜时大眼的等级(有效参数值0.0f-4.0f,开启FaceUnity且开启美颜之后生效)
+				config.setEye_enlarging(1.53f);
+
+				// // 方式一: 加载本地资源
+
+				// String dog = root + "BeagleDog.mp3", dogIcon = root
+				// + "beagledog.png";
+				// String colorCrown = root + "ColorCrown.mp3", colorCrownIcon =
+				// root
+				// + "colorcrown.png";
+				// String tiara = root + "tiara.mp3", tiaraIcon = root
+				// + "tiara.png";
+				// String yellowEar = root + "YellowEar.mp3", YellowEarIcon =
+				// root
+				// + "yellowear.png";
+				//
+				// addItem(asset, dog, "BeagleDog.mp3", dogIcon,
+				// "beagledog.png",
+				// "BeagleDog");
+				// addItem(asset, colorCrown, "ColorCrown.mp3", colorCrownIcon,
+				// "colorcrown.png", "ColorCrown");
+				// addItem(asset, tiara, "tiara.mp3", tiaraIcon, "tiara.png",
+				// "tiara");
+				// addItem(asset, yellowEar, "YellowEar.mp3", YellowEarIcon,
+				// "yellowear.png", "YellowEar");
+				// 方式二:加载网络资源
+				config.enableNetFaceUnity(true);// 如果要启用网络化加载道具的方式
+				config.setUrl(url);// 设置网络化的人脸数据接口
 
 				return null;
 			}
@@ -132,13 +118,14 @@ public class FaceHandler {
 	 * @param assIcon
 	 * @param title
 	 */
+	@SuppressWarnings("unused")
 	private void addItem(AssetManager asset, String path, String assMp3,
 			String Icon, String assIcon, String title) {
 		if (!new File(path).exists()) {
-			SimpleActivity.assetRes2File(asset, assMp3, path);
+			SDKUtils.assetRes2File(asset, "faceunity/" + assMp3, path);
 		}
 		if (!new File(Icon).exists()) {
-			SimpleActivity.assetRes2File(asset, assIcon, Icon);
+			SDKUtils.assetRes2File(asset, "faceunity/" + assIcon, Icon);
 		}
 		config.addFaceUnity(path, Icon, title);
 	}

@@ -16,15 +16,13 @@
 
         <include layout="@layout/sp_music_container" />
 
-        <include layout="@layout/sp_filter_container" />
-
         <include layout="@layout/sp_watermark_container" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llEditorGroups"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="70dp"
         android:background="@color/sub_menu_bgcolor"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
@@ -68,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:scrollbars="@null"
+            android:scrollbars="none"
             android:visibility="visible" >
 
             <RadioGroup
@@ -89,6 +87,14 @@
                     android:drawableTop="@drawable/edit_theme"
                     android:text="@string/theme"
                     android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_mv"
+                    style="@style/edit_menu"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="@dimen/edit_video_ment_item_marginLeft"
+                    android:drawableTop="@drawable/rb_mv"
+                    android:text="@string/mv" />
 
                 <RadioButton
                     android:id="@+id/rb_music"

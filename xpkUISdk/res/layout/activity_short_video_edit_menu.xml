@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:verseekbar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/edit_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <RadioButton
+                android:id="@+id/rb_filter"
+                style="@style/edit_menu"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="@dimen/edit_video_ment_item_marginLeft"
+                android:checked="true"
+                android:text="@string/filter"
+                android:textSize="@dimen/text_size_16" />
+
+            <RadioButton
+                android:id="@+id/rb_mv"
+                style="@style/edit_menu"
+                android:layout_marginLeft="0dp"
+                android:text="@string/mv"
+                android:textSize="@dimen/text_size_16" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:minWidth="150dp"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/cbMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@+id/cbVideoVoice"
+                android:button="@drawable/mv_music" />
+
+            <CheckBox
+                android:id="@+id/cbVideoVoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:button="@drawable/mv_voice" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/baseline_style" />
+
+    <LinearLayout
+        android:id="@+id/shortMenuConentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

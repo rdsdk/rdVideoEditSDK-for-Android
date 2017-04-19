@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="视频截取设置"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioGroup
+                android:id="@+id/rgTrimReturnMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTrimReturnType"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbTrimReturnMedia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实截取"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrimReturnTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="返回时间段"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrimDynamicReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="动态截取"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTrimReturnType"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="截取行为"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioGroup
+                android:id="@+id/rgTrimType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTrimType"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbTrimTypeFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自由截取"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrimSingleFixed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单个定长截取"/>
+
+                <LinearLayout
+                    android:id="@+id/llSingleFixedTrimTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="截取时间："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etSingleFixedTrimTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="默认为15秒，单位秒"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rbTrimDoubleFixed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="两定长截取"/>
+
+                <LinearLayout
+                    android:id="@+id/llTrimTime1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="截取时间1："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etTrimTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="默认为8秒，单位秒"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTrimTime2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="截取时间2："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"/>
+
+                    <EditText
+                        android:id="@+id/etTrimTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="默认为16秒，单位秒"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                </LinearLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTrimType"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="截取时间"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioGroup
+                android:id="@+id/rgTrimCropMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTrimCropMode"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbTrimNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原始"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrim1x1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1比1"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrimNormalWithItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="默认为原始,可切换"/>
+
+                <RadioButton
+                    android:id="@+id/rbTrim1x1WithItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="默认为1比1,可切换"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTrimCropMode"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="视频裁剪比例"
+                android:textColor="#ffffff"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

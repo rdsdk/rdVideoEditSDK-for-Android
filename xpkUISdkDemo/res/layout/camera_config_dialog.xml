@@ -9,6 +9,211 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCameraSupport"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="20dp" >
+
+                <!-- 视频 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cbRec"
+                        android:layout_marginTop="-20dp"
+                        android:background="@drawable/layout_stroke"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="录制最小时长："
+                                android:textColor="#ffffff"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/etCameraMinTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="默认0为不限制，单位秒"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCameraMaxTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="录制最大时长："
+                                android:textColor="#ffffff"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/etCameraMaxTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="默认0为不限制，单位秒"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbRec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="#000000"
+                        android:text="视频" />
+                </RelativeLayout>
+
+                <!-- MV -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cbMV"
+                        android:layout_marginTop="-20dp"
+                        android:background="@drawable/layout_stroke"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="MV最小时长："
+                                android:textColor="#ffffff"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/etCameraMVMinTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="默认为不限制，单位秒"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="MV最大时长："
+                                android:textColor="#ffffff"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/etCameraMVMaxTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/layout_stroke"
+                                android:gravity="center"
+                                android:hint="默认为15秒，单位秒"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:textColor="#ffffff" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cbMV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="#000000"
+                        android:text="短视频MV" />
+                </RelativeLayout>
+
+                <!-- 照片 -->
+
+                <CheckBox
+                    android:id="@+id/cbPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="照片" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCameraSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:gravity="center"
+                android:text="拍摄支持模式"
+                android:textColor="#ffffff"
+                android:textSize="17dp" />
+        </RelativeLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,61 +386,76 @@
             </RadioGroup>
         </LinearLayout>
 
-        <LinearLayout
+        <!-- 水印 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cbOsd"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/layout_stroke"
+                android:orientation="vertical"
+                android:paddingTop="20dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="水印片尾时长："
+                        android:textColor="#ffffff"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/etOsdEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/layout_stroke"
+                        android:gravity="center"
+                        android:hint="范围(0-1.0f),单位秒"
+                        android:inputType="numberDecimal"
+                        android:padding="5dp"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbOsd"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="相机水印" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
+            android:layout_marginTop="5dp"
+            android:background="@drawable/layout_stroke"
+            android:padding="10dp" >
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cbAntiChange"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="录制最小时长："
-                android:textColor="#ffffff"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/etCameraMinTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/layout_stroke"
-                android:gravity="center"
-                android:hint="默认0为不限制，单位秒"
-                android:numeric="integer"
-                android:padding="5dp"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="录制最大时长："
-                android:textColor="#ffffff"
-                android:textSize="17dp" />
-
-            <EditText
-                android:id="@+id/etCameraMaxTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="5dp"
-                android:background="@drawable/layout_stroke"
-                android:gravity="center"
-                android:hint="默认0为不限制，单位秒"
-                android:numeric="integer"
-                android:padding="5dp"
-                android:textColor="#ffffff" />
-        </LinearLayout>
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="#000000"
+                android:text="启用防篡改录制" />
+        </RelativeLayout>
     </LinearLayout>
 
 </ScrollView>

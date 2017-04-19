@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fitler_faceUnity_beauity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="@string/fu_blue"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/text_size_16" />
+
+            <RadioGroup
+                android:id="@+id/fu_blue_level"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fu_paddingLeft"
+                android:paddingRight="@dimen/fu_paddingLeft" >
+
+                <RadioButton
+                    android:id="@+id/fu_blue_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#33333B"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@drawable/fu_blue_rb__color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/fu_blue_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#33333B"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@drawable/fu_blue_rb__color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/fu_blue_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#33333B"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@drawable/fu_blue_rb__color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <RadioButton
+                    android:id="@+id/fu_blue_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#33333B"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@drawable/fu_blue_rb__color"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="@string/fu_color"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/text_size_16" />
+
+            <SeekBar
+                android:id="@+id/sbFuColorbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:paddingLeft="@dimen/fu_paddingLeft"
+                android:paddingRight="@dimen/fu_paddingLeft"
+                android:progressDrawable="@drawable/video_editor_progress"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="23dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="@string/fu_thin"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/text_size_16" />
+
+            <SeekBar
+                android:id="@+id/sbFuThinbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:paddingLeft="@dimen/fu_paddingLeft"
+                android:paddingRight="@dimen/fu_paddingLeft"
+                android:progressDrawable="@drawable/video_editor_progress"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="23dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:text="@string/fu_eye"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/text_size_16" />
+
+            <SeekBar
+                android:id="@+id/sbFuEyebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:paddingLeft="@dimen/fu_paddingLeft"
+                android:paddingRight="@dimen/fu_paddingLeft"
+                android:progressDrawable="@drawable/video_editor_progress"
+                android:thumb="@drawable/seekbar_thumb"
+                android:thumbOffset="23dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
