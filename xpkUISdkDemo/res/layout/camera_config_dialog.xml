@@ -359,7 +359,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
-                android:text="是否启用人脸道具(android4.3及以上支持)："
+                android:text="是否启用人脸识别及贴纸(android4.3及以上支持)："
                 android:textColor="#ffffff"
                 android:textSize="17dp" />
 

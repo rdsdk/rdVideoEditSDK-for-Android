@@ -274,6 +274,7 @@
     <string name="editaudio">编辑配乐</string>
     <string name="select_medias">选择媒体资源</string>
     <string name="downloading">正在下载资源，请稍等...</string>
+    <string name="isloading">加载中....</string>
     <string name="resdownloading">正在下载资源，请稍后再试...</string>
     <string name="editvideopriview">视频编辑</string>
     <string name="drag_for_sub">拖动边框,调整字幕起始位置</string>
@@ -400,9 +401,8 @@
     <string name="export_duration_limit">当前视频时长超过了最长导出时间限制(%d秒)。您可以关闭本提示去调整，或继续导出</string>
     <string name="cancel_export">视频尚未导出完成，是否取消？</string>
 
-
-    <!-- 人脸道具 -->
-    <string name="camare_faceunity_beauty">美颜</string>
+    <!-- 人脸贴纸 -->
+    <string name="camare_fu_beauty">美颜</string>
     <string name="fu_blue">磨皮</string>
     <string name="fu_color">美白</string>
     <string name="fu_thin">瘦脸</string>

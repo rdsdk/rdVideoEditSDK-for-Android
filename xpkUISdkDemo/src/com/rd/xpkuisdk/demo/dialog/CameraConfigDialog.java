@@ -24,7 +24,7 @@ public class CameraConfigDialog {
 	private ConfigData tempData;
 	private CheckBox cbRec, cbMV, cbPhoto, cbOsd, cbAntiChange;
 	private Switch swIsSaveToAlbum, swEnableAlbum, swUseCustomAlbum;
-	private RadioGroup rgCameraMode, rgIsRearCamera, rgFaceUnity;
+	private RadioGroup rgCameraMode, rgIsRearCamera, rgFaceU;
 	private EditText etCameraMaxTime, etCameraMinTime, etCameraMVMaxTime,
 			etCameraMVMinTime, etCamareOsdEnd;
 
@@ -88,7 +88,7 @@ public class CameraConfigDialog {
 		cbRec.setOnCheckedChangeListener(CameraCheckListener);
 		cbPhoto.setOnCheckedChangeListener(CameraCheckListener);
 		cbOsd.setOnCheckedChangeListener(CameraCheckListener);
-		
+
 		cbAntiChange.setChecked(tempData.enableAntiChange);
 		cbOsd.setChecked(tempData.enableCameraWatermark);
 		cbMV.setChecked(!tempData.hideMV);
@@ -146,23 +146,22 @@ public class CameraConfigDialog {
 		} else {
 			rgIsRearCamera.check(R.id.rbFrontCamera);
 		}
-		rgFaceUnity = (RadioGroup) view.findViewById(R.id.rgCameraFaceGroup);
-		rgFaceUnity
-				.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+		rgFaceU = (RadioGroup) view.findViewById(R.id.rgCameraFaceGroup);
+		rgFaceU.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
-					@Override
-					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						if (checkedId == R.id.rbEnableFace) {
-							tempData.isDefaultFace = true;
-						} else {
-							tempData.isDefaultFace = false;
-						}
-					}
-				});
+			@Override
+			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				if (checkedId == R.id.rbEnableFace) {
+					tempData.isDefaultFace = true;
+				} else {
+					tempData.isDefaultFace = false;
+				}
+			}
+		});
 		if (tempData.isDefaultFace) {
-			rgFaceUnity.check(R.id.rbEnableFace);
+			rgFaceU.check(R.id.rbEnableFace);
 		} else {
-			rgFaceUnity.check(R.id.rbUnableFace);
+			rgFaceU.check(R.id.rbUnableFace);
 		}
 
 		// 设置拍摄方式

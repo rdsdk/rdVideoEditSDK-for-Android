@@ -101,9 +101,9 @@ public class EditorUIAndExportConfigDialog {
 				TextView tvAutoRepeat = (TextView) view
 						.findViewById(R.id.tvAutoRepeat);
 				if (isChecked) {
-					tvAutoRepeat.setText("开启自动播放");
+					tvAutoRepeat.setText("开启自动重播");
 				} else {
-					tvAutoRepeat.setText("关闭自动播放");
+					tvAutoRepeat.setText("关闭自动重播");
 				}
 				tempData.enableAutoRepeat = isChecked;
 			}

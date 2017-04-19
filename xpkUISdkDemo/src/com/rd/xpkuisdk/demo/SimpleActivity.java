@@ -305,9 +305,9 @@ public class SimpleActivity extends Activity {
 						.setSingleCameraSaveToAlbum(configData.isSaveToAlbum)
 						// 设置录制时是否静音，true代表录制后无声音
 						.setAudioMute(false)
-						// 设置是否启用faceunity
-						.setEnableFace(configData.isDefaultFace)
-						// 设置Faceunity鉴权证书
+						// 设置是否启用人脸贴纸功能
+						.enableFaceu(configData.isDefaultFace)
+						// 设置人脸贴纸鉴权证书
 						.setPack(authpack.A())
 						// 设置是否默认为后置摄像头
 						.setDefaultRearCamera(configData.isDefaultRearCamera)
@@ -357,10 +357,10 @@ public class SimpleActivity extends Activity {
 				.setSingleCameraSaveToAlbum(true)
 				// 设置录制时是否静音，true代表录制后无声音
 				.setAudioMute(false)
-				// 设置是否启用faceunity
-				.setEnableFace(false)
-				// 设置Faceunity鉴权证书
-				// .setPack(authpack.A())
+				// 设置是否启用人脸贴纸
+				.enableFaceu(false)
+				// 设置启用人脸贴纸鉴权证书
+				.setPack(authpack.A())
 				// 设置是否默认为后置摄像头
 				.setDefaultRearCamera(false)
 				// 是否显示相册按钮

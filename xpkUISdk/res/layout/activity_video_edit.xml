@@ -177,7 +177,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="10dp"
-                            android:text="00:00"
+                            android:text="00:00.0"
                             android:textColor="@color/white"
                             android:textSize="@dimen/text_size_14" />
 
@@ -196,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@id/ivFullScreen"
-                            android:text="00:00"
+                            android:text="00:00.0"
                             android:textColor="@color/white"
                             android:textSize="@dimen/text_size_14" />
 
@@ -209,7 +209,7 @@
                             android:layout_toRightOf="@id/tvCurTime"
                             android:maxHeight="8px"
                             android:minHeight="8px"
-                            android:paddingLeft="15dp"
+                            android:paddingLeft="10dp"
                             android:paddingRight="15dp"
                             android:progressDrawable="@drawable/video_editor_progress"
                             android:thumb="@drawable/seekbar_thumb"

@@ -51,7 +51,7 @@
                 </com.rd.xpkuisdk.ui.HorizontalListViewCamera>
             </RelativeLayout>
 
-            <!-- faceUnity 开启美颜可自动调节瘦脸、磨皮  横竖屏切换layout -->
+            <!-- 开启美颜可自动调节瘦脸、磨皮  横竖屏切换layout -->
 
             <LinearLayout
                 android:id="@+id/fuLayout_parent"
@@ -128,7 +128,7 @@
                     android:background="@null"
                     android:button="@null"
                     android:gravity="center"
-                    android:text="@string/camare_faceunity_beauty"
+                    android:text="@string/camare_fu_beauty"
                     android:textColor="@drawable/edit_menu_color"
                     android:textSize="@dimen/text_size_14" />
 

@@ -42,9 +42,7 @@ public class SDKUtils {
 			os.close();
 			is.close();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
 		} finally {
 			try {
 				if (os != null) {
