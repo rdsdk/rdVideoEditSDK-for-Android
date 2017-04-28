@@ -91,7 +91,6 @@
             android:layout_marginBottom="5dp"
             android:gravity="center"
             android:minHeight="20dp"
-            android:text="05:00"
             android:textColor="@color/main_orange"
             android:textSize="@dimen/text_size_18" />
     </RelativeLayout>

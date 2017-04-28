@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="video_isAntiChang">该视频是防篡改视频</string>
+    <string name="osd_title">"水印内容：</string>
+    <string name="osd_hint">"请输入水印内容</string>
+    <string name="osd_content">"×××营业厅 ×××业务员 \n业务员编号:0001  \n业务名称:xxxx  \n客户身份证号：500233yyyymmddxxxx</string>
+
+</resources>

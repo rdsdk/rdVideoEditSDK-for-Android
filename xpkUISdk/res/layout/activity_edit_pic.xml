@@ -34,14 +34,14 @@
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:gravity="center"
-                    android:hint="请输入文本"
+                    android:hint="@string/hint_text"
                     android:lines="6"
                     android:maxLines="6"
-                    android:textSize="@dimen/text_size_25"
                     android:scrollbarStyle="@null"
                     android:scrollbars="@null"
                     android:singleLine="false"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_25" />
             </com.rd.lib.ui.PreviewFrameLayout>
         </com.rd.lib.ui.PreviewFrameLayout>
 

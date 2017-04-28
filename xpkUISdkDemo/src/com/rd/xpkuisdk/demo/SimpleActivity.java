@@ -2,6 +2,7 @@ package com.rd.xpkuisdk.demo;
 
 import static com.rd.xpkuisdk.XpkSdk.onXpkEdit;
 import static com.rd.xpkuisdk.XpkSdk.onXpkTrimVideo;
+import static com.rd.xpkuisdk.XpkSdk.onXpkVideo;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +41,7 @@ import com.rd.xpkuisdk.demo.dialog.CompressConfigDialog;
 import com.rd.xpkuisdk.demo.dialog.ConfigData;
 import com.rd.xpkuisdk.demo.dialog.ConfigDialogListener;
 import com.rd.xpkuisdk.demo.dialog.EditorUIAndExportConfigDialog;
+import com.rd.xpkuisdk.demo.dialog.OsdConfigDialog;
 import com.rd.xpkuisdk.demo.dialog.VideoTrimConfigDialog;
 import com.rd.xpkuisdk.demo.utils.SDKUtils;
 import com.rd.xpkuisdk.manager.CameraConfiguration;
@@ -50,6 +53,7 @@ import com.rd.xpkuisdk.manager.UIConfiguration;
 import com.rd.xpkuisdk.manager.UIConfiguration.ClipEditingModules;
 import com.rd.xpkuisdk.manager.UIConfiguration.EditAndExportModules;
 import com.rd.xpkuisdk.manager.VideoMetadataRetriever;
+import com.rd.xpkuisdk.manager.XpkOSD.OSDState;
 
 /**
  * xpkUISDK演示页
@@ -96,6 +100,11 @@ public class SimpleActivity extends Activity {
 	private final int XPK_ALBUM_PLAYER_REQUEST_CODE = 1012;
 
 	/**
+	 * 防篡改录制演示
+	 */
+	private final int XPK_CAMERA_ANTI_CHANGE_REQUEST_CODE = 1013;
+
+	/**
 	 * REQUEST_CODE定义：<br>
 	 * 视频编辑
 	 */
@@ -125,6 +134,7 @@ public class SimpleActivity extends Activity {
 	 */
 	private final int XPK_SHORTVIDEO_TRIM_REQUEST_CODE = 112;
 
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
@@ -133,7 +143,6 @@ public class SimpleActivity extends Activity {
 		}
 		setContentView(R.layout.activity_simple_layout);
 		restoreConfigInstanceState();
-
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
 				&& !XpkSdk.isInitialized()) {
 			if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -146,6 +155,13 @@ public class SimpleActivity extends Activity {
 		}
 		// 初始化秀拍客配置
 		initEditorUIAndExportConfig();
+		registerAllResultHandlers();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		XpkSdk.exitApp(this);
 	}
 
 	/**
@@ -216,11 +232,15 @@ public class SimpleActivity extends Activity {
 						configData.enableSort)
 				.setClipEditingModuleVisibility(ClipEditingModules.TEXT,
 						configData.enableText)
+				.setClipEditingModuleVisibility(ClipEditingModules.REVERSE,
+						configData.enableReverse)
 				// 字幕在mv的外面
 				.enableTitlingOuter(configData.enableTitlingOuter)
 				// 特效在mv的外面
 				.enableSpecialeffectsOuter(configData.enableSpecialeffectsOuter)
-				.get();
+				// 配乐方式2 (
+				// setSoundTrackType(UIConfiguration.SOUND_TRACK_LAYOUT_2))有效,设置自定义的网络音乐
+				.setMusicUrl(configData.musicUrl).get();
 
 		// 导出视频参数配置
 		ExportConfiguration exportConfig = new ExportConfiguration.Builder()
@@ -276,9 +296,11 @@ public class SimpleActivity extends Activity {
 	 * @param UIType
 	 *            * 设置录制时默认界面:<br>
 	 *            默认16：9录制:<br>
-	 *            CameraConfiguration. WIDE_SCREEN_CAN_CHANGE<br>
+	 *            CameraConfiguration#WIDE_SCREEN_CAN_CHANGE<br>
 	 *            默认1：1:<br>
 	 *            CameraConfiguration. SQUARE_SCREEN_CAN_CHANGE<br>
+	 *            仅16：9录制:<br>
+	 *            CameraConfiguration.ONLY_WIDE_SCREEN<br>
 	 *            仅1：1录制:<br>
 	 *            CameraConfiguration.ONLY_SQUARE_SCREEN
 	 */
@@ -297,7 +319,8 @@ public class SimpleActivity extends Activity {
 						 * CameraConfiguration. WIDE_SCREEN_CAN_CHANGE<br>
 						 * 默认1：1:<br>
 						 * CameraConfiguration. SQUARE_SCREEN_CAN_CHANGE<br>
-						 * 仅1：1录制:<br>
+						 * 仅16：9录制:<br>
+						 * CameraConfiguration.ONLY_SCREEN_SCREEN 仅1：1录制:<br>
 						 * CameraConfiguration.ONLY_SQUARE_SCREEN
 						 */
 						.setCameraUIType(UIType)
@@ -323,15 +346,74 @@ public class SimpleActivity extends Activity {
 						.setCameraMVMinTime(configData.cameraMVMinTime)
 						// 设置mv最大时长
 						.setCameraMVMaxTime(configData.cameraMVMaxTime)
-
 						// 开启相机水印时需注册水印
 						// XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
 						// 相机录制水印
 						.enableWatermark(configData.enableCameraWatermark)
+						// 相机水印片头
+						.setCameraTrailerTime(OSDState.header, 2f)
 						// 相机录制结束时片尾水印时长(0-1.0 单位：秒)
-						.setCameraTrailerTime(configData.cameraWatermarkEnd)
+						.setCameraTrailerTime(OSDState.end,
+								configData.cameraWatermarkEnd)
 						// 是否启用防篡改录制
 						.enableAntiChange(configData.enableAntiChange).get());
+
+	}
+
+	/**
+	 * 防篡改录制的相机配置
+	 * 
+	 */
+	private void initCameraAntiChangeConfig() {
+
+		CameraConfiguration config = new CameraConfiguration.Builder()
+				// 可设置最小录制时长,0代表不限制
+				// .setVideoMinTime(configData.cameraMinTime)
+				// // 可设置最大录制时长,0代表不限制
+				// .setVideoMaxTime(configData.cameraMaxTime)
+				// 为true代表多次拍摄，拍摄完成一段之后，将保存至相册并开始下一段拍摄，默认为false单次拍摄，拍摄完成后返回资源地址
+				.useMultiShoot(false)
+				/*
+				 * 仅16：9录制:<br> CameraConfiguration.ONLY_WIDE_SCREEN
+				 */
+				.setCameraUIType(CameraConfiguration.ONLY_WIDE_SCREEN)
+				// 设置拍摄完成后，是否保存至相册（仅单次拍摄方式有效），同时通过onActivityResult及SIMPLE_CAMERA_REQUEST_CODE返回
+				.setSingleCameraSaveToAlbum(true)
+				// 设置录制时是否静音，true代表录制后无声音
+				.setAudioMute(false)
+				// 设置是否启用人脸贴纸功能
+				.enableFaceu(configData.isDefaultFace)
+				// 设置人脸贴纸鉴权证书
+				.setPack(authpack.A())
+				// 设置是否默认为后置摄像头
+				.setDefaultRearCamera(false)
+				// 是否显示相册按钮
+				.enableAlbum(true)
+				// 是否使用自定义相册
+				// .useCustomAlbum(configData.useCustomAlbum)
+				// 设置隐藏拍摄功能（全部隐藏将强制开启视频拍摄）
+				.hideMV(true)
+				.hidePhoto(true)
+				.hideRec(false)
+				// 设置mv最小时长
+				// .setCameraMVMinTime(configData.cameraMVMinTime)
+				// // 设置mv最大时长
+				// .setCameraMVMaxTime(configData.cameraMVMaxTime)
+				// 开启相机水印时需注册水印
+				// XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
+				// 相机录制水印
+				.enableWatermark(true)
+				// 相机录制结束时片尾水印时长(0-1.0 单位：秒)
+				.setCameraTrailerTime(OSDState.header, 2f)
+				.setCameraTrailerTime(OSDState.end, 1f)
+				// 是否启用防篡改录制
+				.enableAntiChange(true).get();
+
+		XpksdkService xpkService = XpkSdk.getXpksdkService();
+		if (null != xpkService) {
+			// 初始化所有配置
+			xpkService.initConfiguration(config);
+		}
 
 	}
 
@@ -513,19 +595,31 @@ public class SimpleActivity extends Activity {
 		switch (v.getId()) {
 		case R.id.xpkrec_square: // 正方形录制视频，编辑录制后的视频，如果有导出时，导出视频的路径
 			XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
+			CameraWatermarkBuilder.setText("");// 可自定义水印显示文本
 			initCameraConfig(CameraConfiguration.ONLY_SQUARE_SCREEN);
 			XpkSdk.onXpkCamera(this, XPK_CAMERA_REQUEST_CODE);
 			break;
 		case R.id.xpkrec_wide: // 长方形录制视频，编辑录制后的视频，如果有导出时，导出视频的路径
-			XpkSdk.registerOSDBuilder(null);// 测试置NULL
-			initCameraConfig(CameraConfiguration.WIDE_SCREEN_CAN_CHANGE);
+			XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
+			CameraWatermarkBuilder.setText("");// 可自定义水印显示文本
+			initCameraConfig(CameraConfiguration.ONLY_WIDE_SCREEN);
 			XpkSdk.onXpkCamera(this, XPK_CAMERA_REQUEST_CODE);
 			break;
 		case R.id.xpkrec: // 正方形，长方形可切换录制视频，编辑录制后的视频，如果有导出时，导出视频的路径
 			XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
+			CameraWatermarkBuilder.setText("");// 可自定义水印显示文本
 			initCameraConfig(CameraConfiguration.SQUARE_SCREEN_CAN_CHANGE);
 			XpkSdk.onXpkCamera(this, XPK_CAMERA_REQUEST_CODE);
 			break;
+		case R.id.xpkrec_AntiChange: // 全屏录制，防篡改录制
+			XpkSdk.registerOSDBuilder(CameraWatermarkBuilder.class);
+			String osd = TextUtils.isEmpty(configData.antiChangeText) ? getString(R.string.osd_content)
+					: configData.antiChangeText;
+			CameraWatermarkBuilder.setText(osd);
+			initCameraAntiChangeConfig();
+			XpkSdk.onXpkCamera(this, XPK_CAMERA_ANTI_CHANGE_REQUEST_CODE);
+			break;
+
 		case R.id.xpkedit: // 传递资源路径，进入视频编辑，返回导出的视频的地址
 			initEditorUIAndExportConfig();
 			XpkSdk.getXpksdkService().initConfiguration(
@@ -542,11 +636,9 @@ public class SimpleActivity extends Activity {
 			XpkSdk.onXpkVideo(this, XPK_EDIT_REQUEST_CODE);
 			break;
 		case R.id.xpk_player: // 播放器
-
 			initUIAblumConfig();
 			XpkSdk.onXpkAlbum(this, UIConfiguration.ALBUM_SUPPORT_VIDEO_ONLY,
 					XPK_ALBUM_PLAYER_REQUEST_CODE);
-
 			break;
 		case R.id.xpk_trim_l: // 截取横屏视频
 			initTrimConfig();
@@ -586,7 +678,6 @@ public class SimpleActivity extends Activity {
 			initUIAblumConfig();
 			XpkSdk.onXpkAlbum(this, UIConfiguration.ALBUM_SUPPORT_VIDEO_ONLY,
 					XPK_ALBUM_COMPRESS_REQUEST_CODE);
-
 			break;
 		case R.id.xpk_ui_config: // ui配置
 			if (isConfigDialogShow) {
@@ -694,41 +785,120 @@ public class SimpleActivity extends Activity {
 		case R.id.reset_config:
 			resetConfigInstanceState();
 			break;
+		case R.id.xpk_AntiChange_config:
+			if (isConfigDialogShow) {
+				return;
+			}
+			new OsdConfigDialog(this, new ConfigDialogListener() {
+
+				@Override
+				public void onSaveConfigData(ConfigData configData) {
+					// initAndGetConfigData().setConfig(configData);
+					SimpleActivity.this.configData.antiChangeText = configData.antiChangeText;
+					initCameraAntiChangeConfig();
+					saveConfigInstanceState();
+				}
+
+				@Override
+				public void onDismiss(DialogInterface dialog) {
+					isConfigDialogShow = false;
+				}
+			}, configData);
+			isConfigDialogShow = true;
+			break;
 		default:
 			break;
 		}
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == XPK_CAMERA_REQUEST_CODE) {
+	/**
+	 *TODO:registerAllResultHandlers
+	 */
+	private void registerAllResultHandlers() {
+		registerActivityResultHandler(XPK_CAMERA_REQUEST_CODE,
+				cameraResultHandler);
+		registerActivityResultHandler(XPK_CAMERA_ANTI_CHANGE_REQUEST_CODE,
+				cameraAntiChangeResultHandler);
+
+		registerActivityResultHandler(XPK_ALBUM_REQUEST_CODE,
+				albumResultHandler);
+		registerActivityResultHandler(XPK_ALBUM_COMPRESS_REQUEST_CODE,
+				albumCompressResultHandler);
+
+		registerActivityResultHandler(XPK_EDIT_REQUEST_CODE, editResultHandler);
+		registerActivityResultHandler(XPK_ALBUM_PLAYER_REQUEST_CODE,
+				albumPlayerResultHandler);
+		registerActivityResultHandler(XPK_TRIM_REQUEST_CODE, trimResultHandler);
+
+		registerActivityResultHandler(XPK_SHORTVIDEO_CAMERA_REQUEST_CODE,
+				shortvideoCameraResultHandler);
+		registerActivityResultHandler(XPK_SHORTVIDEO_ALBUM_REQUEST_CODE,
+				shortvideoAlbumResultHandler);
+		registerActivityResultHandler(XPK_SHORTVIDEO_TRIM_REQUEST_CODE,
+				shortvideoTrimResultHandler);
+		
+	}
+
+	private ActivityResultHandler cameraResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == XpkSdk.RESULT_CAMERA_TO_ALBUM) {
 				// 点击拍摄的相册按钮，将返回在此，并在这里做进入相册界面操作
-				XpkSdk.onXpkAlbum(this, UIConfiguration.ALBUM_SUPPORT_DEFAULT,
+				XpkSdk.onXpkAlbum(context,
+						UIConfiguration.ALBUM_SUPPORT_DEFAULT,
 						XPK_ALBUM_REQUEST_CODE);
 			} else if (resultCode == RESULT_OK) {
 				// 拍摄后返回的媒体路径
 				ArrayList<String> arrMediaListPath = new ArrayList<String>();
-				arrMediaListPath.add(data
-						.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH));
-				arrMediaListPath.add(data
-						.getStringExtra(XpkSdk.INTENT_KEY_PICTURE_PATH));
+				String videoPath = data
+						.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH);
+				String picPath = data
+						.getStringExtra(XpkSdk.INTENT_KEY_PICTURE_PATH);
+				arrMediaListPath.add(videoPath);
+				arrMediaListPath.add(picPath);
+				String logInfo = String.format("Video path：%s,Picture path：%s",
+						videoPath, picPath);
+				Log.d(TAG, logInfo);
+				if (configData.albumSupportFormatType == UIConfiguration.ALBUM_SUPPORT_IMAGE_ONLY) {
+					if (videoPath != null) {
+						onXpkVideo(context);
+						return;
+					}
+				} else if (configData.albumSupportFormatType == UIConfiguration.ALBUM_SUPPORT_VIDEO_ONLY) {
+					if (picPath != null) {
+						onXpkVideo(context);
+						return;
+					}
+				}
+				onXpkEdit(context, arrMediaListPath);
+			}
+		}
+	};
+	private ActivityResultHandler cameraAntiChangeResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
+			if (resultCode == RESULT_OK) {
 				String logInfo = String.format("Video path：%s,Picture path：%s",
 						data.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH),
 						data.getStringExtra(XpkSdk.INTENT_KEY_PICTURE_PATH));
 				Log.d(TAG, logInfo);
-				onXpkEdit(this, arrMediaListPath);
-
-				// Intent intent = new Intent(this, VideoPlayerActivity.class);
-				// intent.putExtra(VideoPlayerActivity.ACTION_PATH,
-				// data.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH));
-				// startActivity(intent);
-
+				onPlayVideo(data.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH));
 			}
-		} else if (requestCode == XPK_ALBUM_REQUEST_CODE) {
+		}
+	};
+
+	private ActivityResultHandler albumResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == XpkSdk.RESULT_ALBUM_TO_CAMERA) {
 				// 点击相册的拍摄按钮，将返回在此，并在这里做进入拍摄界面操作
-				XpkSdk.onXpkCamera(this, XPK_CAMERA_REQUEST_CODE);
+				XpkSdk.onXpkCamera(context, XPK_CAMERA_REQUEST_CODE);
 			} else if (resultCode == RESULT_OK) {
 				// 返回选择的图片视频地址list
 				ArrayList<String> arrMediaListPath = data
@@ -738,17 +908,32 @@ public class SimpleActivity extends Activity {
 					Log.d(TAG, path);
 					logInfo += path + "\n";
 				}
-				Toast.makeText(this, logInfo, Toast.LENGTH_LONG).show();
+				Toast.makeText(context, logInfo, Toast.LENGTH_LONG).show();
 			}
-		} else if (requestCode == XPK_EDIT_REQUEST_CODE) {
+		}
+	};
+
+	private ActivityResultHandler editResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == RESULT_OK) {
 				String mediaPath = data.getStringExtra(XpkSdk.XPK_EDIT_RESULT);
 				if (mediaPath != null) {
 					Log.d(TAG, mediaPath);
-					Toast.makeText(this, mediaPath, Toast.LENGTH_LONG).show();
+					Toast.makeText(context, mediaPath, Toast.LENGTH_LONG)
+							.show();
 				}
 			}
-		} else if (requestCode == XPK_TRIM_REQUEST_CODE) {
+		}
+	};
+
+	private ActivityResultHandler trimResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == RESULT_OK) {
 				int startTime = data.getIntExtra(XpkSdk.TRIM_START_TIME, 0);
 				int endTime = data.getIntExtra(XpkSdk.TRIM_END_TIME, 0);
@@ -756,12 +941,19 @@ public class SimpleActivity extends Activity {
 				String logInfo = "截取开始时间:" + startTime + "ms" + ",结束时间:"
 						+ endTime + "ms\n裁剪区域：" + rect;
 				Log.d(TAG, logInfo);
-				Toast.makeText(this, logInfo, Toast.LENGTH_LONG).show();
+				Toast.makeText(context, logInfo, Toast.LENGTH_LONG).show();
 			}
-		} else if (requestCode == XPK_SHORTVIDEO_CAMERA_REQUEST_CODE) {// 短视频录制
+		}
+	};
+
+	private ActivityResultHandler shortvideoCameraResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == XpkSdk.RESULT_CAMERA_TO_ALBUM) {
 				// TODO: 按下拍摄的相册按钮，在此进入相册
-				XpkSdk.onXpkAlbum(this,
+				XpkSdk.onXpkAlbum(context,
 						UIConfiguration.ALBUM_SUPPORT_VIDEO_ONLY,
 						XPK_SHORTVIDEO_ALBUM_REQUEST_CODE);
 			} else if (resultCode == RESULT_OK) {
@@ -769,12 +961,19 @@ public class SimpleActivity extends Activity {
 				ArrayList<String> arrMediaListPath = new ArrayList<String>();
 				arrMediaListPath.add(data
 						.getStringExtra(XpkSdk.INTENT_KEY_VIDEO_PATH));
-				onXpkEdit(this, arrMediaListPath);
+				onXpkEdit(context, arrMediaListPath);
 			}
-		} else if (requestCode == XPK_SHORTVIDEO_ALBUM_REQUEST_CODE) {
+		}
+	};
+
+	private ActivityResultHandler shortvideoAlbumResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == XpkSdk.RESULT_ALBUM_TO_CAMERA) {
 				// TODO: 按下相册的拍摄按钮，在此进入拍摄界面
-				XpkSdk.onXpkCamera(this, XPK_SHORTVIDEO_CAMERA_REQUEST_CODE);
+				XpkSdk.onXpkCamera(context, XPK_SHORTVIDEO_CAMERA_REQUEST_CODE);
 			} else if (resultCode == RESULT_OK) {
 				// TODO: 选择媒体结束后，在此进入截取界面
 				ArrayList<String> arrCameraMediaListPath = data
@@ -808,7 +1007,14 @@ public class SimpleActivity extends Activity {
 					}
 				}
 			}
-		} else if (requestCode == XPK_SHORTVIDEO_TRIM_REQUEST_CODE) {
+		}
+	};
+	
+	private ActivityResultHandler shortvideoTrimResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == RESULT_OK) {
 				// TODO: 截取完成，在此进入编辑界面
 				EditObject eo = new EditObject(
@@ -817,103 +1023,61 @@ public class SimpleActivity extends Activity {
 						.getParcelableExtra(XpkSdk.TRIM_CROP_RECT));
 				eo.setStartTime(data.getIntExtra(XpkSdk.TRIM_START_TIME, 0));
 				eo.setEndTime(data.getIntExtra(XpkSdk.TRIM_END_TIME, 0));
-				onXpkEdit(this, eo, XPK_EDIT_REQUEST_CODE);
+				onXpkEdit(context, eo, XPK_EDIT_REQUEST_CODE);
 			}
-		} else if (requestCode == XPK_ALBUM_COMPRESS_REQUEST_CODE) {
-			// 选择要压缩的视频资源
-			if (resultCode == RESULT_OK) {
-				// 返回选择的图片视频地址list
-				ArrayList<String> arrMediaListPath = data
-						.getStringArrayListExtra(XpkSdk.XPK_ALBUM_RESULT);
-				if (arrMediaListPath.size() > 0) {
-					if (!TextUtils.isEmpty(arrMediaListPath.get(0))) {
-						XpkSdk.onCompressVideo(this, arrMediaListPath.get(0),
-								iCompressVideoCallback);
-					}
-				}
-			}
-		} else if (requestCode == XPK_ALBUM_PLAYER_REQUEST_CODE) {
+		}
+	};
+
+	private ActivityResultHandler albumPlayerResultHandler = new ActivityResultHandler() {
+
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
 			if (resultCode == RESULT_OK) {
 				// 返回选择的视频地址list
 				ArrayList<String> arrMediaListPath = data
 						.getStringArrayListExtra(XpkSdk.XPK_ALBUM_RESULT);
 				if (arrMediaListPath.size() > 0) {
 					if (!TextUtils.isEmpty(arrMediaListPath.get(0))) {
-						Intent intent = new Intent(this,
-								VideoPlayerActivity.class);
-						intent.putExtra(VideoPlayerActivity.ACTION_PATH,
-								arrMediaListPath.get(0));
-						startActivity(intent);
+						onPlayVideo(arrMediaListPath.get(0));
 					}
 				}
 			}
 		}
-	}
-
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		XpkSdk.exitApp(this);
-	}
-
-	// 防止多次弹出对话框
-	private boolean isConfigDialogShow;
-	private ConfigData configData;
+	};
 
 	/**
-	 * 初始化并返回配置
+	 * 播放视频
+	 * 
+	 * @param path
 	 */
-	private ConfigData initAndGetConfigData() {
-		if (configData == null) {
-			configData = new ConfigData();
-		}
-		return configData;
+	private void onPlayVideo(String path) {
+		Intent intent = new Intent(this, VideoPlayerActivity.class);
+		intent.putExtra(VideoPlayerActivity.ACTION_PATH, path);
+		startActivity(intent);
 	}
 
-	private void exportDemoResource() {
-		if (!new File(EDIT_PICTURE_PATH).exists()
-				|| !new File(EDIT_L_VIDEO_PATH).exists()
-				|| !new File(EDIT_S_VIDEO_PATH).exists()
-				|| !new File(EDIT_P_VIDEO_PATH).exists()) {
-			new AsyncTask<Integer, Integer, Integer>() {
-				private ProgressDialog m_dlgProgress;
+	/**
+	 * 选择要压缩的视频资源
+	 */
+	private ActivityResultHandler albumCompressResultHandler = new ActivityResultHandler() {
 
-				@Override
-				protected void onPreExecute() {
-					m_dlgProgress = ProgressDialog.show(SimpleActivity.this,
-							null, "导出测试资源...");
+		@Override
+		public void onActivityResult(Context context, int resultCode,
+				Intent data) {
+			if (resultCode == RESULT_OK) {
+				// 返回选择的图片视频地址list
+				ArrayList<String> arrMediaListPath = data
+						.getStringArrayListExtra(XpkSdk.XPK_ALBUM_RESULT);
+				if (arrMediaListPath.size() > 0) {
+					if (!TextUtils.isEmpty(arrMediaListPath.get(0))) {
+						XpkSdk.onCompressVideo(context,
+								arrMediaListPath.get(0), iCompressVideoCallback);
+					}
 				}
-
-				@Override
-				protected Integer doInBackground(Integer... params) {
-					if (!new File(EDIT_PICTURE_PATH).exists()) {
-						// 导出测试编辑资源
-						SDKUtils.assetRes2File(getAssets(),
-								"demomedia/android.jpg", EDIT_PICTURE_PATH);
-					}
-					if (!new File(EDIT_L_VIDEO_PATH).exists()) {
-						SDKUtils.assetRes2File(getAssets(),
-								"demomedia/demoVideo1.mp4", EDIT_L_VIDEO_PATH);
-					}
-					if (!new File(EDIT_S_VIDEO_PATH).exists()) {
-						SDKUtils.assetRes2File(getAssets(),
-								"demomedia/demoVideo2.mp4", EDIT_S_VIDEO_PATH);
-					}
-					if (!new File(EDIT_P_VIDEO_PATH).exists()) {
-						SDKUtils.assetRes2File(getAssets(),
-								"demomedia/demoVideo3.mp4", EDIT_P_VIDEO_PATH);
-					}
-					return null;
-				}
-
-				@Override
-				protected void onPostExecute(Integer result) {
-					m_dlgProgress.dismiss();
-					m_dlgProgress = null;
-				}
-			}.execute();
+			}
 		}
-	}
+	};
 
 	/**
 	 * 压缩视频回调函数
@@ -970,6 +1134,68 @@ public class SimpleActivity extends Activity {
 		}
 	};
 
+	// 防止多次弹出对话框
+	private boolean isConfigDialogShow;
+	private ConfigData configData;
+
+	/**
+	 * 初始化并返回配置
+	 */
+	private ConfigData initAndGetConfigData() {
+		if (configData == null) {
+			configData = new ConfigData();
+		}
+		return configData;
+	}
+
+	/**
+	 * 导出测试资源
+	 */
+	private void exportDemoResource() {
+		if (!new File(EDIT_PICTURE_PATH).exists()
+				|| !new File(EDIT_L_VIDEO_PATH).exists()
+				|| !new File(EDIT_S_VIDEO_PATH).exists()
+				|| !new File(EDIT_P_VIDEO_PATH).exists()) {
+			new AsyncTask<Integer, Integer, Integer>() {
+				private ProgressDialog m_dlgProgress;
+
+				@Override
+				protected void onPreExecute() {
+					m_dlgProgress = ProgressDialog.show(SimpleActivity.this,
+							null, "导出测试资源...");
+				}
+
+				@Override
+				protected Integer doInBackground(Integer... params) {
+					if (!new File(EDIT_PICTURE_PATH).exists()) {
+						// 导出测试编辑资源
+						SDKUtils.assetRes2File(getAssets(),
+								"demomedia/android.jpg", EDIT_PICTURE_PATH);
+					}
+					if (!new File(EDIT_L_VIDEO_PATH).exists()) {
+						SDKUtils.assetRes2File(getAssets(),
+								"demomedia/demoVideo1.mp4", EDIT_L_VIDEO_PATH);
+					}
+					if (!new File(EDIT_S_VIDEO_PATH).exists()) {
+						SDKUtils.assetRes2File(getAssets(),
+								"demomedia/demoVideo2.mp4", EDIT_S_VIDEO_PATH);
+					}
+					if (!new File(EDIT_P_VIDEO_PATH).exists()) {
+						SDKUtils.assetRes2File(getAssets(),
+								"demomedia/demoVideo3.mp4", EDIT_P_VIDEO_PATH);
+					}
+					return null;
+				}
+
+				@Override
+				protected void onPostExecute(Integer result) {
+					m_dlgProgress.dismiss();
+					m_dlgProgress = null;
+				}
+			}.execute();
+		}
+	}
+
 	/**
 	 * 重置持续化保存的配置
 	 */
@@ -998,5 +1224,47 @@ public class SimpleActivity extends Activity {
 				Context.MODE_PRIVATE);
 		configData = XpksdkService.restoreObject(sharedPreferences,
 				"CONFIG_DATA", initAndGetConfigData());
+	}
+
+	private SparseArray<ActivityResultHandler> registeredActivityResultHandlers;
+
+	/**
+	 * 注册响应activity result
+	 * 
+	 * @param requestCode
+	 * @param handler
+	 */
+	private void registerActivityResultHandler(int requestCode,
+			ActivityResultHandler handler) {
+		if (null == registeredActivityResultHandlers) {
+			registeredActivityResultHandlers = new SparseArray<SimpleActivity.ActivityResultHandler>();
+		}
+		registeredActivityResultHandlers.put(requestCode, handler);
+	}
+
+	private interface ActivityResultHandler {
+		/**
+		 * 响应
+		 * 
+		 * @param context
+		 * @param resultCode
+		 *            The integer result code returned by the child activity
+		 *            through its setResult().
+		 * @param data
+		 *            An Intent, which can return result data to the caller
+		 *            (various data can be attached to Intent "extras").
+		 */
+		void onActivityResult(Context context, int resultCode, Intent data);
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (null != registeredActivityResultHandlers) {
+			ActivityResultHandler handler = registeredActivityResultHandlers
+					.get(requestCode);
+			if (null != handler) {
+				handler.onActivityResult(this, resultCode, data);
+			}
+		}
 	}
 }

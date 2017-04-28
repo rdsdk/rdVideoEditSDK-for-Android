@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string-array name="crop_menu">
+        <item>原始值</item>
+        <item>正方形</item>
+        <item>自由</item>
+    </string-array>
+    <string-array name="speed_array">
+        <item>1/4</item>
+        <item>1/2</item>
+        <item>1X</item>
+        <item>2X</item>
+        <item>4X</item>
+    </string-array>
+    <string-array name="duration_array">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="scan_sd_menu">
+        <item>快速扫描</item>
+        <item>自定义扫描</item>
+    </string-array>
+
+</resources>

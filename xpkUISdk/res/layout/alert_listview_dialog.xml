@@ -37,6 +37,6 @@
         android:layout_height="@dimen/alert_listview_dialog_item_height"
         android:layout_marginTop="15dp"
         android:background="@drawable/dialog_corners_bg"
-        android:text="取消" />
+        android:text="@string/cancel" />
 
 </LinearLayout>

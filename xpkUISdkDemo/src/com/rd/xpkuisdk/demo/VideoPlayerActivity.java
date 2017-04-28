@@ -233,7 +233,7 @@ public class VideoPlayerActivity extends Activity {
 			m_dlgLoading.dismiss();
 			if ("yes".equals(support_anti_change)) {
 				final TextView tv = new TextView(getApplicationContext());
-				tv.setText("防篡改视频");
+				tv.setText(R.string.video_isAntiChang);
 				final FrameLayout.LayoutParams lp = new LayoutParams(
 						FrameLayout.LayoutParams.WRAP_CONTENT,
 						FrameLayout.LayoutParams.WRAP_CONTENT);

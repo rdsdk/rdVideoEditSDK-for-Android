@@ -225,7 +225,7 @@
                 android:button="@null"
                 android:checked="true"
                 android:drawableTop="@drawable/doodle_paint_background"
-                android:text="涂鸦笔"
+                android:text="@string/graffiti_paint"
                 android:textColor="@color/doodle_text_color"
                 android:textSize="12sp" />
 
@@ -236,7 +236,7 @@
                 android:layout_marginLeft="20dp"
                 android:button="@null"
                 android:drawableTop="@drawable/doodle_eraser_background"
-                android:text="橡皮擦"
+             android:text="@string/eraser"
                 android:textSize="12sp" />
         </RadioGroup>
 

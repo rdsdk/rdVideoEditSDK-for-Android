@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:minHeight="40dp"
             android:minWidth="60dp"
-            android:text="配音"
+            android:text="@string/audio"
             android:background="@null"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_15"

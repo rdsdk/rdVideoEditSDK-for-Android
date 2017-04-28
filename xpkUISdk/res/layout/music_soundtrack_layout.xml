@@ -45,7 +45,7 @@
             android:gravity="left"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
-            android:text="音乐"
+            android:text="@string/music"
             android:textColor="@color/borderline_color"
             android:textSize="@dimen/text_size_16" />
     </RelativeLayout>

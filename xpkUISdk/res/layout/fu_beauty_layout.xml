@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
- >
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="1"
+        android:layout_height="35dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="2dp"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -128,7 +129,7 @@
             android:paddingRight="@dimen/fu_paddingLeft"
             android:progressDrawable="@drawable/video_editor_progress"
             android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="23dp" />
+            android:thumbOffset="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -160,7 +161,7 @@
             android:paddingRight="@dimen/fu_paddingLeft"
             android:progressDrawable="@drawable/video_editor_progress"
             android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="23dp" />
+            android:thumbOffset="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -192,7 +193,7 @@
             android:paddingRight="@dimen/fu_paddingLeft"
             android:progressDrawable="@drawable/video_editor_progress"
             android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="23dp" />
+            android:thumbOffset="20dp" />
     </LinearLayout>
 
 </LinearLayout>

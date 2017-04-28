@@ -14,8 +14,6 @@
         android:gravity="center_vertical"
         android:orientation="vertical" >
 
-        <include layout="@layout/sp_music_container" />
-
         <include layout="@layout/sp_watermark_container" />
     </LinearLayout>
 

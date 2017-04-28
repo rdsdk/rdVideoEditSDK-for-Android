@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!-- 相机滤镜 -->
+    <string name="camera_effect_0">原图</string>
+    <string name="camera_effect_5">暖风飘"</string>
+    <string name="camera_effect_6">阿宝</string>
+    <string name="camera_effect_7">梦里</string>
+    <string name="camera_effect_8">拿铁</string>
+    <string name="camera_effect_9">活力</string>
+    <string name="camera_effect_10">优雅</string>
+    <string name="camera_effect_11">暴走</string>
+    <string name="camera_effect_12">街拍</string>
+    <string name="camera_effect_13">欧洲站</string>
+    <string name="camera_effect_14">里约</string>
+    <string name="camera_effect_15">流连</string>
+    <string name="camera_effect_16">聚光</string>
+    <string name="camera_effect_17">候鸟</string>
+    <string name="camera_effect_18">云端</string>
+    <string name="camera_effect_19">彩虹瀑</string>
+    <string name="camera_effect_20">淡雅</string>
+    <string name="camera_effect_21">优格</string>
+    <string name="camera_effect_22">青春</string>
+    <string name="camera_effect_23">胭脂</string>
+    <string name="camera_effect_24">精灵</string>
+    <string name="camera_effect_25">遐想</string>
+    <string name="camera_effect_26">冰冰凉</string>
+    <string name="camera_effect_27">牛奶</string>
+    <string name="camera_effect_28">塞纳河畔</string>
+    <string name="camera_effect_29">清晨</string>
+    <string name="camera_effect_30">伊豆</string>
+    <string name="camera_effect_31">随想</string>
+    <string name="camera_effect_32">窗菲</string>
+    <string name="camera_effect_33">近黄昏</string>
+    <string name="camera_effect_34">阴天</string>
+    <string name="camera_effect_35">檀岛</string>
+    <string name="camera_effect_36">节气</string>
+    <string name="camera_effect_37">晚霞</string>
+    <string name="camera_effect_38">朦胧</string>
+    <string name="camera_effect_39">记忆</string>
+    <!-- 配乐方式1 (内置配乐) -->
+    <string name="music_1_1">悦动</string>
+    <string name="music_1_2">励志</string>
+    <string name="music_1_3">浪漫</string>
+    <string name="music_1_4">旅行</string>
+    <string name="music_1_5">小清新</string>
+    <string name="music_1_6">小资</string>
+    <string name="music_1_7">时尚</string>
+    <string name="music_1_8">回忆</string>
+    <string name="music_1_9">轻松</string>
+    <string name="music_1_10">乡村</string>
+    <string name="music_1_11">悠闲</string>
+
+    <!-- 配乐方式二 -->
+    <string name="music_2_0">潮玩</string>
+    <string name="music_2_1">发现</string>
+    <string name="music_2_2">黑白</string>
+    <string name="music_2_3">回忆</string>
+    <string name="music_2_4">街头</string>
+    <string name="music_2_5">旅行</string>
+    <string name="music_2_6">清新</string>
+    <string name="music_2_7">撒野</string>
+
+    <!-- 极录客使用 (配乐方式二 ) 同上-->
+    <string name="sp_music_null">无</string>
+    <string name="sp_music_chaowan">潮玩</string>
+    <string name="sp_music_faxian">发现</string>
+    <string name="sp_music_heibai">黑白</string>
+    <string name="sp_music_huiyi">回忆</string>
+    <string name="sp_music_jietou">街头</string>
+    <string name="sp_music_lvxing">旅行</string>
+    <string name="sp_music_qingxin">清新</string>
+    <string name="sp_music_saye">撒野</string>
+
+    <!-- 滤镜方式1(多组滤镜) -->
+    <string name="filter_1_0">原图</string>
+    <string name="filter_1_5">撒野</string>
+    <string name="filter_1_6">阿宝</string>
+    <string name="filter_1_7">梦里</string>
+    <string name="filter_1_8">拿铁</string>
+    <string name="filter_1_9">活力</string>
+    <string name="filter_1_10">优雅</string>
+    <string name="filter_1_11">暴走</string>
+    <string name="filter_1_12">街拍</string>
+    <string name="filter_1_13">欧洲站</string>
+    <string name="filter_1_14">里约</string>
+    <string name="filter_1_15">流年</string>
+    <string name="filter_1_16">聚光</string>
+    <string name="filter_1_17">候鸟</string>
+    <string name="filter_1_18">云端</string>
+    <string name="filter_1_19">彩虹瀑</string>
+    <string name="filter_1_20">淡雅</string>
+    <string name="filter_1_21">优格</string>
+    <string name="filter_1_22">青春</string>
+    <string name="filter_1_23">胭脂</string>
+    <string name="filter_1_24">精灵</string>
+    <string name="filter_1_25">遐想</string>
+    <string name="filter_1_26">冰冰凉</string>
+    <string name="filter_1_27">牛奶</string>
+    <string name="filter_1_28">塞纳河畔</string>
+    <string name="filter_1_29">清晨</string>
+    <string name="filter_1_30">伊豆</string>
+    <string name="filter_1_31">随想</string>
+    <string name="filter_1_32">窗菲</string>
+    <string name="filter_1_33">近黄昏</string>
+    <string name="filter_1_34">阴天</string>
+    <string name="filter_1_35">檀岛</string>
+    <string name="filter_1_36">节气</string>
+    <string name="filter_1_37">晚霞</string>
+    <string name="filter_1_38">朦胧</string>
+    <string name="filter_1_39">记忆</string>
+
+    <!-- 滤镜方式二 (jlk) -->
+    <string name="sp_filter_1">原片</string>
+    <string name="sp_filter_2">褪色</string>
+    <string name="sp_filter_3">明暗</string>
+    <string name="sp_filter_4">空白</string>
+    <string name="sp_filter_5">光年</string>
+    <string name="sp_filter_6">印记</string>
+    <string name="sp_filter_7">火花</string>
+    <string name="sp_filter_8">流云</string>
+    <string name="sp_filter_9">清欢</string>
+    <string name="sp_filter_10">描摹</string>
+
+</resources>

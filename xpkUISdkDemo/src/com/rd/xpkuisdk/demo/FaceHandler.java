@@ -15,7 +15,7 @@ import com.rd.xpkuisdk.manager.FaceuConfig;
 /**
  * 导入人脸贴纸资源
  * 
- * @author JIAN 
+ * @author JIAN
  * @date 2017-3-18 上午11:36:37
  */
 public class FaceHandler {
@@ -59,37 +59,26 @@ public class FaceHandler {
 				}
 				config.setBeautyPath(beauty);// //设置美颜基础库本地路径（必须,否则无法启用美颜）
 
-				//设置开启美颜时美白的等级 (参数值0.0f-1.0f,开启人脸识别且开启美颜之后生效)
+				// 设置开启美颜时美白的等级 (参数值0.0f-1.0f,开启人脸识别且开启美颜之后生效)
 				config.setColor_level(0.48f);
-				//设置开启美颜时磨皮的等级(参数值0.0f-4.0f,开启人脸识别且开启美颜之后生效)
+				// 设置开启美颜时磨皮的等级(参数值0.0f-4.0f,开启人脸识别且开启美颜之后生效)
 				config.setBlur_level(4.0f);
-				//设置开启美颜时瘦脸的等级 (有效参数值0.0f-2.0f,开启人脸识别且开启美颜之后生效)
+				// 设置开启美颜时瘦脸的等级 (有效参数值0.0f-2.0f,开启人脸识别且开启美颜之后生效)
 				config.setCheek_thinning(0.68f);
-				//设置美颜时大眼的等级(有效参数值0.0f-4.0f,开启人脸识别且开启美颜之后生效)
+				// 设置美颜时大眼的等级(有效参数值0.0f-4.0f,开启人脸识别且开启美颜之后生效)
 				config.setEye_enlarging(1.53f);
 
-				// // 方式一: 加载本地资源
+				  // 方式一: 加载本地资源
 
-				// String dog = root + "BeagleDog.mp3", dogIcon = root
-				// + "beagledog.png";
-				// String colorCrown = root + "ColorCrown.mp3", colorCrownIcon =
-				// root
-				// + "colorcrown.png";
-				// String tiara = root + "tiara.mp3", tiaraIcon = root
-				// + "tiara.png";
-				// String yellowEar = root + "YellowEar.mp3", YellowEarIcon =
-				// root
-				// + "yellowear.png";
-				//
-				// addItem(asset, dog, "BeagleDog.mp3", dogIcon,
-				// "beagledog.png",
-				// "BeagleDog");
-				// addItem(asset, colorCrown, "ColorCrown.mp3", colorCrownIcon,
-				// "colorcrown.png", "ColorCrown");
-				// addItem(asset, tiara, "tiara.mp3", tiaraIcon, "tiara.png",
-				// "tiara");
-				// addItem(asset, yellowEar, "YellowEar.mp3", YellowEarIcon,
-				// "yellowear.png", "YellowEar");
+//				String dog = root + "BeagleDog.mp3", dogIcon = root
+//						+ "beagledog.png";
+//				String yellowEar = root + "YellowEar.mp3", YellowEarIcon = root
+//						+ "yellowear.png";
+//
+//				addItem(asset, dog, "BeagleDog.mp3", dogIcon, "beagledog.png",
+//						"BeagleDog");
+//				addItem(asset, yellowEar, "YellowEar.mp3", YellowEarIcon,
+//						"yellowear.png", "YellowEar");
 				// 方式二:加载网络资源
 				config.enableNetFaceu(true);// 如果要启用网络化加载贴纸的方式
 				config.setUrl(url);// 设置网络化的人脸贴纸数据接口

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fullscreen_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:visibility="visible" >
+
+    <!-- 拍摄视频界面摄影 -->
+
+    <include layout="@layout/preview_video" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <!-- 引用拍摄界面除底部栏的按钮控件 -->
+
+        <include layout="@layout/indicator_bar" />
+
+        <!-- 底部工具栏 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/camera_list_back_color"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnFlashModeCtrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/camera_flash_status" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnSwitchCamera5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/btn_switch_camera" />
+
+            <com.rd.lib.ui.RotateImageView
+                android:id="@+id/btnbeauty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:scaleType="center"
+                android:src="@drawable/living_beauty"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <!-- 底部分割线 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/camera_list_back_color" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:background="@color/camera_list_back_color" />
+        </LinearLayout>
+
+        <!-- 底部栏背景图片 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/camera_list_back_color"
+            android:visibility="visible" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 左边按钮 -->
+
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:id="@+id/rrlbtnBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" >
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/btnBottomLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_face_button"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@drawable/normal_bottom_button_text_color"
+            android:textSize="@dimen/text_size_11" />
+    </com.rd.lib.ui.RotateRelativeLayout>
+
+    <!-- 长方形照片拍摄切换 -->
+
+    <RelativeLayout
+        android:id="@+id/rlSelectRecOrPhoto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rrlbtnRecord"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible" >
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/lvSelectMV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/lvSelectRec1" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnSelectMV1"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/selectrecorphoto_mark"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvItembtnSelectMVCaption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/btnSelectMV1"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_15" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/lvSelectRec1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnSelectRec1"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/selectrecorphoto_mark" />
+
+            <TextView
+                android:id="@+id/tvItembtnSelectRecCaption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/btnSelectRec1"
+                android:text="@string/select_media_title_video"
+                android:textColor="@color/red"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_15" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/lvSelectPhoto1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_toRightOf="@+id/lvSelectRec1" >
+
+            <com.rd.lib.ui.ExtButton
+                android:id="@+id/btnSelectPhoto1"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/selectrecorphoto_mark"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvItembtnSelectPhotoCaption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/btnSelectPhoto1"
+                android:text="@string/select_media_title_photo"
+                android:textColor="@color/white"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/text_size_15" />
+        </com.rd.lib.ui.RotateRelativeLayout>
+    </RelativeLayout>
+
+    <!-- 拍摄按钮 -->
+
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:id="@+id/rrlbtnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" >
+
+        <Button
+            android:id="@+id/btnRecord"
+            style="@style/main_entry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shutter_stop_record" />
+    </com.rd.lib.ui.RotateRelativeLayout>
+
+    <!-- 右边按钮 -->
+
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:id="@+id/rrlbtnBottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" >
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/btnBottomRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_album_button"
+            android:gravity="center_vertical"
+            android:textColor="@drawable/normal_bottom_button_text_color"
+            android:textSize="@dimen/text_size_16" />
+    </com.rd.lib.ui.RotateRelativeLayout>
+
+    <!-- 完成OK按钮 -->
+
+    <com.rd.lib.ui.RotateRelativeLayout
+        android:id="@+id/rrlbtnBottomRightForLandscape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" >
+
+        <com.rd.lib.ui.ExtButton
+            android:id="@+id/btnBottomRightForLandscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_album_button"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@drawable/normal_bottom_button_text_color"
+            android:textSize="@dimen/text_size_11" />
+    </com.rd.lib.ui.RotateRelativeLayout>
+
+</RelativeLayout>

@@ -80,7 +80,7 @@
                 android:drawablePadding="5dp"
                 android:drawableTop="@drawable/doodle_add_doodle"
                 android:gravity="center"
-                android:text="添加涂鸦" />
+                android:text="@string/add_graffiti" />
 
             <TextView
                 android:id="@+id/tv_doodle_delete_text_view"
@@ -91,7 +91,7 @@
                 android:layout_toRightOf="@id/tv_dooele_add_doodle_text_view"
                 android:drawableTop="@drawable/doodle_delete_background"
                 android:gravity="center"
-                android:text="删除"
+                android:text="@string/del"
                 android:visibility="gone" />
         </RelativeLayout>
     </LinearLayout>

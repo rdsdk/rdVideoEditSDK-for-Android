@@ -95,6 +95,7 @@
     <string name="preview_del">删除</string>
     <string name="preview_sort">调序</string>
     <string name="preview_intercept">截取</string>
+    <string name="preview_img_duration">图片时长</string>
     <string name="preview_edit_pic">编辑</string>
     <string name="preview_text">文字</string>
     <string name="crop_free_title">自由裁切</string>
@@ -107,6 +108,7 @@
     <string name="release_hand_for_del">松开手删除</string>
     <string name="dragged_info_trash_del">拖进垃圾桶删除</string>
     <string name="music">音乐</string>
+    <string name="music2">音乐2</string>
     <string name="audio">配音</string>
     <string name="subtitle">字幕</string>
     <string name="special">特效</string>
@@ -197,22 +199,6 @@
     <string name="funny">搞怪</string>
     <string name="unclassified">未分类</string>
     <string name="more">更多</string>
-
-    <string-array name="speed_array">
-        <item>1/4</item>
-        <item>1/2</item>
-        <item>1X</item>
-        <item>2X</item>
-        <item>4X</item>
-    </string-array>
-    <string-array name="duration_array">
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-    </string-array>
-
     <string name="et_subtitle_size">字体大小 </string>
     <string name="et_subtitle_ttf">选择字体</string>
     <string name="et_subtitle_color">字体颜色</string>
@@ -220,7 +206,7 @@
     <string name="sub_style">字幕样式</string>
     <string name="split_duration_too_low">分割视频的时间太短</string>
     <string name="split_check_video_length">请选择视频区域</string>
-    <string name="please_check_network">请打开网络连接</string>
+    <string name="please_check_network">没有可用的网络</string>
     <string name="loading_style">正在加载样式</string>
     <string name="last_split_cannt_del">至少保留一段视频</string>
     <string name="add_failed">时间区域太短，不能添加</string>
@@ -274,8 +260,20 @@
     <string name="editaudio">编辑配乐</string>
     <string name="select_medias">选择媒体资源</string>
     <string name="downloading">正在下载资源，请稍等...</string>
+    <string name="download_error">无法下载.</string>
+    <string name="default_ttf"> 默认字体</string>
+    <string name="show_error_for_ttf_by_net"> 没有可用的网络,无法显示完整字体列表</string>
     <string name="isloading">加载中....</string>
     <string name="resdownloading">正在下载资源，请稍后再试...</string>
+    <string name="addsub_video_head_failed">主题片头无法添加字幕!</string>
+    <string name="addsub_video_end_failed">主题片尾无法添加字幕!</string>
+    <string name="addsub_video_between_failed">区域太小无法添加字幕!</string>
+    <string name="addspecial_video_head_failed">主题片头无法添加特效!</string>
+    <string name="addspecial_video_end_failed">主题片尾无法添加特效!</string>
+    <string name="addspecial_video_between_failed">时间区域太短无法添加特效!</string>
+    <string name="addaudio_video_head_failed">主题片头无法添加配音!</string>
+    <string name="addaudio_video_end_failed">主题片尾无法添加配音!</string>
+    <string name="addaudio_video_between_failed">时间区域太短无法添加配音!</string>
     <string name="editvideopriview">视频编辑</string>
     <string name="drag_for_sub">拖动边框,调整字幕起始位置</string>
     <string name="drag_for_sp">拖动边框,调整特效起始位置</string>
@@ -294,7 +292,7 @@
     <string name="check_all">全选</string>
     <string name="check_cancel">反选</string>
     <string name="reload">重新加载</string>
-    <string name="please_open_wifi">请打开数据网络</string>
+    <string name="please_open_wifi">没有可用的网络</string>
     <string name="load_web_error">加载网页数据失败</string>
     <string name="timeout">请求超时</string>
     <string name="add">添加</string>
@@ -326,6 +324,7 @@
     <string name="transition_random">随机</string>
     <string name="transition_dialog_description">确定应用随机转场？这将清除已设置内容！</string>
     <string name="camare_filter_0">原图</string>
+    <!--
     <string name="camare_filter_1">欧洲</string>
     <string name="camare_filter_2">街拍</string>
     <string name="camare_filter_3">暴走</string>
@@ -335,6 +334,8 @@
     <string name="camare_filter_7">云端</string>
     <string name="camare_filter_8">流连</string>
     <string name="camare_filter_9">原图</string>
+
+  
     <string name="camare_filter_10">原图</string>
     <string name="camare_filter_11">原图</string>
     <string name="camare_filter_12">原图</string>
@@ -347,7 +348,9 @@
     <string name="camare_filter_19">原图</string>
     <string name="camare_filter_20">原图</string>
     <string name="camare_filter_21">原图</string>
-    <string name="camare_effect_0">原始</string>
+    <string name="camare_effect_0">原始</string>
+    -->
+    <!--
     <string name="camare_effect_1">黑白</string>
     <string name="camare_effect_2">怀旧</string>
     <string name="camare_effect_3">冷色</string>
@@ -356,33 +359,13 @@
     <string name="camare_effect_6">蓝色时刻</string>
     <string name="camare_effect_7">冷艳</string>
     <string name="camare_effect_8">暖洋洋</string>
-    <string name="camare_effect_9">优格</string>
+    <string name="camare_effect_9">优格</string>
+    -->
     <string name="just_only_one_video">至少保留一个视频</string>
     <string name="just_only_one_image">只有一张图片，不可以删除</string>
 
     <!-- 横屏使用 -->
     <string name="land_speed_title">调速</string>
-
-    <!-- 极录客使用 -->
-    <string name="sp_music_null">无</string>
-    <string name="sp_music_chaowan">潮玩</string>
-    <string name="sp_music_faxian">发现</string>
-    <string name="sp_music_heibai">黑白</string>
-    <string name="sp_music_huiyi">回忆</string>
-    <string name="sp_music_jietou">街头</string>
-    <string name="sp_music_lvxing">旅行</string>
-    <string name="sp_music_qingxin">清新</string>
-    <string name="sp_music_saye">撒野</string>
-    <string name="sp_filter_1">原片</string>
-    <string name="sp_filter_2">褪色</string>
-    <string name="sp_filter_3">明暗</string>
-    <string name="sp_filter_4">空白</string>
-    <string name="sp_filter_5">光年</string>
-    <string name="sp_filter_6">印记</string>
-    <string name="sp_filter_7">火花</string>
-    <string name="sp_filter_8">流云</string>
-    <string name="sp_filter_9">清欢</string>
-    <string name="sp_filter_10">描摹</string>
 
     <!-- 对话框提示 -->
     <string name="cancel_all_changed">确定放弃所有操作？</string>
@@ -409,5 +392,83 @@
     <string name="fu_eye">大眼</string>
     <string name="camare_filter">滤镜</string>
     <string name="camare_face_filter">贴纸</string>
+
+    <!-- 压缩 -->
+
+    <string name="compress_add_error">视频创建错误</string>
+    <string name="compress_hc_error">开启硬件加速后出现了编码错误，请尝试关闭后再试一次</string>
+    <string name="compress_cancel">取消压缩</string>
+
+    <!-- 错误相关 -->
+
+    <string name="string_null">""</string>
+    <string name="error_preview_retry">暂时无法预览，请重试！</string>
+    <string name="error_preview_crop">无法预览当前剪辑!</string>
+    <string name="blackboard_text">文字板</string>
+    <string name="edit_photo">编辑图片</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="canceling">取消中...</string>
+
+    <!-- 录制 -->
+    <string name="permission_camera_error">未允许使用摄像头！</string>
+    <string name="permission_ablum_error">未允许读取相册！</string>
+    <string name="permission_camera_error_p_allow">相机无法打开,请打开相机权限!</string>
+    <string name="permission_audio_error">未允许录制音频！</string>
+    <string name="permission_audio_error_p_allow">无法录音,,请打开录音权限!</string>
+    <string name="exit">退出</string>
+    <string name="setting">设置</string>
+    <string name="m_short_mv">%d 秒\n\tMV</string>
+    <string name="m_short_mv_no_line">%d 秒 MV</string>
+    <string name="sd_not_enough_record">内存空间不足，无法录制视频！</string>
+    <string name="dialog_tips">温馨提示</string>
+    <string name="error_code">错误代码%d</string>
+    <string name="undefine">未定义</string>
+    <string name="media_select">媒体选择</string>
+    <string name="unsupport_video_o_photo">不支持的图片或视频！</string>
+    <string name="iknow">我知道了</string>
+    <string name="event_select_media_num">选择媒体数量</string>
+    <string name="once_un_exceed_num"> 单次选择媒体不能超过%d个</string>
+    <string name="sd_umount">当前存储卡尚未挂载</string>
+    <string name="p_select_dir">请选择文件夹</string>
+    <string name="isdelete">是否删除此媒体项？</string>
+    <string name="long_s">%s 秒</string>
+    <string name="error_preview_trim">无法预览当前剪辑!</string>
+    <string name="cancel_export_video">视频尚未导出完成，是否取消？</string>
+    <string name="video_edit_ac_name">高级编辑</string>
+    <string name="un_allow_video_photo">未允许读取图片、视频！</string>
+    <string name="trans_need_two_medias">转场至少需要两个图片或视频！</string>
+    <string name="other_menu">其他菜单</string>
+    <string name="close">关闭</string>
+    <string name="thrid_app_play">第三方播放</string>
+    <string name="xpk_play">xpk播放视频</string>
+    <string name="method_select_media2">选择媒体数量方式二</string>
+    <string name="allvideo">全部视频</string>
+    <string name="allphoto">全部图片</string>
+    <string name="ablum">相册</string>
+
+    <!-- 配音 -->
+    <string name="error_record_audio_retry">录音失败，请重试!</string>
+    <string name="record_audio_too_short_retry">录音时间太短，请重试!</string>
+    <string name="history_recently">最近使用</string>
+    <string name="sure_delete">确认删除吗?</string>
+    <string name="local_music">本地音乐</string>
+    <string name="downloaded">已下载</string>
+    <string name="the_song_not_support_retry">该配乐不存在或不支持,请重新选择！</string>
+    <string name="prepareMV">正在准备MV...</string>
+    <string name="internal_music">内置音乐</string>
+    <string name="total_edit_items">共%d个片段</string>
+    <string name="unit">个</string>
+    <string name="isdownloading_sure_cancel">正在下载,是否取消</string>
+    <string name="download_ing">下载中</string>
+    <string name="download_over">完成</string>
+    <string name="hint_text">请输入文本"</string>
+    <string name="add_graffiti">添加涂鸦</string>
+    <string name="graffiti_paint">涂鸦笔</string>
+    <string name="eraser">橡皮擦</string>
+    <string name="prompt">提示</string>
+    <string name="paint_with_5">当前画笔宽度为: 5</string>
+    <string name="isdeveloping_p_look">正在开发，敬请期待</string>
+    <string name="test">测试\n丹药</string>
 
 </resources>

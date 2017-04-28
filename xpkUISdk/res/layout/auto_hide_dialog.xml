@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dialog_view"
     style="@style/alert_dialog_bg_style"
-    android:background="@color/transparent_black"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/transparent_black"
     android:orientation="vertical"
     tools:ignore="UseCompoundDrawables" >
 
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="温馨提示"
+        android:text="@string/dialog_tips"
         android:textColor="@color/white"
         android:textSize="22sp"
         tools:ignore="SelectableText" />

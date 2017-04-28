@@ -16,7 +16,7 @@
         android:gravity="center"
         android:minWidth="20dp"
         android:padding="10dp"
-        android:text="测试\n丹药"
+        android:text="@string/test"
         android:textColor="@color/white" />
 
 </FrameLayout>
