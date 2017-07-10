@@ -28,7 +28,7 @@
     <dimen name="text_size_19">19dp</dimen>
     <dimen name="text_size_25">25dp</dimen>
     <dimen name="main_top_text_height">40dp</dimen>
-    <dimen name="text_size_rangseekbar">13dp</dimen>
+    <dimen name="text_size_rangseekbar">10dp</dimen>
     <dimen name="text_size_rangseekbar_bigger">15dp</dimen>
     <dimen name="rangeseekbar_height">55dp</dimen>
     <dimen name="state_width">38dp</dimen>
@@ -144,6 +144,8 @@
 
     <!--  -->
     <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
     <dimen name="dimen_30">30dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
     <dimen name="dimen_60">60dp</dimen>

@@ -51,7 +51,7 @@
             <RelativeLayout
                 android:id="@+id/mymusic_item"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/music_item_content_height"
                 android:gravity="center_vertical" >
 
                 <TextView
@@ -77,7 +77,8 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_toLeftOf="@+id/artname" >
+                    android:layout_toLeftOf="@+id/artname"
+                    android:minHeight="38dp" >
 
                     <TextView
                         android:id="@+id/duration"
@@ -102,22 +103,50 @@
                         android:gravity="center"
                         android:visibility="gone" />
 
-                    <Button
-                        android:id="@+id/item_add"
-                        android:layout_width="45dp"
-                        android:layout_height="25dp"
+                    <FrameLayout
+                        android:id="@+id/addLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_alignBaseline="@+id/duration"
-                        android:layout_alignBottom="@+id/duration"
                         android:layout_alignWithParentIfMissing="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:layout_toLeftOf="@id/cbHistoryCheck"
-                        android:background="@drawable/music_library_additem_bg"
-                        android:gravity="center"
-                        android:text="@string/add"
-                        android:textColor="@drawable/select_camera_popwin_textcolor"
-                        android:textSize="@dimen/text_size_14"
-                        android:visibility="visible" />
+                        android:layout_toLeftOf="@id/cbHistoryCheck" >
+
+                        <Button
+                            android:id="@+id/item_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/music_library_additem_bg"
+                            android:gravity="center"
+                            android:minHeight="25dp"
+                            android:minWidth="45dp"
+                            android:text="@string/add"
+                            android:textColor="@drawable/select_camera_popwin_textcolor"
+                            android:textSize="@dimen/text_size_14"
+                            android:visibility="visible" />
+
+                        <FrameLayout
+                            android:id="@+id/music_down_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:id="@+id/music_state"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minHeight="@dimen/down_width"
+                                android:minWidth="@dimen/down_width"
+                                android:src="@drawable/down_btn" />
+
+                            <com.rd.xpkuisdk.ui.CircleProgressBarView
+                                android:id="@+id/music_pbar"
+                                android:layout_width="@dimen/down_width"
+                                android:layout_height="@dimen/down_width"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/songname"
@@ -125,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="15dp"
-                        android:layout_toLeftOf="@id/item_add"
+                        android:layout_toLeftOf="@id/addLayout"
                         android:layout_toRightOf="@+id/duration"
                         android:singleLine="true"
                         android:textColor="@color/white"
@@ -142,7 +171,7 @@
                     android:id="@+id/child_hintview"
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="@dimen/music_item_content_height"
                     android:background="@color/edit_music_soundtrack_bg"
                     android:visibility="gone" >
                 </View>

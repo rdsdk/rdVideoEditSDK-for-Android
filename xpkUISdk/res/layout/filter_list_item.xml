@@ -21,11 +21,17 @@
             extCircle:circleChecked="false" />
     </RelativeLayout>
 
-    <TextView
+    <com.rd.lib.ui.ExtTextView
         android:id="@+id/tvItemCaption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="@dimen/filter_list_item_size"
+        android:singleLine="true"
         android:textColor="@color/white"
         android:textIsSelectable="false"
         android:textSize="@dimen/text_size_12" />

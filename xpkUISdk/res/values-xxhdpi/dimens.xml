@@ -29,5 +29,6 @@
     <dimen name="camera_filter_more_content_height">170dp</dimen>
     <dimen name="camera_filter_more_content_height_land">140dp</dimen>
     <dimen name="fu_paddingLeft">12dp</dimen>
+    <dimen name="music_item_content_height">50dp</dimen>
 
 </resources>

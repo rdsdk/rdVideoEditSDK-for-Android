@@ -3,6 +3,7 @@
 
     <item android:state_pressed="true" android:color="@color/sub_menu_bgcolor"/>
     <item android:state_checked="true" android:color="@color/sub_menu_bgcolor"/>
+    <item android:state_selected="true" android:color="@color/sub_menu_bgcolor"/>
     <item android:color="@color/white"/>
 
 </selector>

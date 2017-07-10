@@ -97,6 +97,38 @@
                 android:text="4"
                 android:textColor="@drawable/fu_blue_rb__color"
                 android:textSize="@dimen/text_size_14" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+            <RadioButton
+                android:id="@+id/fu_blue_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#33333B"
+                android:button="@null"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@drawable/fu_blue_rb__color"
+                android:textSize="@dimen/text_size_14" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+            <RadioButton
+                android:id="@+id/fu_blue_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#33333B"
+                android:button="@null"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@drawable/fu_blue_rb__color"
+                android:textSize="@dimen/text_size_14" />
         </RadioGroup>
     </LinearLayout>
 

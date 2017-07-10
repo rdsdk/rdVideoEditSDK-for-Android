@@ -214,6 +214,102 @@
             android:visibility="gone" />
     </RelativeLayout>
 
+    <!-- 添加云音乐布局 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/living_bar" >
+
+        <com.rd.lib.ui.RotateRelativeLayout
+            android:id="@+id/rrlAddMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" >
+
+                <com.rd.lib.ui.RotateImageView
+                    android:id="@+id/btnAddMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingRight="10dp"
+                    android:background="@null"
+                    android:src="@drawable/edit_music_icon"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/llAddMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/round_editstyle"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:scrollHorizontally="false"
+                        android:src="@drawable/edit_music_icon"/>
+
+
+                    <TextView
+                        android:id="@+id/edit_text_music_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="4dp"
+                        android:paddingTop="5dp"
+                        android:scrollHorizontally="false"
+                        android:text="添加音乐"
+                        android:textSize="@dimen/text_size_12"
+                        android:textColor="#b3ffffff"/>
+
+
+                    <ImageView
+                        android:id="@+id/btn_edit_text_music_del"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:paddingLeft="4dp"
+                        android:scaleType="centerInside"
+                        android:scrollHorizontally="false"
+                        android:src="@drawable/edit_text_music_del"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvMusicName"-->
+                <!--style="@style/TimerTextStyle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/record_timer_back"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:textSize="@dimen/text_size_18"-->
+                <!--android:visibility="gone" />-->
+        </com.rd.lib.ui.RotateRelativeLayout>
+    </RelativeLayout>
+
+
+
     <!-- 时间布局 -->
 
     <RelativeLayout

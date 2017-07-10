@@ -13,6 +13,7 @@
             android:id="@+id/svPlayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:overScrollMode="never"
             android:scrollbars="none">
 
             <LinearLayout
@@ -38,14 +39,21 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"/>
                     </com.rd.lib.ui.PreviewFrameLayout>
+
+                    <com.rd.xpkuisdk.ui.ProgressView
+                        android:id="@+id/progressView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true" />
                 </com.rd.lib.ui.PreviewFrameLayout>
             </LinearLayout>
         </ScrollView>
 
-        <HorizontalScrollView
+        <com.rd.xpkuisdk.ui.HoriScrollView
             android:id="@+id/hsvPlayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:overScrollMode="never"
             android:scrollbars="none"
             android:visibility="gone">
 
@@ -72,10 +80,15 @@
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"/>
                     </com.rd.lib.ui.PreviewFrameLayout>
+
+                    <com.rd.xpkuisdk.ui.ProgressView
+                        android:id="@+id/progressViewHori"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true" />
                 </com.rd.lib.ui.PreviewFrameLayout>
             </LinearLayout>
-
-        </HorizontalScrollView>
+        </com.rd.xpkuisdk.ui.HoriScrollView>
 
         <ImageView
             android:id="@+id/ivPlayerState"
@@ -86,8 +99,35 @@
             android:onClick="clickView"
             android:scaleType="center"
             android:src="@drawable/btn_play"/>
-    </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/rlAddTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivPlayerState"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/progress_time_bg"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/tvAddTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_25" />
+
+            <TextView
+                android:id="@+id/tvOldTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddTime"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+        </RelativeLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rlSeekbar"
@@ -294,6 +334,7 @@
         android:background="@color/transparent_black">
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/text_size_18"
@@ -301,5 +342,4 @@
             android:text="截取"/>
 
     </RelativeLayout>
-
 </RelativeLayout>

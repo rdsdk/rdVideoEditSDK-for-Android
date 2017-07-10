@@ -75,6 +75,8 @@
     <string name="crop_rotate_confirm">确定裁剪</string>
     <string name="edit_music_add">点击添加配乐</string>
     <string name="edit_music_media_voice">视频原音</string>
+    <string name="musicVoice">配乐</string>
+    <string name="videoVoice">原音</string>
     <string name="edit_click_split">单击分割</string>
 
     <!-- 秀拍客改版 -->
@@ -133,6 +135,13 @@
     <string name="subtitle_size">大小</string>
     <string name="subtitle_stroke">描边</string>
     <string name="none">无</string>
+    <string name="music_origin_close">无</string>
+    <string name="music_none">无配乐</string>
+    <string name="video_voice_n">原音开</string>
+    <string name="video_voice_p">原音关</string>
+    <string name="local">本地</string>
+    <string name="used">用过</string>
+    <string name="music_yun">云音乐</string>
     <string name="complete">完成</string>
     <string name="crop_mirror_reset">还原</string>
 
@@ -294,6 +303,7 @@
     <string name="reload">重新加载</string>
     <string name="please_open_wifi">没有可用的网络</string>
     <string name="load_web_error">加载网页数据失败</string>
+    <string name="load_http_failed">加载数据失败</string>
     <string name="timeout">请求超时</string>
     <string name="add">添加</string>
     <string name="all_video">全部视频</string>
@@ -324,6 +334,9 @@
     <string name="transition_random">随机</string>
     <string name="transition_dialog_description">确定应用随机转场？这将清除已设置内容！</string>
     <string name="camare_filter_0">原图</string>
+    
+    <string name="hint_music_search">搜索音乐</string>
+    
     <!--
     <string name="camare_filter_1">欧洲</string>
     <string name="camare_filter_2">街拍</string>
@@ -348,7 +361,18 @@
     <string name="camare_filter_19">原图</string>
     <string name="camare_filter_20">原图</string>
     <string name="camare_filter_21">原图</string>
-    <string name="camare_effect_0">原始</string>
+    <string name="camare_effect_0">原始</string>
+
+
+
+
+
+
+
+
+
+
+
     -->
     <!--
     <string name="camare_effect_1">黑白</string>
@@ -359,7 +383,18 @@
     <string name="camare_effect_6">蓝色时刻</string>
     <string name="camare_effect_7">冷艳</string>
     <string name="camare_effect_8">暖洋洋</string>
-    <string name="camare_effect_9">优格</string>
+    <string name="camare_effect_9">优格</string>
+
+
+
+
+
+
+
+
+
+
+
     -->
     <string name="just_only_one_video">至少保留一个视频</string>
     <string name="just_only_one_image">只有一张图片，不可以删除</string>
@@ -409,6 +444,7 @@
     <string name="yes">是</string>
     <string name="no">否</string>
     <string name="canceling">取消中...</string>
+    <string name="trim_support_video_only">截取功能只支持视频文件</string>
 
     <!-- 录制 -->
     <string name="permission_camera_error">未允许使用摄像头！</string>

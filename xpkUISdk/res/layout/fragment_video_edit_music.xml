@@ -14,13 +14,12 @@
         <Button
             android:id="@+id/btnVoice"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="40dp"
-            android:minWidth="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/more_music_menu_bg_selected"
             android:text="@string/audio"
-            android:background="@null"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15"            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:visibility="gone" />
 
         <RelativeLayout

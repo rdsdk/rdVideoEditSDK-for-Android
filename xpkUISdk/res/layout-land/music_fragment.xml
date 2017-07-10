@@ -8,59 +8,24 @@
     <com.rd.xpkuisdk.ui.HorizontalListViewMV
         android:id="@+id/lvListView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:scrollbars="none" >
 
         <include layout="@layout/camare_filters_container" />
     </com.rd.xpkuisdk.ui.HorizontalListViewMV>
 
-    <LinearLayout
-        android:layout_width="150dp"
+    <Button
+        android:id="@+id/btnVoice2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-        <Button
-            android:id="@+id/btnVoice2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="center_horizontal"
-            android:minWidth="60dp"
-            android:text="@string/audio"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_15"
-            android:visibility="gone" />
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="2dp"
-            android:gravity="center_horizontal"
-            android:minWidth="150dp" >
-
-            <com.rd.xpkuisdk.ui.SwitchButton
-                android:id="@+id/sp_sbOriginVoice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                app:swBackDrawable="@drawable/sb_back_drawable"
-                app:swThumbColor="@color/white" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="15dp"
-                android:layout_toLeftOf="@id/sp_sbOriginVoice"
-                android:text="@string/edit_music_media_voice"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_15" />
-        </RelativeLayout>
-    </LinearLayout>
+        android:background="@drawable/more_music_menu_bg_selected"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/audio"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15"
+        android:visibility="gone" />
 
 </LinearLayout>

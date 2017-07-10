@@ -32,5 +32,5 @@
     <dimen name="preview_rangseekbarplus_trim_height">75dp</dimen>
     <dimen name="point_width">5dp</dimen>
     <dimen name="camera_filter_more_content_height">180dp</dimen>
-
+   <dimen name="music_item_content_height">60dp</dimen>
 </resources>
