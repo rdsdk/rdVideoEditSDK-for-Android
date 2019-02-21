@@ -1,6 +1,10 @@
 # RD Video Editing SDK for android
 &emsp;&emsp;It combines video capture and video editing functions, including video dubbing, subtitles, special effects, filters, transitions and other functions to meet the needs of developers and quickly implant into the app. Support intelligent hardware decoding when editing preview, no need to transcode when selecting video, reducing user waiting time. 
 
+### The latest SDK download (date:20190221):：
+
+[Download](http://d.56show.com/rdsdk/private/pack/rd_VEUISdk(Bin)_Android_190221_1.1.1311576.zip)
+
 ### SDK功能介绍:
 #### 1.拍摄
 * **实时美颜**	
