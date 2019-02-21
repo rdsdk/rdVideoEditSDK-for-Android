@@ -1,5 +1,5 @@
-# 锐动视频编辑SDK android版
-&emsp;&emsp;集视频拍摄和视频剪辑功能于一体,同时包含视频配音配乐、字幕特效、滤镜、转场等各种功能，全方位满足开发者的需求，并可以快速植入到APP中。`编辑预览时支持智能硬件解码，选择视频时不需要转码，减少用户等待时间`。
+# RD Video Editing SDK for android
+&emsp;&emsp;It combines video capture and video editing functions, including video dubbing, subtitles, special effects, filters, transitions and other functions to meet the needs of developers and quickly implant into the app. Support intelligent hardware decoding when editing preview, no need to transcode when selecting video, reducing user waiting time. 
 
 ### SDK功能介绍:
 #### 1.拍摄
